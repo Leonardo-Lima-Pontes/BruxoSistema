@@ -35,6 +35,7 @@ namespace BruxoSistema
             }
         }
 
+        // Logar no sistema
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
             if (ValidarCampos())
@@ -53,7 +54,7 @@ namespace BruxoSistema
 
                     this.Hide();
                     TelaInicial telaInicial = new TelaInicial();
-                    telaInicial.Closed += (s, args) => this.Close();
+                    telaInicial.Closed += (s, args) => this.Close(); //fecha formulario de login e inicia o sistema
                     telaInicial.ShowDialog();
                 }
                 else

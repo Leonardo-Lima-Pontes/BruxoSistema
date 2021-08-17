@@ -16,17 +16,17 @@ namespace BruxoBiblioteca.Models
         /// <summary>
         /// Quantidade que este pedido teve deste produto
         /// </summary>
-        public double QUANTIDADE { get; set; }
+        public decimal QUANTIDADE { get; set; }
 
         /// <summary>
         /// Valor do produto que foi vendido nesta venda
         /// </summary>
-        public double VALOR { get; set; }
+        public decimal VALOR { get; set; }
 
         /// <summary>
         /// Produto que este pedidoproduto contem
         /// </summary>
-        public Produto PRODUTO_ID { get; set; }
+        public int PRODUTO_ID { get; set; } //retirei o Produto como tipo (aninhado ver qual é a melhor forma)
 
     }
 }

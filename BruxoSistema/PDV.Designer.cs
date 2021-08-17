@@ -42,6 +42,7 @@ namespace BruxoSistema
             this.ValorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelVendedor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +63,7 @@ namespace BruxoSistema
             this.button1.TabIndex = 2;
             this.button1.Text = "Finalizar venda";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -75,7 +77,7 @@ namespace BruxoSistema
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(993, 152);
+            this.label2.Location = new System.Drawing.Point(991, 222);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 15);
             this.label2.TabIndex = 4;
@@ -93,7 +95,7 @@ namespace BruxoSistema
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(995, 256);
+            this.label4.Location = new System.Drawing.Point(993, 284);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 15);
             this.label4.TabIndex = 6;
@@ -113,7 +115,8 @@ namespace BruxoSistema
             this.Nome,
             this.ValorUnitario,
             this.Quantidade,
-            this.ValorTotal});
+            this.ValorTotal,
+            this.Id});
             this.dataGridViewProdutos.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -166,6 +169,12 @@ namespace BruxoSistema
             this.ValorTotal.Name = "ValorTotal";
             this.ValorTotal.ReadOnly = true;
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
             // labelVendedor
             // 
             this.labelVendedor.AutoSize = true;
@@ -212,11 +221,12 @@ namespace BruxoSistema
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewProdutos;
+        private System.Windows.Forms.Label labelVendedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorTotal;
-        private System.Windows.Forms.Label labelVendedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }

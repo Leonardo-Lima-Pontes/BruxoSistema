@@ -13,6 +13,7 @@ namespace BruxoSistema
 {
     public partial class PDV : Form
     {
+
         public PDV()
         {
             InitializeComponent();
@@ -36,15 +37,26 @@ namespace BruxoSistema
         //lança produto
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            //VALIDA INFOMAÇÃO - OK
-            //PROCURA NO BANCO DE DADOS E RETORNA - OK
-            //COLOCA O PRODUTO NO BOX
-            //SALVA AS INFORMAÇÕES DE PEDIDO
-            //SALVA AS INFORMAÇÕES DE PRODUTO PEDIDO
+            //ARRUMAR
+            //colocar tela de selecionar produto poder selecionar mais de um produto
+            //pesquisa tela de venda por nome do produto também
+
+            // FUNCIONAL - MVP
+            //criar tela de pesquisa - ok
+            //arrumar totalizador quando alterar quantidade/valor unitario
+            //criar metodo para enviar da tela de pesquisa os dados do produto selecionado - ok
+            //criar tela de forma de pagamento
+            //finalizar venda gravar no banco
 
 
             if (e.KeyValue.Equals(13)) //Enter
             {
+                if (string.IsNullOrEmpty(textBoxPesquisaProduto.Text))
+                {
+                    button1_Click(sender, e);
+                    return;
+                }
+
                 if (ValidaInformacaoProduto())
                 {
                     // encontra produto no banco com base no codigo
@@ -57,21 +69,22 @@ namespace BruxoSistema
                         return;
                     }
 
+                    // se a consulta tiver somente um produto já lança no datagridview
                     if (produtosParaVenda.Count == 1)
                     {
-                        int index = this.dataGridViewProdutos.Rows.Add();
-                        dataGridViewProdutos.Rows[index].Cells[0].Value = produtosParaVenda[0].CODIGO;
-                        dataGridViewProdutos.Rows[index].Cells[1].Value = produtosParaVenda[0].NOME;
-                        dataGridViewProdutos.Rows[index].Cells[2].Value = produtosParaVenda[0].PRECOVENDA;
-                        dataGridViewProdutos.Rows[index].Cells[3].Value = 1;
-                        dataGridViewProdutos.Rows[index].Cells[4].Value = produtosParaVenda[0].PRECOVENDA;
-                        textBoxPesquisaProduto.Text = "";
-
-                        labelTotal.Text = dataGridViewProdutos.Rows.Cast<DataGridViewRow>().Sum(i => Convert.ToDecimal(i.Cells[4].Value)).ToString("N2");
+                        InserirProdutoNaVenda(produtosParaVenda[0]);
+                        AtualizarTotalDaVenda();
                     } 
                     else if (produtosParaVenda.Count > 1)
                     {
-                        //TODO - abrir tela de pesquisa de produtos para selação
+                        // criar novo formulario de consulta no formulario tem um objeto de produto que sera instalanciado
+                        // conforme selecao do usuario chama metodo para instaciar o produto que é acesso
+                        using (ConsultaProdutoVenda consultaProdutoVenda = new ConsultaProdutoVenda(produtosParaVenda))
+                        {
+                            consultaProdutoVenda.ShowDialog();
+                            InserirProdutoNaVenda(consultaProdutoVenda.produtoSelecionado); //pega o produto instaciado e insere na datagridview de venda
+                        }
+                        AtualizarTotalDaVenda();
                     }
                 }
                 else
@@ -80,6 +93,25 @@ namespace BruxoSistema
                 }
 
             }
+        }
+
+        // Atualiza o totalizador da venda
+        private void AtualizarTotalDaVenda()
+        {
+            labelTotal.Text = dataGridViewProdutos.Rows.Cast<DataGridViewRow>().Sum(i => Convert.ToDecimal(i.Cells[4].Value)).ToString("N2");
+        }
+
+        // Inseri produto no datagridview
+        private void InserirProdutoNaVenda(Produto produtoParaVenda)
+        {
+            int index = this.dataGridViewProdutos.Rows.Add();
+            dataGridViewProdutos.Rows[index].Cells[0].Value = produtoParaVenda.CODIGO;
+            dataGridViewProdutos.Rows[index].Cells[1].Value = produtoParaVenda.NOME;
+            dataGridViewProdutos.Rows[index].Cells[2].Value = produtoParaVenda.PRECOVENDA;
+            dataGridViewProdutos.Rows[index].Cells[3].Value = 1;
+            dataGridViewProdutos.Rows[index].Cells[4].Value = produtoParaVenda.PRECOVENDA;
+            dataGridViewProdutos.Rows[index].Cells[5].Value = produtoParaVenda.ID_PRODUTO;
+            textBoxPesquisaProduto.Text = "";
         }
 
         //valida pesquisa
@@ -101,6 +133,7 @@ namespace BruxoSistema
             return validacao;
         }
 
+        // Atualiza o valor total do produto com base na mudança de quantidade/valor
         private void dataGridViewProdutos_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridViewProdutos.RowCount > 0)
@@ -108,7 +141,62 @@ namespace BruxoSistema
                 decimal novoValorUnitario = decimal.Parse(dataGridViewProdutos.Rows[e.RowIndex].Cells[2].Value.ToString());
                 decimal novaQuantidade = decimal.Parse(dataGridViewProdutos.Rows[e.RowIndex].Cells[3].Value.ToString());
                 dataGridViewProdutos.Rows[e.RowIndex].Cells[4].Value = novoValorUnitario * novaQuantidade;
+                AtualizarTotalDaVenda();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormaPagamento formaPagamentoSelecionada;
+
+            // criar novo formulario de consulta no formulario tem um objeto de produto que sera instalanciado
+            // conforme selecao do usuario chama metodo para instaciar o produto que é acesso
+            using (Faturamento telaDeFaturamento = new Faturamento())
+            {
+                telaDeFaturamento.ShowDialog();
+                formaPagamentoSelecionada =  telaDeFaturamento.formaPagamentoSelecionada;
+                //TODO - retornar método de pagamento escolhido
+            }
+
+            FinalizaVenda(formaPagamentoSelecionada);
+        }
+
+        //ENTENDER SE HÁ NECESSIDADE DE PEDIDOPRODUTO TENHA ALINHADO O OBJETO PRODUTO ?
+        //ENTENDER SE HÁ NECESSIDADE DE PEDIDO CONTER ANINHADO OS OBJETOS USUARIO FORMA PAMENTO ?
+
+        /// <summary>
+        /// Instacia o objeto pedido para insercao no banco de dados, contendo todos os dados valor total do pedido
+        /// id do usuario logado na sessao forma de pagamento e lista de pedidoproduto (produtos vendedidos e informações 
+        /// sobre cada vende desse produto quantidade e valor
+        /// </summary>
+        /// <param name="formaPagamentoSelecionada">forma de pagamento selecionada pelo usuario</param>
+        private void FinalizaVenda(FormaPagamento formaPagamentoSelecionada)
+        {
+            Usuario usuarioDaSessao = new Usuario();
+            usuarioDaSessao.ID_USUARIO = UsuarioSessao.IdUsuario;
+            usuarioDaSessao.NOME = UsuarioSessao.Nomeusuario;
+
+            List<PedidoProduto> produtosDoPedido = new List<PedidoProduto>();
+
+            foreach (DataGridViewRow row in dataGridViewProdutos.Rows)
+            {
+                PedidoProduto produtoDoPedido = new PedidoProduto();
+                produtoDoPedido.QUANTIDADE = decimal.Parse(row.Cells[3].Value.ToString());
+                produtoDoPedido.VALOR = decimal.Parse(row.Cells[4].Value.ToString());
+                produtoDoPedido.PRODUTO_ID = int.Parse(row.Cells[5].Value.ToString());
+
+                produtosDoPedido.Add(produtoDoPedido);
+            }
+
+            Pedido pedidoFinalizado = new Pedido();
+            pedidoFinalizado.FORMAPAMENTO_ID = formaPagamentoSelecionada;
+            pedidoFinalizado.USUARIO_ID = usuarioDaSessao;
+            pedidoFinalizado.VALORPEDIDO = decimal.Parse(labelTotal.Text);
+            pedidoFinalizado.PRODUTOSVENDIDOS = produtosDoPedido;
+
+            Pedido.InserirNovoPedido(pedidoFinalizado);
+
+            MessageBox.Show("Venda Finalizada");
         }
     }
 }
