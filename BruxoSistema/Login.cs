@@ -62,6 +62,10 @@ namespace BruxoSistema
                     MessageBox.Show("Usuario ou senha incorretos");
                 }
             }
+            else
+            {
+                MessageBox.Show("Por gentileza consagrado infome os dados corretamente !!");
+            }
         }
 
         // valida campos do formulario
@@ -75,6 +79,14 @@ namespace BruxoSistema
             }
 
             return validacao;
+        }
+
+        private void Login_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(13)) //ESC
+            {
+                buttonEntrar_Click(sender, e);
+            }
         }
     }
 }

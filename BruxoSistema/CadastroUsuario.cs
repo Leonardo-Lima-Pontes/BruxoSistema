@@ -59,7 +59,26 @@ namespace BruxoSistema
                 validacao = false;
             }
 
+            if (textBoxSenha.Text != textBoxSenhaConfimacao.Text)
+            {
+                MessageBox.Show("Consagrado campos de senha não são iguais !!");
+                return false;
+            }
+
             return validacao;
+        }
+
+        private void CadastroUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(13)) //ENTER
+            {
+                buttonGravar_Click(sender, e);
+            }
+
+            if (e.KeyValue.Equals(27)) //ESC
+            {
+                this.Close();
+            }
         }
     }
 }

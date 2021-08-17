@@ -1,0 +1,62 @@
+tarefas
+
+criar parte funcional do sistema - ok
+criação de banco - ok
+criação de telas basicas - ok
+gravar tabelas para venda basico - ok
+criar funcional da venda e gravar com transaction - ok
+
+definir icone do sistema
+
+login:
+revitalizar tela de login - ok
+pressinar enter para entrar apos senha - ok
+tirar foco do botao e colocar no nome - ok
+colocar senha como password - ok
+
+
+cadastro de usuario
+revitalizar tela de usuario - ok
+pressinar enter para criar usuario ápós senha - ok
+colocar campo de confimação de senha (deois campos de senha para validar a senha) - ok
+tirar foco do botao e colocar no nome - ok
+colocar senha como password - ok
+esc para sair de tela - ok
+
+tela inicial
+colocar charmar telas com teclas - ok
+esc para sair - ok
+enter para venda e outros - ok
+colocar sair/login e voltar para a tela de login - ok
+revitalizar tela - ok
+
+tela de forma de cadastro produto
+revitalizar tela
+entar para cadastrar
+esc para sair
+foco no cadastro
+
+tela de forma de pagamento
+revitalizar tela
+entar para cadastrar
+esc para sair
+foco no cadastro
+
+tela de venda vish
+revitalizar tela
+colocar foco direto na pesquisa
+clicas na celula valor unitario/quantidade e já selecionar o conteudo
+colocar quaantidade de intens
+se não tiver nenhum produto na venda dar mensagem que não pode continuar
+
+tela de selecionar pedido
+revitalizar tela
+esc para sair
+enter para selecionar produto
+
+
+tela de faturamento
+revitalizar tela
+colocar foco já na primra forma de pagamento
+enter para finalizar
+esc para cancelar o faturamento e voltar para inserir mais produtos (bug ao sair da tela)

@@ -29,83 +29,129 @@ namespace BruxoSistema
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonCancelar = new System.Windows.Forms.Button();
-            this.buttonSalvar = new System.Windows.Forms.Button();
-            this.labelNomeProduto = new System.Windows.Forms.Label();
-            this.textBoxNomeFormaPagamento = new System.Windows.Forms.MaskedTextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroFormaPagamento));
             this.checkBoxDesabilitado = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonEntrar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxNomeFormaPagamento = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonCancelar
-            // 
-            this.buttonCancelar.Location = new System.Drawing.Point(139, 224);
-            this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(100, 23);
-            this.buttonCancelar.TabIndex = 15;
-            this.buttonCancelar.Text = "Cancelar";
-            this.buttonCancelar.UseVisualStyleBackColor = true;
-            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
-            // 
-            // buttonSalvar
-            // 
-            this.buttonSalvar.Location = new System.Drawing.Point(139, 195);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(100, 23);
-            this.buttonSalvar.TabIndex = 13;
-            this.buttonSalvar.Text = "Salvar";
-            this.buttonSalvar.UseVisualStyleBackColor = true;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
-            // 
-            // labelNomeProduto
-            // 
-            this.labelNomeProduto.AutoSize = true;
-            this.labelNomeProduto.Location = new System.Drawing.Point(61, 122);
-            this.labelNomeProduto.Name = "labelNomeProduto";
-            this.labelNomeProduto.Size = new System.Drawing.Size(43, 15);
-            this.labelNomeProduto.TabIndex = 14;
-            this.labelNomeProduto.Text = "Nome:";
-            // 
-            // textBoxNomeFormaPagamento
-            // 
-            this.textBoxNomeFormaPagamento.Location = new System.Drawing.Point(110, 119);
-            this.textBoxNomeFormaPagamento.Name = "textBoxNomeFormaPagamento";
-            this.textBoxNomeFormaPagamento.Size = new System.Drawing.Size(161, 23);
-            this.textBoxNomeFormaPagamento.TabIndex = 9;
             // 
             // checkBoxDesabilitado
             // 
             this.checkBoxDesabilitado.AutoSize = true;
-            this.checkBoxDesabilitado.Location = new System.Drawing.Point(110, 148);
+            this.checkBoxDesabilitado.Location = new System.Drawing.Point(197, 152);
             this.checkBoxDesabilitado.Name = "checkBoxDesabilitado";
             this.checkBoxDesabilitado.Size = new System.Drawing.Size(91, 19);
             this.checkBoxDesabilitado.TabIndex = 16;
+            this.checkBoxDesabilitado.TabStop = false;
             this.checkBoxDesabilitado.Text = "Desabilitado";
             this.checkBoxDesabilitado.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(140, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::BruxoSistema.Properties.Resources.sair__1_;
+            this.button1.Location = new System.Drawing.Point(52, 227);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(236, 35);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Cancelar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // buttonEntrar
+            // 
+            this.buttonEntrar.Image = global::BruxoSistema.Properties.Resources.entrar;
+            this.buttonEntrar.Location = new System.Drawing.Point(52, 186);
+            this.buttonEntrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonEntrar.Name = "buttonEntrar";
+            this.buttonEntrar.Size = new System.Drawing.Size(236, 35);
+            this.buttonEntrar.TabIndex = 2;
+            this.buttonEntrar.Text = "Cadastrar Forma";
+            this.buttonEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEntrar.UseVisualStyleBackColor = true;
+            this.buttonEntrar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(41, 122);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Nome:";
+            // 
+            // textBoxNomeFormaPagamento
+            // 
+            this.textBoxNomeFormaPagamento.Location = new System.Drawing.Point(98, 121);
+            this.textBoxNomeFormaPagamento.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxNomeFormaPagamento.Name = "textBoxNomeFormaPagamento";
+            this.textBoxNomeFormaPagamento.PlaceholderText = "Nome da forma de pagamento";
+            this.textBoxNomeFormaPagamento.Size = new System.Drawing.Size(190, 23);
+            this.textBoxNomeFormaPagamento.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(52, 179);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(236, 1);
+            this.panel1.TabIndex = 30;
             // 
             // CadastroFormaPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 321);
-            this.Controls.Add(this.checkBoxDesabilitado);
-            this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonSalvar);
-            this.Controls.Add(this.labelNomeProduto);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(328, 321);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonEntrar);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNomeFormaPagamento);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.checkBoxDesabilitado);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CadastroFormaPagamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CadastroFormaPagamento";
+            this.Text = "Forma de pagamento";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CadastroFormaPagamento_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Button buttonSalvar;
-        private System.Windows.Forms.Label labelNomeProduto;
-        private System.Windows.Forms.MaskedTextBox textBoxNomeFormaPagamento;
         private System.Windows.Forms.CheckBox checkBoxDesabilitado;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEntrar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxNomeFormaPagamento;
+        private System.Windows.Forms.Panel panel1;
     }
 }

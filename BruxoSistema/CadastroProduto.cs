@@ -73,5 +73,23 @@ namespace BruxoSistema
         {
             this.Close();
         }
+
+        private void CadastroProduto_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CadastroProduto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(13)) //ENTER
+            {
+                buttonSalvar_Click(sender, e);
+            }
+
+            if (e.KeyValue.Equals(27)) //ESC
+            {
+                this.Close();
+            }
+        }
     }
 }

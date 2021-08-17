@@ -54,5 +54,18 @@ namespace BruxoSistema
 
             return validacao;
         }
+
+        private void CadastroFormaPagamento_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(13)) //ENTER
+            {
+                buttonSalvar_Click(sender, e);
+            }
+
+            if (e.KeyValue.Equals(27)) //ESC
+            {
+                this.Close();
+            }
+        }
     }
 }
