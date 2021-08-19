@@ -17,7 +17,6 @@ namespace BruxoSistema
         public PDV()
         {
             InitializeComponent();
-
             labelVendedor.Text = UsuarioSessao.Nomeusuario;
         }
 
@@ -90,7 +89,8 @@ namespace BruxoSistema
                             {
                                 InserirProdutoNaVenda(consultaProdutoVenda.produtoSelecionado); //pega o produto instaciado e insere na datagridview de venda
                                 AtualizarTotalDaVenda();
-                                AtualizarTotalQuantidadeItemDaVenda(); 
+                                AtualizarTotalQuantidadeItemDaVenda();
+                                FocarQuantidade();
                             }
                         }
                     }
@@ -113,7 +113,7 @@ namespace BruxoSistema
         // Atualiza o totalizador de items na venda
         private void AtualizarTotalQuantidadeItemDaVenda()
         {
-            labelQuantidadeItens.Text = dataGridViewProdutos.Rows.Cast<DataGridViewRow>().Sum(i => Convert.ToInt32(i.Cells[3].Value)).ToString();
+            labelQuantidadeItens.Text = dataGridViewProdutos.Rows.Cast<DataGridViewRow>().Sum(i => Convert.ToDecimal(i.Cells[3].Value)).ToString();
         }
 
         // Atualiza o totalizador da venda
@@ -192,8 +192,6 @@ namespace BruxoSistema
                     FinalizaVenda(formaPagamentoSelecionada);
                 }
             }
-
-            
         }
 
         //ENTENDER SE HÁ NECESSIDADE DE PEDIDOPRODUTO TENHA ALINHADO O OBJETO PRODUTO ?
@@ -231,6 +229,15 @@ namespace BruxoSistema
             Pedido.InserirNovoPedido(pedidoFinalizado);
 
             MessageBox.Show("Venda Finalizada");
+            ResetarVenda();
+        }
+
+        private void ResetarVenda()
+        {
+            dataGridViewProdutos.Rows.Clear();
+            dataGridViewProdutos.Refresh();
+            labelTotalVenda.ResetText();
+            labelQuantidadeItens.ResetText();
         }
 
         //começar edição do valor assim que clicar na celular
@@ -239,5 +246,17 @@ namespace BruxoSistema
             dataGridViewProdutos.BeginEdit(true);
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            if (dataGridViewProdutos.Rows.Count > 0)
+            {
+                var resultado = MessageBox.Show("Os itens da venda serão perdidos", "Limpar Venda", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resultado == DialogResult.Yes)
+                {
+                    ResetarVenda();
+                }
+            }
+        }
     }
 }

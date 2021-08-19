@@ -56,8 +56,10 @@ esc para sair - ok
 enter para selecionar produto - ok
 
 
-tela de faturamento
-revitalizar tela
+tela de faturamento - ok
+revitalizar tela - ok
 colocar foco já na primra forma de pagamento - ok
-enter para finalizar
-esc para cancelar o faturamento e voltar para inserir mais produtos (bug ao sair da tela)
+enter para finalizar - ok
+esc para cancelar o faturamento e voltar para inserir mais produtos (bug ao sair da tela) - ok
+
+Implementar testes

@@ -28,8 +28,9 @@ namespace BruxoSistema
         {
             formasDePagamentosHabilitadas = FormaPagamento.SelecionarFormasDePagamentoHabilitadas();
 
-            int posicaoInicialX = 50;
-            int posicaoInicialY = 10;
+            int posicaoInicialX = 70;
+            int posicaoInicialY = 9;
+            int tabIndex = 1;
 
             foreach (var forma in formasDePagamentosHabilitadas)
             {
@@ -39,28 +40,61 @@ namespace BruxoSistema
                 novoBotão.Text = forma.NOME;
                 novoBotão.Location = new Point(posicaoInicialY, posicaoInicialX);
                 novoBotão.Width = 160;
+                novoBotão.TabIndex = 1;
                 novoBotão.Height = 50;
+                novoBotão.BackColor = Color.White;
                 novoBotão.TextAlign = ContentAlignment.MiddleCenter;
                 novoBotão.AutoSize = false;
                 novoBotão.FlatStyle = FlatStyle.Flat;
-                novoBotão.BackColor = Color.Honeydew;
-                novoBotão.FlatAppearance.BorderColor = Color.Tan;
+                novoBotão.Click += new EventHandler(MudarCorFormaPagamentoSelecionada);
                 this.Controls.Add(novoBotão);
+
+                tabIndex++;
 
                 posicaoInicialY += 165;
                 if (posicaoInicialY > 400)
                 {
                     posicaoInicialX += 70;
-                    posicaoInicialY = 10;
+                    posicaoInicialY = 9;
                 }
             }
-            this.Controls.OfType<RadioButton>().First().Checked = true;      
+
+            Controls.OfType<RadioButton>().First().Select();
+        }
+
+        private void MudarCorFormaPagamentoSelecionada(object sender, EventArgs e)
+        {
+            foreach (RadioButton forma in Controls.OfType<RadioButton>())
+            {
+                if (forma.Checked == false)
+                {
+                    forma.BackColor = Color.White;
+                }
+                else
+                {
+                    forma.BackColor = Color.LightBlue;
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             formaPagamentoSelecionada = (FormaPagamento)this.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Tag;
             this.Close();
+        }
+
+        private void Faturamento_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(13)) //ENTER
+            {
+                button1_Click(sender, e);
+            }
+
+            if (e.KeyValue.Equals(27))
+            {
+                this.Close();
+            }
+
         }
     }
 }
