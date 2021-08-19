@@ -30,11 +30,11 @@ namespace BruxoSistema
             foreach (var produto in produtosParaEscolher)
             {
                 int index = this.dataGridViewProdutos.Rows.Add();
-                dataGridViewProdutos.Rows[index].Cells[1].Value = produto.CODIGO;
-                dataGridViewProdutos.Rows[index].Cells[2].Value = produto.NOME;
-                dataGridViewProdutos.Rows[index].Cells[3].Value = produto.PRECOVENDA;
-                dataGridViewProdutos.Rows[index].Cells[4].Value = produto.ESTOQUE;
-                dataGridViewProdutos.Rows[index].Cells[5].Value = produto.ID_PRODUTO;
+                dataGridViewProdutos.Rows[index].Cells[0].Value = produto.CODIGO;
+                dataGridViewProdutos.Rows[index].Cells[1].Value = produto.NOME;
+                dataGridViewProdutos.Rows[index].Cells[2].Value = produto.PRECOVENDA;
+                dataGridViewProdutos.Rows[index].Cells[3].Value = produto.ESTOQUE;
+                dataGridViewProdutos.Rows[index].Cells[4].Value = produto.ID_PRODUTO;
             }
         }
 
@@ -42,12 +42,25 @@ namespace BruxoSistema
         {
             int index = dataGridViewProdutos.SelectedRows[0].Index;
 
-            produtoSelecionado.CODIGO = int.Parse(dataGridViewProdutos.Rows[index].Cells[1].Value.ToString());
-            produtoSelecionado.NOME = dataGridViewProdutos.Rows[index].Cells[2].Value.ToString();
-            produtoSelecionado.PRECOVENDA = decimal.Parse(dataGridViewProdutos.Rows[index].Cells[3].Value.ToString());
-            produtoSelecionado.ID_PRODUTO = int.Parse(dataGridViewProdutos.Rows[index].Cells[5].Value.ToString());
+            produtoSelecionado.CODIGO = int.Parse(dataGridViewProdutos.Rows[index].Cells[0].Value.ToString());
+            produtoSelecionado.NOME = dataGridViewProdutos.Rows[index].Cells[1].Value.ToString();
+            produtoSelecionado.PRECOVENDA = decimal.Parse(dataGridViewProdutos.Rows[index].Cells[2].Value.ToString());
+            produtoSelecionado.ID_PRODUTO = int.Parse(dataGridViewProdutos.Rows[index].Cells[4].Value.ToString());
 
             this.Close();
+        }
+
+        private void dataGridViewProdutos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue.Equals(13)) //ENTER
+            {
+                button1_Click(sender, e);
+            }
+
+            if (e.KeyValue.Equals(27)) //ESC
+            {
+                this.Close();
+            }
         }
     }
 }

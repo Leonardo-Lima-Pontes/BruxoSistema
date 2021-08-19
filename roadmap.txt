@@ -29,34 +29,35 @@ esc para sair - ok
 enter para venda e outros - ok
 colocar sair/login e voltar para a tela de login - ok
 revitalizar tela - ok
+login/sair sair da visualização quando o nome do usuario é maior
 
-tela de forma de cadastro produto
-revitalizar tela
-entar para cadastrar
-esc para sair
-foco no cadastro
+tela de forma de cadastro produto - ok
+revitalizar tela - ok
+entar para cadastrar -ok
+esc para sair - ok
+foco no cadastro - ok
 
-tela de forma de pagamento
-revitalizar tela
-entar para cadastrar
-esc para sair
-foco no cadastro
+tela de forma de pagamento - ok
+revitalizar tela - ok
+entar para cadastrar - ok
+esc para sair - ok
+foco no cadastro - ok
 
 tela de venda vish
-revitalizar tela
-colocar foco direto na pesquisa
-clicas na celula valor unitario/quantidade e já selecionar o conteudo
-colocar quaantidade de intens
-se não tiver nenhum produto na venda dar mensagem que não pode continuar
+revitalizar tela - ok
+colocar foco direto na pesquisa  - ok
+clicas na celula valor unitario/quantidade e já selecionar o conteudo - ok
+colocar quaantidade de item - ok
+se não tiver nenhum produto na venda dar mensagem que não pode continuar - ok
 
-tela de selecionar pedido
-revitalizar tela
-esc para sair
-enter para selecionar produto
+tela de selecionar pedidoproduto
+revitalizar tela - ok
+esc para sair - ok
+enter para selecionar produto - ok
 
 
 tela de faturamento
 revitalizar tela
-colocar foco já na primra forma de pagamento
+colocar foco já na primra forma de pagamento - ok
 enter para finalizar
 esc para cancelar o faturamento e voltar para inserir mais produtos (bug ao sair da tela)

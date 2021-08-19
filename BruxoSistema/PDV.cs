@@ -66,6 +66,7 @@ namespace BruxoSistema
                     if (produtosParaVenda.Count == 0)
                     {
                         MessageBox.Show("produto não encontrado");
+                        textBoxPesquisaProduto.Text = "";
                         return;
                     }
 
@@ -74,6 +75,8 @@ namespace BruxoSistema
                     {
                         InserirProdutoNaVenda(produtosParaVenda[0]);
                         AtualizarTotalDaVenda();
+                        AtualizarTotalQuantidadeItemDaVenda();
+                        FocarQuantidade();
                     } 
                     else if (produtosParaVenda.Count > 1)
                     {
@@ -82,9 +85,14 @@ namespace BruxoSistema
                         using (ConsultaProdutoVenda consultaProdutoVenda = new ConsultaProdutoVenda(produtosParaVenda))
                         {
                             consultaProdutoVenda.ShowDialog();
-                            InserirProdutoNaVenda(consultaProdutoVenda.produtoSelecionado); //pega o produto instaciado e insere na datagridview de venda
+                            Produto produtoParaVenda = consultaProdutoVenda.produtoSelecionado;
+                            if (produtoParaVenda.NOME != null)
+                            {
+                                InserirProdutoNaVenda(consultaProdutoVenda.produtoSelecionado); //pega o produto instaciado e insere na datagridview de venda
+                                AtualizarTotalDaVenda();
+                                AtualizarTotalQuantidadeItemDaVenda(); 
+                            }
                         }
-                        AtualizarTotalDaVenda();
                     }
                 }
                 else
@@ -95,10 +103,23 @@ namespace BruxoSistema
             }
         }
 
+        public void FocarQuantidade()
+        {
+            int ultimaLinhaInserida = dataGridViewProdutos.Rows.Count - 1;
+            dataGridViewProdutos.CurrentCell = dataGridViewProdutos.Rows[ultimaLinhaInserida].Cells[3];
+            dataGridViewProdutos.BeginEdit(true);
+        }
+
+        // Atualiza o totalizador de items na venda
+        private void AtualizarTotalQuantidadeItemDaVenda()
+        {
+            labelQuantidadeItens.Text = dataGridViewProdutos.Rows.Cast<DataGridViewRow>().Sum(i => Convert.ToInt32(i.Cells[3].Value)).ToString();
+        }
+
         // Atualiza o totalizador da venda
         private void AtualizarTotalDaVenda()
         {
-            labelTotal.Text = dataGridViewProdutos.Rows.Cast<DataGridViewRow>().Sum(i => Convert.ToDecimal(i.Cells[4].Value)).ToString("N2");
+            labelTotalVenda.Text = dataGridViewProdutos.Rows.Cast<DataGridViewRow>().Sum(i => Convert.ToDecimal(i.Cells[4].Value)).ToString("N2");
         }
 
         // Inseri produto no datagridview
@@ -142,11 +163,21 @@ namespace BruxoSistema
                 decimal novaQuantidade = decimal.Parse(dataGridViewProdutos.Rows[e.RowIndex].Cells[3].Value.ToString());
                 dataGridViewProdutos.Rows[e.RowIndex].Cells[4].Value = novoValorUnitario * novaQuantidade;
                 AtualizarTotalDaVenda();
+                AtualizarTotalQuantidadeItemDaVenda();
+                textBoxPesquisaProduto.Select();
+                dataGridViewProdutos.ClearSelection();
             }
         }
 
+        //encerra entrada de intens e chama a tela de faturamento
         private void button1_Click(object sender, EventArgs e)
         {
+            if (dataGridViewProdutos.Rows.Count < 1)
+            {
+                MessageBox.Show("Consagrado insira produtos para que possamos prosseguir com a venda");
+                return;
+            }
+
             FormaPagamento formaPagamentoSelecionada;
 
             // criar novo formulario de consulta no formulario tem um objeto de produto que sera instalanciado
@@ -156,14 +187,17 @@ namespace BruxoSistema
                 telaDeFaturamento.ShowDialog();
                 formaPagamentoSelecionada =  telaDeFaturamento.formaPagamentoSelecionada;
                 //TODO - retornar método de pagamento escolhido
+                if (formaPagamentoSelecionada.NOME != null)
+                {
+                    FinalizaVenda(formaPagamentoSelecionada);
+                }
             }
 
-            FinalizaVenda(formaPagamentoSelecionada);
+            
         }
 
         //ENTENDER SE HÁ NECESSIDADE DE PEDIDOPRODUTO TENHA ALINHADO O OBJETO PRODUTO ?
         //ENTENDER SE HÁ NECESSIDADE DE PEDIDO CONTER ANINHADO OS OBJETOS USUARIO FORMA PAMENTO ?
-
         /// <summary>
         /// Instacia o objeto pedido para insercao no banco de dados, contendo todos os dados valor total do pedido
         /// id do usuario logado na sessao forma de pagamento e lista de pedidoproduto (produtos vendedidos e informações 
@@ -191,12 +225,19 @@ namespace BruxoSistema
             Pedido pedidoFinalizado = new Pedido();
             pedidoFinalizado.FORMAPAMENTO_ID = formaPagamentoSelecionada;
             pedidoFinalizado.USUARIO_ID = usuarioDaSessao;
-            pedidoFinalizado.VALORPEDIDO = decimal.Parse(labelTotal.Text);
+            pedidoFinalizado.VALORPEDIDO = decimal.Parse(labelTotalVenda.Text);
             pedidoFinalizado.PRODUTOSVENDIDOS = produtosDoPedido;
 
             Pedido.InserirNovoPedido(pedidoFinalizado);
 
             MessageBox.Show("Venda Finalizada");
         }
+
+        //começar edição do valor assim que clicar na celular
+        private void dataGridViewProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridViewProdutos.BeginEdit(true);
+        }
+
     }
 }
