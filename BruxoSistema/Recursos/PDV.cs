@@ -1,4 +1,5 @@
-﻿using BruxoBiblioteca.Models;
+﻿using BruxoBiblioteca.Controllers;
+using BruxoBiblioteca.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +21,9 @@ namespace BruxoSistema
             labelVendedor.Text = UsuarioSessao.Nomeusuario;
         }
 
-        //fechar pdv
-        private void PDV_KeyDown(object sender, KeyEventArgs e)
+        private void FecharPDV_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue.Equals(27)) //ESC
+            if (e.KeyCode == Keys.Escape)
             {
                 var resultado = MessageBox.Show("Deseja fechar a tela de vendas ?", "SAIR", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (resultado == DialogResult.Yes)
@@ -33,74 +33,77 @@ namespace BruxoSistema
             }
         }
 
-        //lança produto
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void textBoxPesquisarProdutoEnter_KeyDown(object sender, KeyEventArgs e)
         {
-            //ARRUMAR
-            //colocar tela de selecionar produto poder selecionar mais de um produto
-            //pesquisa tela de venda por nome do produto também
+            if (e.KeyCode != Keys.Enter)
+                return;
 
-            // FUNCIONAL - MVP
-            //criar tela de pesquisa - ok
-            //arrumar totalizador quando alterar quantidade/valor unitario
-            //criar metodo para enviar da tela de pesquisa os dados do produto selecionado - ok
-            //criar tela de forma de pagamento
-            //finalizar venda gravar no banco
+            FaturarVendaOuSelecionarProduto();
+        }
 
+        private void FaturarVendaOuSelecionarProduto()
+        {
+            var entradaUsuario = textBoxPesquisaProduto.Text;
+            bool validado = PDVController.ValidarEntradaUsuario(entradaUsuario);
 
-            if (e.KeyValue.Equals(13)) //Enter
+            if (!validado)
             {
-                if (string.IsNullOrEmpty(textBoxPesquisaProduto.Text))
-                {
-                    button1_Click(sender, e);
-                    return;
-                }
-
-                if (ValidaInformacaoProduto())
-                {
-                    // encontra produto no banco com base no codigo
-                    int codigoProduto = int.Parse(textBoxPesquisaProduto.Text);
-                    List<Produto> produtosParaVenda = Produto.SelecionarProdutoVenda(codigoProduto);
-
-                    if (produtosParaVenda.Count == 0)
-                    {
-                        MessageBox.Show("produto não encontrado");
-                        textBoxPesquisaProduto.Text = "";
-                        return;
-                    }
-
-                    // se a consulta tiver somente um produto já lança no datagridview
-                    if (produtosParaVenda.Count == 1)
-                    {
-                        InserirProdutoNaVenda(produtosParaVenda[0]);
-                        AtualizarTotalDaVenda();
-                        AtualizarTotalQuantidadeItemDaVenda();
-                        FocarQuantidade();
-                    } 
-                    else if (produtosParaVenda.Count > 1)
-                    {
-                        // criar novo formulario de consulta no formulario tem um objeto de produto que sera instalanciado
-                        // conforme selecao do usuario chama metodo para instaciar o produto que é acesso
-                        using (ConsultaProdutoVenda consultaProdutoVenda = new ConsultaProdutoVenda(produtosParaVenda))
-                        {
-                            consultaProdutoVenda.ShowDialog();
-                            Produto produtoParaVenda = consultaProdutoVenda.produtoSelecionado;
-                            if (produtoParaVenda.NOME != null)
-                            {
-                                InserirProdutoNaVenda(consultaProdutoVenda.produtoSelecionado); //pega o produto instaciado e insere na datagridview de venda
-                                AtualizarTotalDaVenda();
-                                AtualizarTotalQuantidadeItemDaVenda();
-                                FocarQuantidade();
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Informe o codigo do produto de maneira correta");
-                }
-
+                MessageBox.Show("Consagrado por favor entre com um produto valido !");
+                return;
             }
+
+            switch (entradaUsuario)
+            {
+                case "": FaturarVenda(); break;
+                default: SelecionarOpcaoDeLancamentoProduto(); break;
+            }
+        }
+
+        private void SelecionarOpcaoDeLancamentoProduto()
+        {
+            int codigoProduto = int.Parse(textBoxPesquisaProduto.Text);
+            List<Produto> produtosParaVenda = PDVController.SelecionarProdutosVenda(codigoProduto);
+
+            int opcaoLancamento = produtosParaVenda.Count;
+
+            switch (opcaoLancamento)
+            {
+                case 0: InformarProdutoNaoEncontrado(); break;
+                case 1: LancarProdutoNaVenda(produtosParaVenda[0]); break;
+                default: SelecionarProduto(produtosParaVenda); break;
+            }
+        }
+
+        private void SelecionarProduto(List<Produto> produtos)
+        {
+            using (ConsultaProdutoVenda consultaProdutoVenda = new ConsultaProdutoVenda(produtos))
+            {
+                consultaProdutoVenda.ShowDialog();
+
+                Produto produtoParaVenda = consultaProdutoVenda.produtoSelecionado;
+
+                if (produtoParaVenda.NOME != null)
+                {
+                    InserirProdutoNaVenda(consultaProdutoVenda.produtoSelecionado);
+                    AtualizarTotalDaVenda();
+                    AtualizarTotalQuantidadeItemDaVenda();
+                    FocarQuantidade();
+                }
+            }
+        }
+
+        private void LancarProdutoNaVenda(Produto produto)
+        {
+            InserirProdutoNaVenda(produto);
+            AtualizarTotalDaVenda();
+            AtualizarTotalQuantidadeItemDaVenda();
+            FocarQuantidade();
+        }
+
+        private void InformarProdutoNaoEncontrado()
+        {
+            MessageBox.Show("produto não encontrado");
+            textBoxPesquisaProduto.Text = "";
         }
 
         public void FocarQuantidade()
@@ -135,8 +138,7 @@ namespace BruxoSistema
             textBoxPesquisaProduto.Text = "";
         }
 
-        //valida pesquisa
-        private bool ValidaInformacaoProduto()
+        private bool ValidarInformacaoProduto()
         {
             bool validacao = true;
 
@@ -169,8 +171,12 @@ namespace BruxoSistema
             }
         }
 
-        //encerra entrada de intens e chama a tela de faturamento
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonFaturarVenda_Click(object sender, EventArgs e)
+        {
+            FaturarVenda();
+        }
+
+        private void FaturarVenda()
         {
             if (dataGridViewProdutos.Rows.Count < 1)
             {
@@ -185,7 +191,7 @@ namespace BruxoSistema
             using (Faturamento telaDeFaturamento = new Faturamento())
             {
                 telaDeFaturamento.ShowDialog();
-                formaPagamentoSelecionada =  telaDeFaturamento.formaPagamentoSelecionada;
+                formaPagamentoSelecionada = telaDeFaturamento.formaPagamentoSelecionada;
                 //TODO - retornar método de pagamento escolhido
                 if (formaPagamentoSelecionada.NOME != null)
                 {
@@ -194,8 +200,6 @@ namespace BruxoSistema
             }
         }
 
-        //ENTENDER SE HÁ NECESSIDADE DE PEDIDOPRODUTO TENHA ALINHADO O OBJETO PRODUTO ?
-        //ENTENDER SE HÁ NECESSIDADE DE PEDIDO CONTER ANINHADO OS OBJETOS USUARIO FORMA PAMENTO ?
         /// <summary>
         /// Instacia o objeto pedido para insercao no banco de dados, contendo todos os dados valor total do pedido
         /// id do usuario logado na sessao forma de pagamento e lista de pedidoproduto (produtos vendedidos e informações 
@@ -248,7 +252,7 @@ namespace BruxoSistema
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             if (dataGridViewProdutos.Rows.Count > 0)
             {
                 var resultado = MessageBox.Show("Os itens da venda serão perdidos", "Limpar Venda", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);

@@ -34,7 +34,7 @@ namespace BruxoSistema
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBoxPesquisaProduto = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonFaturarVenda = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,22 +78,22 @@ namespace BruxoSistema
             this.textBoxPesquisaProduto.PlaceholderText = "Digita aqui o produto para vender";
             this.textBoxPesquisaProduto.Size = new System.Drawing.Size(650, 29);
             this.textBoxPesquisaProduto.TabIndex = 1;
-            this.textBoxPesquisaProduto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBoxPesquisaProduto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPesquisarProdutoEnter_KeyDown);
             // 
-            // button1
+            // buttonFaturarVenda
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(747, 502);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 70);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Finalizar (ENTER)";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonFaturarVenda.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonFaturarVenda.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonFaturarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFaturarVenda.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonFaturarVenda.Location = new System.Drawing.Point(747, 502);
+            this.buttonFaturarVenda.Name = "buttonFaturarVenda";
+            this.buttonFaturarVenda.Size = new System.Drawing.Size(175, 70);
+            this.buttonFaturarVenda.TabIndex = 2;
+            this.buttonFaturarVenda.Text = "Finalizar (ENTER)";
+            this.buttonFaturarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonFaturarVenda.UseVisualStyleBackColor = false;
+            this.buttonFaturarVenda.Click += new System.EventHandler(this.buttonFaturarVenda_Click);
             // 
             // label2
             // 
@@ -401,7 +401,7 @@ namespace BruxoSistema
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonFaturarVenda);
             this.Controls.Add(this.textBoxPesquisaProduto);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -413,7 +413,7 @@ namespace BruxoSistema
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Boas Vendas";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PDV_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FecharPDV_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -427,7 +427,7 @@ namespace BruxoSistema
 
         #endregion
         private System.Windows.Forms.TextBox textBoxPesquisaProduto;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonFaturarVenda;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Label label3;
