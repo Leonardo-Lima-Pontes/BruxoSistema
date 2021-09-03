@@ -14,7 +14,7 @@ namespace BruxoSistema
     public partial class Faturamento : Form
     {
         public List<FormaPagamento> formasDePagamentosHabilitadas = new List<FormaPagamento>();
-        public FormaPagamento formaPagamentoSelecionada = new FormaPagamento();
+        public FormaPagamento formaPagamentoSelecionada;
 
         public Faturamento()
         {
@@ -40,7 +40,7 @@ namespace BruxoSistema
                 novoBotão.Text = forma.NOME;
                 novoBotão.Location = new Point(posicaoInicialY, posicaoInicialX);
                 novoBotão.Width = 160;
-                novoBotão.TabIndex = 1;
+                novoBotão.TabIndex = tabIndex;
                 novoBotão.Height = 50;
                 novoBotão.BackColor = Color.White;
                 novoBotão.TextAlign = ContentAlignment.MiddleCenter;

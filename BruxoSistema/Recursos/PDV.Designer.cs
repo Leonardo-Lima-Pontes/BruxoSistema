@@ -62,7 +62,7 @@ namespace BruxoSistema
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonResetarVenda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.panel3.SuspendLayout();
@@ -213,8 +213,8 @@ namespace BruxoSistema
             this.dataGridViewProdutos.Size = new System.Drawing.Size(727, 491);
             this.dataGridViewProdutos.TabIndex = 18;
             this.dataGridViewProdutos.TabStop = false;
-            this.dataGridViewProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellClick);
-            this.dataGridViewProdutos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellEndEdit);
+            this.dataGridViewProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSelecionarCelulaInteira_CellClick);
+            this.dataGridViewProdutos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecalcularValorTotalProduto_CellEndEdit);
             // 
             // Column1
             // 
@@ -366,20 +366,20 @@ namespace BruxoSistema
             this.label8.TabIndex = 6;
             this.label8.Text = "Informações";
             // 
-            // button2
+            // buttonResetarVenda
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(14, 543);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 29);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Limpar Venda";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonResetarVenda.BackColor = System.Drawing.Color.White;
+            this.buttonResetarVenda.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonResetarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonResetarVenda.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonResetarVenda.Location = new System.Drawing.Point(14, 543);
+            this.buttonResetarVenda.Name = "buttonResetarVenda";
+            this.buttonResetarVenda.Size = new System.Drawing.Size(130, 29);
+            this.buttonResetarVenda.TabIndex = 24;
+            this.buttonResetarVenda.Text = "Limpar Venda";
+            this.buttonResetarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonResetarVenda.UseVisualStyleBackColor = false;
+            this.buttonResetarVenda.Click += new System.EventHandler(this.buttonResetarVenda_Click);
             // 
             // PDV
             // 
@@ -387,7 +387,7 @@ namespace BruxoSistema
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(931, 582);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonResetarVenda);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
@@ -455,6 +455,6 @@ namespace BruxoSistema
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonResetarVenda;
     }
 }

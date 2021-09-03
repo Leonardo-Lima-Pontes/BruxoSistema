@@ -20,17 +20,55 @@ namespace BruxoBiblioteca.Controllers
         public static bool ValidarEntradaUsuario(string entradaUsuario)
         {
             if (string.IsNullOrWhiteSpace(entradaUsuario))
-            {
                 return true;
-            }
 
             bool validaCodigo = int.TryParse(entradaUsuario, out int codigoProduto);
             if (validaCodigo)
-            {
                 return true;
-            }
 
             return false;
+        }
+
+        public static decimal RecalcularPrecoTotalVendaProduto(decimal novoValorUnitario, decimal novaQuantidade)
+        {
+            return novoValorUnitario * novaQuantidade;
+        }
+
+        public static bool ValidarProdutoParaVenda(Produto produtoParaVenda)
+        {
+            if (produtoParaVenda.CODIGO == 0 ||
+                produtoParaVenda.ID_PRODUTO == 0 ||
+                produtoParaVenda.NOME == null ||
+                produtoParaVenda.PRECOVENDA == 0)
+                return false;
+
+            return true;
+        }
+
+        public static bool ValidarUsuario(Usuario usuario)
+        {
+            if (usuario.ID_USUARIO == 0 || string.IsNullOrWhiteSpace(usuario.NOME))
+                return false;
+
+            return true;
+        }
+
+        public static bool ValidarPedidoProduto(PedidoProduto produtoDaVenda)
+        {
+            if (produtoDaVenda.QUANTIDADE == 0 ||
+                produtoDaVenda.PRODUTO_ID == 0 ||
+                produtoDaVenda.VALOR == 0)
+                return false;
+
+            return true;
+        }
+
+        public static bool ValidarPedido(Pedido pedidoFinalizado)
+        {
+            if (pedidoFinalizado.VALORPEDIDO == 0)
+                return false;
+
+            return true;
         }
     }
 }
