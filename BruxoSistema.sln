@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BruxoSistema", "BruxoSistem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BruxoBiblioteca", "BruxoBiblioteca\BruxoBiblioteca.csproj", "{9BC84C96-0804-42E8-8133-281644B56297}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BruxoSistemas.Testes", "BruxoSistemas.Testes\BruxoSistemas.Testes.csproj", "{4EC31544-638B-4687-B77B-657D47A1AA30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BruxoSistema.Testes", "BruxoSistemas.Testes\BruxoSistema.Testes.csproj", "{4EC31544-638B-4687-B77B-657D47A1AA30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

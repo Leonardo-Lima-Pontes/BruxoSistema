@@ -19,7 +19,7 @@ namespace BruxoBiblioteca.Controllers
 
         public static bool ValidarEntradaUsuario(string entradaUsuario)
         {
-            if (string.IsNullOrWhiteSpace(entradaUsuario))
+            if (string.IsNullOrEmpty(entradaUsuario))
                 return true;
 
             bool validaCodigo = int.TryParse(entradaUsuario, out int codigoProduto);
@@ -69,6 +69,11 @@ namespace BruxoBiblioteca.Controllers
                 return false;
 
             return true;
+        }
+
+        public static void InserirNovoPedido(Pedido pedidoFinalizado)
+        {
+            PDVDao.InserirNovoPedido(pedidoFinalizado);
         }
     }
 }

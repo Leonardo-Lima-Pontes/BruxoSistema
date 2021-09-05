@@ -38,6 +38,17 @@ namespace BruxoBiblioteca.Models
         /// </summary>
         public decimal PRECOVENDA { get; set; }
 
+        public Produto(int iD_PRODUTO = 0, string nOME = "", int cODIGO = 0, decimal eSTOQUE = 0, decimal pRECOVENDA = 0)
+        {
+            ID_PRODUTO = iD_PRODUTO;
+            NOME = nOME;
+            CODIGO = cODIGO;
+            ESTOQUE = eSTOQUE;
+            PRECOVENDA = pRECOVENDA;
+        }
+
+
+
         /// <summary>
         /// Método para inserir um novo usuario
         /// </summary>

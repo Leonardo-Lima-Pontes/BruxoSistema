@@ -32,9 +32,10 @@ namespace BruxoSistema
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDV));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.textBoxPesquisaProduto = new System.Windows.Forms.TextBox();
-            this.buttonFaturarVenda = new System.Windows.Forms.Button();
+            this.txtPesquisaProduto = new System.Windows.Forms.TextBox();
+            this.btnFaturarVenda = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,12 +45,6 @@ namespace BruxoSistema
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelCliente = new System.Windows.Forms.Label();
@@ -62,7 +57,13 @@ namespace BruxoSistema
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.buttonResetarVenda = new System.Windows.Forms.Button();
+            this.btnResetarVenda = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.panel3.SuspendLayout();
@@ -70,30 +71,30 @@ namespace BruxoSistema
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBoxPesquisaProduto
+            // txtPesquisaProduto
             // 
-            this.textBoxPesquisaProduto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPesquisaProduto.Location = new System.Drawing.Point(91, 11);
-            this.textBoxPesquisaProduto.Name = "textBoxPesquisaProduto";
-            this.textBoxPesquisaProduto.PlaceholderText = "Digita aqui o produto para vender";
-            this.textBoxPesquisaProduto.Size = new System.Drawing.Size(650, 29);
-            this.textBoxPesquisaProduto.TabIndex = 1;
-            this.textBoxPesquisaProduto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPesquisarProdutoEnter_KeyDown);
+            this.txtPesquisaProduto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPesquisaProduto.Location = new System.Drawing.Point(91, 11);
+            this.txtPesquisaProduto.Name = "txtPesquisaProduto";
+            this.txtPesquisaProduto.PlaceholderText = "Digita aqui o produto para vender";
+            this.txtPesquisaProduto.Size = new System.Drawing.Size(650, 29);
+            this.txtPesquisaProduto.TabIndex = 1;
+            this.txtPesquisaProduto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPesquisarProdutoEnter_KeyDown);
             // 
-            // buttonFaturarVenda
+            // btnFaturarVenda
             // 
-            this.buttonFaturarVenda.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonFaturarVenda.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonFaturarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFaturarVenda.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonFaturarVenda.Location = new System.Drawing.Point(747, 502);
-            this.buttonFaturarVenda.Name = "buttonFaturarVenda";
-            this.buttonFaturarVenda.Size = new System.Drawing.Size(175, 70);
-            this.buttonFaturarVenda.TabIndex = 2;
-            this.buttonFaturarVenda.Text = "Finalizar (ENTER)";
-            this.buttonFaturarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonFaturarVenda.UseVisualStyleBackColor = false;
-            this.buttonFaturarVenda.Click += new System.EventHandler(this.buttonFaturarVenda_Click);
+            this.btnFaturarVenda.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnFaturarVenda.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnFaturarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFaturarVenda.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnFaturarVenda.Location = new System.Drawing.Point(747, 502);
+            this.btnFaturarVenda.Name = "btnFaturarVenda";
+            this.btnFaturarVenda.Size = new System.Drawing.Size(175, 70);
+            this.btnFaturarVenda.TabIndex = 2;
+            this.btnFaturarVenda.Text = "Finalizar (ENTER)";
+            this.btnFaturarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFaturarVenda.UseVisualStyleBackColor = false;
+            this.btnFaturarVenda.Click += new System.EventHandler(this.btnFaturarVenda_Click);
             // 
             // label2
             // 
@@ -194,14 +195,15 @@ namespace BruxoSistema
             this.Column4,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewProdutos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.NullValue = null;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewProdutos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewProdutos.EnableHeadersVisualStyles = false;
             this.dataGridViewProdutos.GridColor = System.Drawing.Color.White;
             this.dataGridViewProdutos.Location = new System.Drawing.Point(14, 46);
@@ -215,46 +217,8 @@ namespace BruxoSistema
             this.dataGridViewProdutos.TabStop = false;
             this.dataGridViewProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSelecionarCelulaInteira_CellClick);
             this.dataGridViewProdutos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecalcularValorTotalProduto_CellEndEdit);
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 43.14721F;
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 209.6561F;
-            this.Column2.HeaderText = "Descrição";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 82.11393F;
-            this.Column3.HeaderText = "Valor Unitário";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 71.64872F;
-            this.Column4.HeaderText = "Quantidade";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 93.43407F;
-            this.Column5.HeaderText = "Valor Total";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Id";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
+            this.dataGridViewProdutos.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgVerificaDigito_EditingControlShowing);
+            this.dataGridViewProdutos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvValidaDigito_KeyPress);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -366,20 +330,63 @@ namespace BruxoSistema
             this.label8.TabIndex = 6;
             this.label8.Text = "Informações";
             // 
-            // buttonResetarVenda
+            // btnResetarVenda
             // 
-            this.buttonResetarVenda.BackColor = System.Drawing.Color.White;
-            this.buttonResetarVenda.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonResetarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonResetarVenda.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonResetarVenda.Location = new System.Drawing.Point(14, 543);
-            this.buttonResetarVenda.Name = "buttonResetarVenda";
-            this.buttonResetarVenda.Size = new System.Drawing.Size(130, 29);
-            this.buttonResetarVenda.TabIndex = 24;
-            this.buttonResetarVenda.Text = "Limpar Venda";
-            this.buttonResetarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonResetarVenda.UseVisualStyleBackColor = false;
-            this.buttonResetarVenda.Click += new System.EventHandler(this.buttonResetarVenda_Click);
+            this.btnResetarVenda.BackColor = System.Drawing.Color.White;
+            this.btnResetarVenda.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnResetarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetarVenda.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnResetarVenda.Location = new System.Drawing.Point(14, 543);
+            this.btnResetarVenda.Name = "btnResetarVenda";
+            this.btnResetarVenda.Size = new System.Drawing.Size(130, 29);
+            this.btnResetarVenda.TabIndex = 24;
+            this.btnResetarVenda.Text = "Limpar Venda";
+            this.btnResetarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnResetarVenda.UseVisualStyleBackColor = false;
+            this.btnResetarVenda.Click += new System.EventHandler(this.btnResetarVenda_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 43.14721F;
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 209.6561F;
+            this.Column2.HeaderText = "Descrição";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 82.11393F;
+            this.Column3.HeaderText = "Valor Unitário";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle3.Format = "N3";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column4.FillWeight = 71.64872F;
+            this.Column4.HeaderText = "Quantidade";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 93.43407F;
+            this.Column5.HeaderText = "Valor Total";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Id";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
             // 
             // PDV
             // 
@@ -387,7 +394,7 @@ namespace BruxoSistema
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(931, 582);
-            this.Controls.Add(this.buttonResetarVenda);
+            this.Controls.Add(this.btnResetarVenda);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
@@ -401,8 +408,8 @@ namespace BruxoSistema
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.buttonFaturarVenda);
-            this.Controls.Add(this.textBoxPesquisaProduto);
+            this.Controls.Add(this.btnFaturarVenda);
+            this.Controls.Add(this.txtPesquisaProduto);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -426,8 +433,8 @@ namespace BruxoSistema
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBoxPesquisaProduto;
-        private System.Windows.Forms.Button buttonFaturarVenda;
+        private System.Windows.Forms.TextBox txtPesquisaProduto;
+        private System.Windows.Forms.Button btnFaturarVenda;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Label label3;
@@ -446,15 +453,15 @@ namespace BruxoSistema
         private System.Windows.Forms.Label labelTotalVenda;
         private System.Windows.Forms.Label labelQuantidadeItens;
         private System.Windows.Forms.Label labelVendedor;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnResetarVenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button buttonResetarVenda;
     }
 }

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,11 +15,13 @@ namespace BruxoSistema
 {
     public partial class PDV : Form
     {
+        decimal precoUnitarioAtualProdutoEditando;
 
         public PDV()
         {
             InitializeComponent();
             labelVendedor.Text = UsuarioSessao.Nomeusuario;
+            dataGridViewProdutos.Columns[2].DefaultCellStyle.Format = "0.00##";
         }
 
         private void FecharPDV_KeyDown(object sender, KeyEventArgs e)
@@ -33,22 +36,34 @@ namespace BruxoSistema
             }
         }
 
-        private void textBoxPesquisarProdutoEnter_KeyDown(object sender, KeyEventArgs e)
+        private void txtPesquisarProdutoEnter_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode != Keys.Enter)
                 return;
 
-            FaturarVendaOuSelecionarProduto();
+            try
+            {
+                FaturarVendaOuSelecionarProduto();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro por favor entre em contato com o Bruxo! \n {ex.Message} \n\n {ex.StackTrace}");
+
+                var resultado = MessageBox.Show("Deseja encerrar a aplicação e esperar o Bruxo resolver o problema ?", "Bug no Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resultado == DialogResult.Yes)
+                    Application.Exit();
+            }
         }
 
         private void FaturarVendaOuSelecionarProduto()
         {
-            var entradaUsuario = textBoxPesquisaProduto.Text;
+            var entradaUsuario = txtPesquisaProduto.Text;
             bool validado = PDVController.ValidarEntradaUsuario(entradaUsuario);
 
             if (!validado)
             {
                 MessageBox.Show("Consagrado por favor entre com um produto valido !");
+                txtPesquisaProduto.Text = "";
                 return;
             }
 
@@ -61,7 +76,7 @@ namespace BruxoSistema
 
         private void SelecionarOpcaoDeLancamentoProduto()
         {
-            int codigoProduto = int.Parse(textBoxPesquisaProduto.Text);
+            int codigoProduto = int.Parse(txtPesquisaProduto.Text);
             List<Produto> produtosParaVenda = PDVController.SelecionarProdutosVenda(codigoProduto);
 
             int opcaoLancamento = produtosParaVenda.Count;
@@ -101,7 +116,7 @@ namespace BruxoSistema
         private void InformarProdutoNaoEncontrado()
         {
             MessageBox.Show("produto não encontrado");
-            textBoxPesquisaProduto.Text = "";
+            txtPesquisaProduto.Text = "";
         }
 
         public void FocarQuantidade()
@@ -130,29 +145,72 @@ namespace BruxoSistema
             dataGridViewProdutos.Rows[index].Cells[3].Value = 1;
             dataGridViewProdutos.Rows[index].Cells[4].Value = produtoParaVenda.PRECOVENDA;
             dataGridViewProdutos.Rows[index].Cells[5].Value = produtoParaVenda.ID_PRODUTO;
-            textBoxPesquisaProduto.Text = "";
+            txtPesquisaProduto.Text = "";   
+
+            precoUnitarioAtualProdutoEditando = produtoParaVenda.PRECOVENDA;
         }
+
+        //quando deixa vazio lança exeção
+        //quando é 0 da problema
+        //quando deixar vazio ou 0 dar replace para 1 (igual no sigecom)
 
         private void dgvRecalcularValorTotalProduto_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewProdutos.RowCount < 0)
-                return;
+            try
+            {
+                if (dataGridViewProdutos.RowCount < 0)
+                    return;
 
-            decimal novoValorUnitario = decimal.Parse(dataGridViewProdutos.Rows[e.RowIndex].Cells[2].Value.ToString());
-            decimal novaQuantidade = decimal.Parse(dataGridViewProdutos.Rows[e.RowIndex].Cells[3].Value.ToString());
+                decimal novaQuantidade = PegarNovaQuantidade(e);
+                decimal novoValorUnitario = PegarNovoValorUnitario(e);
 
-            decimal novoValorTotal = PDVController.RecalcularPrecoTotalVendaProduto(novoValorUnitario, novaQuantidade);
+                decimal novoValorTotal = PDVController.RecalcularPrecoTotalVendaProduto(novoValorUnitario, novaQuantidade);
 
-            dataGridViewProdutos.Rows[e.RowIndex].Cells[4].Value = novoValorTotal;
+                dataGridViewProdutos.Rows[e.RowIndex].Cells[4].Value = novoValorTotal;
 
-            AtualizarTotalDaVenda();
-            AtualizarTotalItensDaVenda();
-            textBoxPesquisaProduto.Select();
-            dataGridViewProdutos.ClearSelection();
+                AtualizarTotalDaVenda();
+                AtualizarTotalItensDaVenda();
+                txtPesquisaProduto.Select();
+                dataGridViewProdutos.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro por favor entre em contato com o Bruxo! \n {ex.Message} \n {ex.StackTrace}");
+            }
 
         }
 
-        private void buttonFaturarVenda_Click(object sender, EventArgs e)
+        private decimal PegarNovoValorUnitario(DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewProdutos.Rows[e.RowIndex].Cells[2].Value == null ||
+                    dataGridViewProdutos.Rows[e.RowIndex].Cells[2].Value.ToString() == "0" ||
+                    dataGridViewProdutos.Rows[e.RowIndex].Cells[2].Value.ToString() == "")
+            {
+                dataGridViewProdutos.Rows[e.RowIndex].Cells[2].Value = precoUnitarioAtualProdutoEditando;
+                return precoUnitarioAtualProdutoEditando;
+            }
+            else
+            {
+                return decimal.Parse(dataGridViewProdutos.Rows[e.RowIndex].Cells[2].Value.ToString());
+            }
+        }
+
+        private decimal PegarNovaQuantidade(DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewProdutos.Rows[e.RowIndex].Cells[3].Value == null ||
+                dataGridViewProdutos.Rows[e.RowIndex].Cells[3].Value.ToString() == "0" ||
+                dataGridViewProdutos.Rows[e.RowIndex].Cells[3].Value.ToString() == "")
+            {
+                dataGridViewProdutos.Rows[e.RowIndex].Cells[3].Value = 1;
+                return 1;
+            }
+            else
+            {
+                return decimal.Parse(dataGridViewProdutos.Rows[e.RowIndex].Cells[3].Value.ToString());
+            }
+        }
+
+        private void btnFaturarVenda_Click(object sender, EventArgs e)
         {
             FaturarVenda();
         }
@@ -178,26 +236,33 @@ namespace BruxoSistema
 
         private void FinalizarVenda(FormaPagamento formaPagamentoSelecionada)
         {
-            Usuario usuarioDaVenda = PegarUsuario();
-            if (usuarioDaVenda == null)
-                return;
+            try
+            {
+                Usuario usuarioDaVenda = PegarUsuario();
+                if (usuarioDaVenda == null)
+                    return;
 
-            List<PedidoProduto> produtosDoPedido = PegarProdutosDoPedido();
-            if (produtosDoPedido == null)
-                return;
+                List<PedidoProduto> produtosDoPedido = PegarProdutosDoPedido();
+                if (produtosDoPedido == null)
+                    return;
 
-            Pedido pedidoFinalizado = PegarInformacoesDoPedido();
-            if (pedidoFinalizado == null)
-                return;
+                Pedido pedidoFinalizado = PegarInformacoesDoPedido();
+                if (pedidoFinalizado == null)
+                    return;
 
-            pedidoFinalizado.FORMAPAMENTO_ID = formaPagamentoSelecionada;
-            pedidoFinalizado.PRODUTOSVENDIDOS = produtosDoPedido;
-            pedidoFinalizado.USUARIO_ID = usuarioDaVenda;
+                pedidoFinalizado.FORMAPAMENTO_ID = formaPagamentoSelecionada;
+                pedidoFinalizado.PRODUTOSVENDIDOS = produtosDoPedido;
+                pedidoFinalizado.USUARIO_ID = usuarioDaVenda;
 
-            Pedido.InserirNovoPedido(pedidoFinalizado);
+                PDVController.InserirNovoPedido(pedidoFinalizado);
 
-            MessageBox.Show("Venda Finalizada");
-            ResetarVenda();
+                MessageBox.Show("Venda Finalizada");
+                ResetarVenda();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro por favor entre em contato com o Bruxo! \n {ex.Message} \n\n {ex.StackTrace}");
+            }
         }
 
         private Pedido PegarInformacoesDoPedido()
@@ -267,17 +332,50 @@ namespace BruxoSistema
         private void dgvSelecionarCelulaInteira_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridViewProdutos.BeginEdit(true);
+            precoUnitarioAtualProdutoEditando = decimal.Parse(dataGridViewProdutos.Rows[e.RowIndex].Cells[2].Value.ToString());
         }
 
-        private void buttonResetarVenda_Click(object sender, EventArgs e)
+        private void btnResetarVenda_Click(object sender, EventArgs e)
         {
-
             if (dataGridViewProdutos.Rows.Count > 0)
             {
                 var resultado = MessageBox.Show("Os itens da venda serão perdidos", "Limpar Venda", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (resultado == DialogResult.Yes)
                 {
                     ResetarVenda();
+                }
+            }
+        }
+
+        private void dgvValidaDigito_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar != (char)Keys.Back) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+            if (e.KeyChar == ',' && (sender as TextBox).Text.IndexOf(',') > -1)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void dgVerificaDigito_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress -= new KeyPressEventHandler(dgvValidaDigito_KeyPress);
+            if (dataGridViewProdutos.CurrentCell.ColumnIndex == 2)
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(dgvValidaDigito_KeyPress);
+                }
+            }
+            if (dataGridViewProdutos.CurrentCell.ColumnIndex == 3)
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(dgvValidaDigito_KeyPress);
                 }
             }
         }

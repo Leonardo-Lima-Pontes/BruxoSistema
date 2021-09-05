@@ -62,4 +62,7 @@ colocar foco já na primra forma de pagamento - ok
 enter para finalizar - ok
 esc para cancelar o faturamento e voltar para inserir mais produtos (bug ao sair da tela) - ok
 
-Implementar testes
+PDV
+refatorar codigo para implementar testes - ok
+implementar testes - ok
+testar e impedir possiveis bugs ou erros - ok
