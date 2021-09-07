@@ -12,7 +12,7 @@ namespace BruxoBiblioteca.Controllers
     {
         public static bool VerificarExisteUsuarioSessao(int id, string nome)
         {
-            if (id != 0 && nome != null)
+            if (id != 0 && !string.IsNullOrWhiteSpace(nome))
                 return true;
 
             return false;
