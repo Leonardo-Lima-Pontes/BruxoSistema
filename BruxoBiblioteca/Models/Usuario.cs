@@ -53,17 +53,7 @@ namespace BruxoBiblioteca.Models
         }
 
         //Verifica se o usuario informado na tela de login realmente exite no sitema caso existe retorna o bjeto usuario se não retorna null
-        public static Usuario Logar(Usuario usuario)
-        {
-            using (IDbConnection conexao = new FbConnection(ConfigurationManager.ConnectionStrings["Banco"].ConnectionString))
-            {
-                conexao.Open();
-
-                usuario = conexao.Query<Usuario>("select * from usuario u where u.Nome = @NOME and u.senha = @SENHA", usuario).FirstOrDefault();
-            }
-
-            return usuario;
-        }
+        
     }
 
 }

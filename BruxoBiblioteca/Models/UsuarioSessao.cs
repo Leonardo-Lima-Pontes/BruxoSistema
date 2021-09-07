@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BruxoBiblioteca.Models
 {
-    public static class UsuarioSessao
+    public class UsuarioSessao
     {
         public static int IdUsuario { get; set; }
         public static string Nomeusuario { get; set; }

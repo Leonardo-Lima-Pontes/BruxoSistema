@@ -34,9 +34,9 @@ namespace BruxoSistema
             this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.labelNome = new System.Windows.Forms.Label();
             this.senhaLabel = new System.Windows.Forms.Label();
-            this.buttonEntrar = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrarUsuario = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -82,19 +82,19 @@ namespace BruxoSistema
             this.senhaLabel.TabIndex = 4;
             this.senhaLabel.Text = "Senha:";
             // 
-            // buttonEntrar
+            // btnEntrar
             // 
-            this.buttonEntrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonEntrar.Image")));
-            this.buttonEntrar.Location = new System.Drawing.Point(72, 288);
-            this.buttonEntrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonEntrar.Name = "buttonEntrar";
-            this.buttonEntrar.Size = new System.Drawing.Size(180, 35);
-            this.buttonEntrar.TabIndex = 5;
-            this.buttonEntrar.Text = "Entrar";
-            this.buttonEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEntrar.UseVisualStyleBackColor = true;
-            this.buttonEntrar.Click += new System.EventHandler(this.buttonEntrar_Click);
+            this.btnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Image")));
+            this.btnEntrar.Location = new System.Drawing.Point(72, 288);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(180, 35);
+            this.btnEntrar.TabIndex = 5;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // panel1
             // 
@@ -105,18 +105,18 @@ namespace BruxoSistema
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 7;
             // 
-            // button1
+            // btnCadastrarUsuario
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(260, 288);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 35);
-            this.button1.TabIndex = 9;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonCadastrarUsuario_Click);
+            this.btnCadastrarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarUsuario.Image")));
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(260, 288);
+            this.btnCadastrarUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
+            this.btnCadastrarUsuario.Size = new System.Drawing.Size(48, 35);
+            this.btnCadastrarUsuario.TabIndex = 9;
+            this.btnCadastrarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastrarUsuario.UseVisualStyleBackColor = true;
+            this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
             // 
             // pictureBox2
             // 
@@ -133,10 +133,10 @@ namespace BruxoSistema
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(360, 382);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(358, 382);
+            this.Controls.Add(this.btnCadastrarUsuario);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.buttonEntrar);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.labelNome);
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.textBoxSenha);
@@ -164,9 +164,9 @@ namespace BruxoSistema
         private System.Windows.Forms.TextBox textBoxSenha;
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Label senhaLabel;
-        private System.Windows.Forms.Button buttonEntrar;
+        private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastrarUsuario;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
