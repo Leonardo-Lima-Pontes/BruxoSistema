@@ -32,15 +32,15 @@ namespace BruxoSistema
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroProduto));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelNome = new System.Windows.Forms.Label();
-            this.textBoxCodigoProduto = new System.Windows.Forms.TextBox();
-            this.textBoxEstoqueProduto = new System.Windows.Forms.TextBox();
+            this.txtCodigoProduto = new System.Windows.Forms.TextBox();
+            this.txtEstoqueProduto = new System.Windows.Forms.TextBox();
             this.senhaLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxNomeProduto = new System.Windows.Forms.TextBox();
-            this.textBoxPrecoVendaProduto = new System.Windows.Forms.TextBox();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
+            this.txtPrecoVendaProduto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonEntrar = new System.Windows.Forms.Button();
+            this.btnCancelarCadastro = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,23 +65,23 @@ namespace BruxoSistema
             this.labelNome.TabIndex = 12;
             this.labelNome.Text = "Codigo:";
             // 
-            // textBoxCodigoProduto
+            // txtCodigoProduto
             // 
-            this.textBoxCodigoProduto.Location = new System.Drawing.Point(104, 129);
-            this.textBoxCodigoProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxCodigoProduto.Name = "textBoxCodigoProduto";
-            this.textBoxCodigoProduto.PlaceholderText = "Codigo do produto";
-            this.textBoxCodigoProduto.Size = new System.Drawing.Size(190, 23);
-            this.textBoxCodigoProduto.TabIndex = 3;
+            this.txtCodigoProduto.Location = new System.Drawing.Point(104, 129);
+            this.txtCodigoProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCodigoProduto.Name = "txtCodigoProduto";
+            this.txtCodigoProduto.PlaceholderText = "Codigo do produto";
+            this.txtCodigoProduto.Size = new System.Drawing.Size(190, 23);
+            this.txtCodigoProduto.TabIndex = 3;
             // 
-            // textBoxEstoqueProduto
+            // txtEstoqueProduto
             // 
-            this.textBoxEstoqueProduto.Location = new System.Drawing.Point(104, 161);
-            this.textBoxEstoqueProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxEstoqueProduto.Name = "textBoxEstoqueProduto";
-            this.textBoxEstoqueProduto.PlaceholderText = "Estoque do produto";
-            this.textBoxEstoqueProduto.Size = new System.Drawing.Size(190, 23);
-            this.textBoxEstoqueProduto.TabIndex = 4;
+            this.txtEstoqueProduto.Location = new System.Drawing.Point(104, 161);
+            this.txtEstoqueProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtEstoqueProduto.Name = "txtEstoqueProduto";
+            this.txtEstoqueProduto.PlaceholderText = "Estoque do produto";
+            this.txtEstoqueProduto.Size = new System.Drawing.Size(190, 23);
+            this.txtEstoqueProduto.TabIndex = 4;
             // 
             // senhaLabel
             // 
@@ -105,23 +105,23 @@ namespace BruxoSistema
             this.label1.TabIndex = 19;
             this.label1.Text = "Nome:";
             // 
-            // textBoxNomeProduto
+            // txtNomeProduto
             // 
-            this.textBoxNomeProduto.Location = new System.Drawing.Point(104, 68);
-            this.textBoxNomeProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxNomeProduto.Name = "textBoxNomeProduto";
-            this.textBoxNomeProduto.PlaceholderText = "Nome do produto";
-            this.textBoxNomeProduto.Size = new System.Drawing.Size(190, 23);
-            this.textBoxNomeProduto.TabIndex = 1;
+            this.txtNomeProduto.Location = new System.Drawing.Point(104, 68);
+            this.txtNomeProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.PlaceholderText = "Nome do produto";
+            this.txtNomeProduto.Size = new System.Drawing.Size(190, 23);
+            this.txtNomeProduto.TabIndex = 1;
             // 
-            // textBoxPrecoVendaProduto
+            // txtPrecoVendaProduto
             // 
-            this.textBoxPrecoVendaProduto.Location = new System.Drawing.Point(104, 100);
-            this.textBoxPrecoVendaProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxPrecoVendaProduto.Name = "textBoxPrecoVendaProduto";
-            this.textBoxPrecoVendaProduto.PlaceholderText = "Preço do produto";
-            this.textBoxPrecoVendaProduto.Size = new System.Drawing.Size(190, 23);
-            this.textBoxPrecoVendaProduto.TabIndex = 2;
+            this.txtPrecoVendaProduto.Location = new System.Drawing.Point(104, 100);
+            this.txtPrecoVendaProduto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPrecoVendaProduto.Name = "txtPrecoVendaProduto";
+            this.txtPrecoVendaProduto.PlaceholderText = "Preço do produto";
+            this.txtPrecoVendaProduto.Size = new System.Drawing.Size(190, 23);
+            this.txtPrecoVendaProduto.TabIndex = 2;
             // 
             // label2
             // 
@@ -134,33 +134,33 @@ namespace BruxoSistema
             this.label2.TabIndex = 20;
             this.label2.Text = "Preço:";
             // 
-            // button1
+            // btnCancelarCadastro
             // 
-            this.button1.Image = global::BruxoSistema.Properties.Resources.sair__1_;
-            this.button1.Location = new System.Drawing.Point(58, 247);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 35);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Cancelar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonCancelar_Click);
+            this.btnCancelarCadastro.Image = global::BruxoSistema.Properties.Resources.sair__1_;
+            this.btnCancelarCadastro.Location = new System.Drawing.Point(58, 247);
+            this.btnCancelarCadastro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCancelarCadastro.Name = "btnCancelarCadastro";
+            this.btnCancelarCadastro.Size = new System.Drawing.Size(236, 35);
+            this.btnCancelarCadastro.TabIndex = 22;
+            this.btnCancelarCadastro.Text = "Cancelar";
+            this.btnCancelarCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelarCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelarCadastro.UseVisualStyleBackColor = true;
+            this.btnCancelarCadastro.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
-            // buttonEntrar
+            // btnEntrar
             // 
-            this.buttonEntrar.Image = global::BruxoSistema.Properties.Resources.entrar;
-            this.buttonEntrar.Location = new System.Drawing.Point(58, 206);
-            this.buttonEntrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonEntrar.Name = "buttonEntrar";
-            this.buttonEntrar.Size = new System.Drawing.Size(236, 35);
-            this.buttonEntrar.TabIndex = 21;
-            this.buttonEntrar.Text = "Cadastrar Produto";
-            this.buttonEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEntrar.UseVisualStyleBackColor = true;
-            this.buttonEntrar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            this.btnEntrar.Image = global::BruxoSistema.Properties.Resources.entrar;
+            this.btnEntrar.Location = new System.Drawing.Point(58, 206);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(236, 35);
+            this.btnEntrar.TabIndex = 21;
+            this.btnEntrar.Text = "Cadastrar Produto";
+            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // pictureBox1
             // 
@@ -179,16 +179,16 @@ namespace BruxoSistema
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(328, 321);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonEntrar);
+            this.Controls.Add(this.btnCancelarCadastro);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxNomeProduto);
-            this.Controls.Add(this.textBoxPrecoVendaProduto);
+            this.Controls.Add(this.txtNomeProduto);
+            this.Controls.Add(this.txtPrecoVendaProduto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelNome);
-            this.Controls.Add(this.textBoxCodigoProduto);
-            this.Controls.Add(this.textBoxEstoqueProduto);
+            this.Controls.Add(this.txtCodigoProduto);
+            this.Controls.Add(this.txtEstoqueProduto);
             this.Controls.Add(this.senhaLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -197,7 +197,6 @@ namespace BruxoSistema
             this.Name = "CadastroProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produto";
-            this.Load += new System.EventHandler(this.CadastroProduto_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CadastroProduto_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -208,15 +207,15 @@ namespace BruxoSistema
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelNome;
-        private System.Windows.Forms.TextBox textBoxCodigoProduto;
-        private System.Windows.Forms.TextBox textBoxEstoqueProduto;
+        private System.Windows.Forms.TextBox txtCodigoProduto;
+        private System.Windows.Forms.TextBox txtEstoqueProduto;
         private System.Windows.Forms.Label senhaLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxNomeProduto;
-        private System.Windows.Forms.TextBox textBoxPrecoVendaProduto;
+        private System.Windows.Forms.TextBox txtNomeProduto;
+        private System.Windows.Forms.TextBox txtPrecoVendaProduto;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonEntrar;
+        private System.Windows.Forms.Button btnCancelarCadastro;
+        private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

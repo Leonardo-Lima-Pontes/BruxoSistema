@@ -41,12 +41,6 @@ namespace BruxoSistema
             pdv.ShowDialog();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            ConsultaDeVendas consultaDeVendas = new ConsultaDeVendas();
-            consultaDeVendas.ShowDialog();
-        }
-
         private void toolStripStatusLabel3_Click(object sender, EventArgs e)
         {
             DialogResult restarAplicacao = MessageBox.Show("Deseja realmente sair da conta meu consagrado ?", "Voltar para login", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -58,11 +52,9 @@ namespace BruxoSistema
 
         private void TelaInicial_KeyDown(object sender, KeyEventArgs e)
         {
-
             switch (e.KeyCode)
             {
                 case Keys.Enter: toolStripButton1_Click(sender, e); break;
-                case Keys.F4: toolStripButton2_Click(sender, e); break;
                 case Keys.F1: toolStripButton3_Click(sender, e); break;
                 case Keys.F3: toolStripButton4_Click(sender, e); break;
                 case Keys.Escape:

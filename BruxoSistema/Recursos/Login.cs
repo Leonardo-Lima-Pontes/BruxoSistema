@@ -1,5 +1,6 @@
 ﻿using BruxoBiblioteca.Controllers;
 using BruxoBiblioteca.Models;
+using FirebirdSql.Data.FirebirdClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,31 +46,43 @@ namespace BruxoSistema
 
         public void RealizarLogin()
         {
-            Usuario usuario = new Usuario();
-            usuario.NOME = textBoxNome.Text;
-            usuario.SENHA = textBoxSenha.Text;
-
-            bool loginInformacoesValidas = LoginController.ValidarLoginSenha(usuario);
-
-            if (!loginInformacoesValidas)
+            try
             {
-                MessageBox.Show("Por gentileza consagrado infome os dados corretamente !!");
-                return;
+                Usuario usuario = new Usuario();
+                usuario.NOME = textBoxNome.Text;
+                usuario.SENHA = textBoxSenha.Text;
+
+                bool loginInformacoesValidas = LoginController.ValidarLoginSenha(usuario);
+
+                if (!loginInformacoesValidas)
+                {
+                    MessageBox.Show("Por gentileza consagrado infome os dados corretamente !!");
+                    return;
+                }
+
+
+                bool loginEfetuado = LoginController.LogarSigeBruxo(usuario);
+
+                if (!loginEfetuado)
+                {
+                    MessageBox.Show("Usuario ou senha incorretos");
+                    return;
+                }
+
+                this.Hide();
+                TelaInicial telaInicial = new TelaInicial();
+                telaInicial.Closed += (s, args) => this.Close();
+                telaInicial.ShowDialog();
             }
-
-
-            bool loginEfetuado = LoginController.LogarSigeBruxo(usuario);
-
-            if (!loginEfetuado)
+            catch (FbException ex)
             {
-                MessageBox.Show("Usuario ou senha incorretos");
-                return;
+                MessageBox.Show($"Não foi possivel se conectar ao banco de dados, por getileza verifique se o serviço" +
+                    $"FirebirdGuardianDefaultInstance está em execução! \n\n\n {ex.Message}");
             }
-
-            this.Hide();
-            TelaInicial telaInicial = new TelaInicial();
-            telaInicial.Closed += (s, args) => this.Close();
-            telaInicial.ShowDialog();
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro por favor entre em contato com o Bruxo! \n {ex.Message} \n {ex.StackTrace}");
+            }
         }
 
         private void Login_KeyDown_1(object sender, KeyEventArgs e)
