@@ -30,7 +30,7 @@ namespace BruxoSistema
             CadastroUsuario cadastroUsuario = new CadastroUsuario();
             cadastroUsuario.ShowDialog();
 
-            if (!LoginController.VerificarExisteUsuarioSessao(UsuarioSessao.IdUsuario, UsuarioSessao.Nomeusuario))
+            if (!LoginController.VerificarExisteUsuarioSessao(UsuarioSessao.IdUsuario, UsuarioSessao.NomeUsuario))
                 return;
 
             this.Hide();

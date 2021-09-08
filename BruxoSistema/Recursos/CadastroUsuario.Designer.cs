@@ -66,7 +66,7 @@ namespace BruxoSistema
             this.buttonEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEntrar.UseVisualStyleBackColor = true;
-            this.buttonEntrar.Click += new System.EventHandler(this.buttonGravar_Click);
+            this.buttonEntrar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // label2
             // 
@@ -142,7 +142,7 @@ namespace BruxoSistema
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonCancelar_Click);
+            this.button1.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pictureBox1
             // 
@@ -182,7 +182,7 @@ namespace BruxoSistema
             this.Name = "CadastroUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Usuario";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CadastroUsuario_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CadastrarUsuario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

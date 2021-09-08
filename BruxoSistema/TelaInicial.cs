@@ -20,7 +20,7 @@ namespace BruxoSistema
 
         private void TelaInicial_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabel2.Text = UsuarioSessao.Nomeusuario;
+            toolStripStatusLabel2.Text = UsuarioSessao.NomeUsuario;
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)

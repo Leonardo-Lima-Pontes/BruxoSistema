@@ -20,7 +20,7 @@ namespace BruxoSistema
         public PDV()
         {
             InitializeComponent();
-            labelVendedor.Text = UsuarioSessao.Nomeusuario;
+            labelVendedor.Text = UsuarioSessao.NomeUsuario;
             dataGridViewProdutos.Columns[2].DefaultCellStyle.Format = "0.00##";
         }
 
@@ -309,7 +309,7 @@ namespace BruxoSistema
         {
             Usuario usuarioDaVenda = new Usuario();
             usuarioDaVenda.ID_USUARIO = UsuarioSessao.IdUsuario;
-            usuarioDaVenda.NOME = UsuarioSessao.Nomeusuario;
+            usuarioDaVenda.NOME = UsuarioSessao.NomeUsuario;
 
             bool usuarioValidado = PDVController.ValidarUsuario(usuarioDaVenda);
             if (!usuarioValidado)
