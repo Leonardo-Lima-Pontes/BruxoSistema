@@ -24,7 +24,6 @@ namespace BruxoSistema
             InserirProdutosNaConsulta(produtosParaEscolher);
         }
 
-        // colocar os produtos no datagridview para selação
         private void InserirProdutosNaConsulta(List<Produto> produtosParaEscolher)
         {
             foreach (var produto in produtosParaEscolher)
@@ -38,7 +37,12 @@ namespace BruxoSistema
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSelecionarProduto_Click(object sender, EventArgs e)
+        {
+            SelecionarProdutoParaVenda();
+        }
+
+        private void SelecionarProdutoParaVenda()
         {
             int index = dataGridViewProdutos.SelectedRows[0].Index;
 
@@ -47,20 +51,16 @@ namespace BruxoSistema
             produtoSelecionado.PRECOVENDA = decimal.Parse(dataGridViewProdutos.Rows[index].Cells[2].Value.ToString());
             produtoSelecionado.ID_PRODUTO = int.Parse(dataGridViewProdutos.Rows[index].Cells[4].Value.ToString());
 
-            this.Close();
+            Close();
         }
 
-        private void dataGridViewProdutos_KeyDown(object sender, KeyEventArgs e)
+        private void SelecionarProdutoOuSair_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue.Equals(13)) //ENTER
-            {
-                button1_Click(sender, e);
-            }
+            if (e.KeyCode == Keys.Enter)
+                SelecionarProdutoParaVenda();
 
-            if (e.KeyValue.Equals(27)) //ESC
-            {
-                this.Close();
-            }
+            if (e.KeyCode == Keys.Escape)
+                Close();
         }
     }
 }

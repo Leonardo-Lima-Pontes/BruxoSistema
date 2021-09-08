@@ -150,10 +150,6 @@ namespace BruxoSistema
             precoUnitarioAtualProdutoEditando = produtoParaVenda.PRECOVENDA;
         }
 
-        //quando deixa vazio lança exeção
-        //quando é 0 da problema
-        //quando deixar vazio ou 0 dar replace para 1 (igual no sigecom)
-
         private void dgvRecalcularValorTotalProduto_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             try

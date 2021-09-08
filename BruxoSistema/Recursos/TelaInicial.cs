@@ -16,32 +16,49 @@ namespace BruxoSistema
         public TelaInicial()
         {
             InitializeComponent();
-        }
 
-        private void TelaInicial_Load(object sender, EventArgs e)
-        {
             toolStripStatusLabel2.Text = UsuarioSessao.NomeUsuario;
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
+        private void btnAbrirTelaCadastroProduto_Click(object sender, EventArgs e)
+        {
+            AbrirTelaCadastroProduto();
+        }
+
+        private void AbrirTelaCadastroProduto()
         {
             CadastroProduto cadastroProduto = new CadastroProduto();
             cadastroProduto.ShowDialog();
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void btnAbrirTelaFormaPagamento_Click(object sender, EventArgs e)
+        {
+            AbrirTelaFormaPagamento();
+        }
+
+        private void AbrirTelaFormaPagamento()
         {
             CadastroFormaPagamento formaPagamento = new CadastroFormaPagamento();
             formaPagamento.ShowDialog();
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void btnAbrirTelaPDV_Click(object sender, EventArgs e)
+        {
+            AbrirTelaPDV();
+        }
+
+        private void AbrirTelaPDV()
         {
             PDV pdv = new PDV();
             pdv.ShowDialog();
         }
 
-        private void toolStripStatusLabel3_Click(object sender, EventArgs e)
+        private void btnVoltarParaTeleDeLogin_Click(object sender, EventArgs e)
+        {
+            VoltarParaTeleDeLogin();
+        }
+
+        private void VoltarParaTeleDeLogin()
         {
             DialogResult restarAplicacao = MessageBox.Show("Deseja realmente sair da conta meu consagrado ?", "Voltar para login", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (restarAplicacao == DialogResult.Yes)
@@ -54,18 +71,17 @@ namespace BruxoSistema
         {
             switch (e.KeyCode)
             {
-                case Keys.Enter: toolStripButton1_Click(sender, e); break;
-                case Keys.F1: toolStripButton3_Click(sender, e); break;
-                case Keys.F3: toolStripButton4_Click(sender, e); break;
-                case Keys.Escape:
-
-                    DialogResult result = MessageBox.Show("Deseja sair do sistema ?", "SAIR", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.Yes)
-                    {
-                        this.Close();
-                    }
-                    break;
+                case Keys.Enter: AbrirTelaPDV(); break;
+                case Keys.F1: AbrirTelaFormaPagamento(); break;
+                case Keys.F3: AbrirTelaCadastroProduto(); break;
+                case Keys.Escape:SairDoSistema();break;
             }
+        }
+
+        private void SairDoSistema()
+        {
+            DialogResult result = MessageBox.Show("Deseja realmente sair do sistema ?", "SAIR", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes) Close();
         }
     }
 }

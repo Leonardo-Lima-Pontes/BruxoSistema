@@ -31,7 +31,7 @@ namespace BruxoSistema
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Faturamento));
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonEntrar = new System.Windows.Forms.Button();
+            this.btnFaturarVenda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -44,19 +44,19 @@ namespace BruxoSistema
             this.label1.TabIndex = 101;
             this.label1.Text = "FORMA DE PAGAMENTO";
             // 
-            // buttonEntrar
+            // btnFaturarVenda
             // 
-            this.buttonEntrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonEntrar.Image")));
-            this.buttonEntrar.Location = new System.Drawing.Point(163, 293);
-            this.buttonEntrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonEntrar.Name = "buttonEntrar";
-            this.buttonEntrar.Size = new System.Drawing.Size(180, 35);
-            this.buttonEntrar.TabIndex = 102;
-            this.buttonEntrar.Text = "Faturar (ENTER)";
-            this.buttonEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEntrar.UseVisualStyleBackColor = true;
-            this.buttonEntrar.Click += new System.EventHandler(this.button1_Click);
+            this.btnFaturarVenda.Image = ((System.Drawing.Image)(resources.GetObject("btnFaturarVenda.Image")));
+            this.btnFaturarVenda.Location = new System.Drawing.Point(163, 293);
+            this.btnFaturarVenda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnFaturarVenda.Name = "btnFaturarVenda";
+            this.btnFaturarVenda.Size = new System.Drawing.Size(180, 35);
+            this.btnFaturarVenda.TabIndex = 102;
+            this.btnFaturarVenda.Text = "Faturar (ENTER)";
+            this.btnFaturarVenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFaturarVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFaturarVenda.UseVisualStyleBackColor = true;
+            this.btnFaturarVenda.Click += new System.EventHandler(this.btnFaturarVenda_Click);
             // 
             // Faturamento
             // 
@@ -64,7 +64,7 @@ namespace BruxoSistema
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(506, 340);
-            this.Controls.Add(this.buttonEntrar);
+            this.Controls.Add(this.btnFaturarVenda);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -73,7 +73,7 @@ namespace BruxoSistema
             this.Name = "Faturamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Faturamento";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Faturamento_KeyDown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FaturarOuSair_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,6 +81,6 @@ namespace BruxoSistema
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonEntrar;
+        private System.Windows.Forms.Button btnFaturarVenda;
     }
 }

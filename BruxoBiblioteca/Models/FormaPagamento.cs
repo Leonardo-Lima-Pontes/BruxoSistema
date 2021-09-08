@@ -46,7 +46,7 @@ namespace BruxoBiblioteca.Models
             using (IDbConnection conexao = new FbConnection(ConfigurationManager.ConnectionStrings["Banco"].ConnectionString))
             {
                 //produtos = conexao.Query<Produto>("select * from produto p where p.codigo = @CODIGO").ToList();
-                formas = conexao.Query<FormaPagamento>("SELECT * FROM forma_pagamento WHERE desabilitado = 'N'").ToList();
+                formas = conexao.Query<FormaPagamento>("SELECT FIRST 9 * FROM forma_pagamento WHERE desabilitado = 'N'").ToList();
             };
 
             return formas;

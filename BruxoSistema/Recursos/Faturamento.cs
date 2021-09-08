@@ -1,4 +1,5 @@
-﻿using BruxoBiblioteca.Models;
+﻿using BruxoBiblioteca.Controllers;
+using BruxoBiblioteca.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,11 +24,14 @@ namespace BruxoSistema
             CarregarFormasDePagamento();
         }
 
-        //carrega todas formas de pagamentos habilitadas no sistema
         private void CarregarFormasDePagamento()
         {
-            formasDePagamentosHabilitadas = FormaPagamento.SelecionarFormasDePagamentoHabilitadas();
+            formasDePagamentosHabilitadas = FaturamentoController.SelecionarFormasDePagamentoHabilitadas();
+            CriarBotoesDeFormasDePagamentos(formasDePagamentosHabilitadas);
+        }
 
+        private void CriarBotoesDeFormasDePagamentos(List<FormaPagamento> formasDePagamentosHabilitadas)
+        {
             int posicaoInicialX = 70;
             int posicaoInicialY = 9;
             int tabIndex = 1;
@@ -67,34 +71,30 @@ namespace BruxoSistema
             foreach (RadioButton forma in Controls.OfType<RadioButton>())
             {
                 if (forma.Checked == false)
-                {
                     forma.BackColor = Color.White;
-                }
                 else
-                {
                     forma.BackColor = Color.LightBlue;
-                }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnFaturarVenda_Click(object sender, EventArgs e)
+        {
+            FaturarVenda();
+        }
+
+        private void FaturarVenda()
         {
             formaPagamentoSelecionada = (FormaPagamento)this.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Tag;
-            this.Close();
+            Close();
         }
 
-        private void Faturamento_KeyDown(object sender, KeyEventArgs e)
+        private void FaturarOuSair_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue.Equals(13)) //ENTER
-            {
-                button1_Click(sender, e);
-            }
+            if (e.KeyCode == Keys.Enter)
+                FaturarVenda();
 
-            if (e.KeyValue.Equals(27))
-            {
-                this.Close();
-            }
-
+            if (e.KeyCode == Keys.Escape)
+                Close();
         }
     }
 }
