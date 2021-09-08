@@ -46,21 +46,6 @@ namespace BruxoBiblioteca.Models
             ESTOQUE = eSTOQUE;
             PRECOVENDA = pRECOVENDA;
         }
-
-
-
-        /// <summary>
-        /// Método para inserir um novo usuario
-        /// </summary>
-        /// <param name="usuario">Objeto usuario a ser passado para inserção no banco de dados</param>
-        public static void InserirNovoProduto(Produto produto)
-        {
-            using (IDbConnection conexao = new FbConnection(ConfigurationManager.ConnectionStrings["Banco"].ConnectionString))
-            {
-                var resultado = conexao.Execute("insert into produto (nome, codigo, estoque, precovenda) values (@NOME, @CODIGO, @ESTOQUE, @PRECOVENDA)", produto);
-            };
-        }
-
     }
 
 }

@@ -76,7 +76,7 @@ namespace BruxoSistema
             // toolStripStatusLabel4
             // 
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(957, 17);
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(988, 17);
             this.toolStripStatusLabel4.Spring = true;
             // 
             // btnVoltarParaTeleDeLogin
@@ -94,7 +94,7 @@ namespace BruxoSistema
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 895F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 897F));
             this.tableLayoutPanel1.Controls.Add(this.toolStrip1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.toolStrip2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -116,7 +116,7 @@ namespace BruxoSistema
             this.toolStrip1.Location = new System.Drawing.Point(1, 1);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(216, 74);
+            this.toolStrip1.Size = new System.Drawing.Size(214, 74);
             this.toolStrip1.TabIndex = 5;
             // 
             // btnAbrirTelaPDV
@@ -148,9 +148,9 @@ namespace BruxoSistema
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAbrirTelaCadastroProduto});
-            this.toolStrip2.Location = new System.Drawing.Point(218, 1);
+            this.toolStrip2.Location = new System.Drawing.Point(216, 1);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(895, 74);
+            this.toolStrip2.Size = new System.Drawing.Size(897, 74);
             this.toolStrip2.TabIndex = 6;
             this.toolStrip2.Text = "toolStrip2";
             // 

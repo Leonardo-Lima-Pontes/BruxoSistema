@@ -146,6 +146,7 @@ namespace BruxoSistema
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ErrorImage = global::BruxoSistema.Properties.Resources.chapeu_de_bruxa;
             this.pictureBox1.Image = global::BruxoSistema.Properties.Resources.chapeu_de_bruxa;
             this.pictureBox1.Location = new System.Drawing.Point(117, 48);
             this.pictureBox1.Name = "pictureBox1";
