@@ -33,7 +33,7 @@ namespace BruxoSistema
             this.checkBoxDesabilitado = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.buttonEntrar = new System.Windows.Forms.Button();
+            this.btnCadastrarFormaPagamento = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNomeFormaPagamento = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -73,21 +73,21 @@ namespace BruxoSistema
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonCancelar_Click);
+            this.button1.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // buttonEntrar
+            // btnCadastrarFormaPagamento
             // 
-            this.buttonEntrar.Image = global::BruxoSistema.Properties.Resources.entrar;
-            this.buttonEntrar.Location = new System.Drawing.Point(52, 186);
-            this.buttonEntrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonEntrar.Name = "buttonEntrar";
-            this.buttonEntrar.Size = new System.Drawing.Size(236, 35);
-            this.buttonEntrar.TabIndex = 2;
-            this.buttonEntrar.Text = "Cadastrar Forma";
-            this.buttonEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonEntrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEntrar.UseVisualStyleBackColor = true;
-            this.buttonEntrar.Click += new System.EventHandler(this.buttonSalvar_Click);
+            this.btnCadastrarFormaPagamento.Image = global::BruxoSistema.Properties.Resources.entrar;
+            this.btnCadastrarFormaPagamento.Location = new System.Drawing.Point(52, 186);
+            this.btnCadastrarFormaPagamento.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCadastrarFormaPagamento.Name = "btnCadastrarFormaPagamento";
+            this.btnCadastrarFormaPagamento.Size = new System.Drawing.Size(236, 35);
+            this.btnCadastrarFormaPagamento.TabIndex = 2;
+            this.btnCadastrarFormaPagamento.Text = "Cadastrar Forma";
+            this.btnCadastrarFormaPagamento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarFormaPagamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastrarFormaPagamento.UseVisualStyleBackColor = true;
+            this.btnCadastrarFormaPagamento.Click += new System.EventHandler(this.btnSalvarFormaPagamento_Click);
             // 
             // label1
             // 
@@ -126,7 +126,7 @@ namespace BruxoSistema
             this.ClientSize = new System.Drawing.Size(328, 321);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonEntrar);
+            this.Controls.Add(this.btnCadastrarFormaPagamento);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNomeFormaPagamento);
             this.Controls.Add(this.panel1);
@@ -149,7 +149,7 @@ namespace BruxoSistema
         private System.Windows.Forms.CheckBox checkBoxDesabilitado;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonEntrar;
+        private System.Windows.Forms.Button btnCadastrarFormaPagamento;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxNomeFormaPagamento;
         private System.Windows.Forms.Panel panel1;
