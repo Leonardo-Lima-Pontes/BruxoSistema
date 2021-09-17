@@ -14,9 +14,9 @@ using BruxoSistema.NovasTelas.NovosRecursos;
 
 namespace BruxoSistema.NovasTelas.Recursos
 {
-    public partial class frmLogin : DevExpress.XtraEditors.XtraForm
+    public partial class frmLoginteste : DevExpress.XtraEditors.XtraForm
     {
-        public frmLogin()
+        public frmLoginteste()
         {
             InitializeComponent();
             CarregarConfiguracoesIniciais();

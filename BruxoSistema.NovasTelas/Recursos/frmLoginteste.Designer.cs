@@ -1,7 +1,7 @@
 ﻿
 namespace BruxoSistema.NovasTelas.Recursos
 {
-    partial class frmLogin
+    partial class frmLoginteste
     {
         /// <summary>
         /// Required designer variable.
