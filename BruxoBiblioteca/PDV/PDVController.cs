@@ -1,18 +1,13 @@
-﻿using BruxoBiblioteca.DAO;
+﻿using System.Collections.Generic;
 using BruxoBiblioteca.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BruxoBiblioteca.Controllers
+namespace BruxoBiblioteca.PDV
 {
-    public static class PDVController
+    public static class PdvController
     {
         public static List<Produto> SelecionarProdutosVenda(int codigoProduto)
         {
-            List<Produto> produtos = PDVDao.SelecionarProdutoVenda(codigoProduto);
+            var produtos = PDVDao.SelecionarProdutoVenda(codigoProduto);
 
             return produtos;
         }
@@ -22,11 +17,8 @@ namespace BruxoBiblioteca.Controllers
             if (string.IsNullOrEmpty(entradaUsuario))
                 return true;
 
-            bool validaCodigo = int.TryParse(entradaUsuario, out int codigoProduto);
-            if (validaCodigo)
-                return true;
-
-            return false;
+            var validaCodigo = int.TryParse(entradaUsuario, out _);
+            return validaCodigo;
         }
 
         public static decimal RecalcularPrecoTotalVendaProduto(decimal novoValorUnitario, decimal novaQuantidade)
@@ -36,39 +28,25 @@ namespace BruxoBiblioteca.Controllers
 
         public static bool ValidarProdutoParaVenda(Produto produtoParaVenda)
         {
-            if (produtoParaVenda.CODIGO == 0 ||
-                produtoParaVenda.ID_PRODUTO == 0 ||
-                produtoParaVenda.NOME == null ||
-                produtoParaVenda.PRECOVENDA == 0)
-                return false;
-
-            return true;
+            return produtoParaVenda.CODIGO != 0
+                   && produtoParaVenda.ID_PRODUTO != 0 
+                   && produtoParaVenda.NOME != null
+                   && produtoParaVenda.PRECOVENDA != 0;
         }
 
         public static bool ValidarUsuario(Usuario usuario)
         {
-            if (usuario.ID_USUARIO == 0 || string.IsNullOrWhiteSpace(usuario.NOME))
-                return false;
-
-            return true;
+            return usuario.ID_USUARIO != 0 && !string.IsNullOrWhiteSpace(usuario.NOME);
         }
 
         public static bool ValidarPedidoProduto(PedidoProduto produtoDaVenda)
         {
-            if (produtoDaVenda.QUANTIDADE == 0 ||
-                produtoDaVenda.PRODUTO_ID == 0 ||
-                produtoDaVenda.VALOR == 0)
-                return false;
-
-            return true;
+            return produtoDaVenda.QUANTIDADE != 0 && produtoDaVenda.PRODUTO_ID != 0 && produtoDaVenda.VALOR != 0;
         }
 
         public static bool ValidarPedido(Pedido pedidoFinalizado)
         {
-            if (pedidoFinalizado.VALORPEDIDO == 0)
-                return false;
-
-            return true;
+            return pedidoFinalizado.VALORPEDIDO != 0;
         }
 
         public static void InserirNovoPedido(Pedido pedidoFinalizado)

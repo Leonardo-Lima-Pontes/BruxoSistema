@@ -1,15 +1,10 @@
-﻿using BruxoBiblioteca.Controllers;
-using BruxoBiblioteca.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BruxoBiblioteca.NovasTelas.Models;
+using BruxoBiblioteca.NovasTelas.PDV;
+
 
 namespace BruxoSistema
 {
@@ -58,7 +53,7 @@ namespace BruxoSistema
         private void FaturarVendaOuSelecionarProduto()
         {
             var entradaUsuario = txtPesquisaProduto.Text;
-            bool validado = PDVController.ValidarEntradaUsuario(entradaUsuario);
+            bool validado = PdvController.ValidarEntradaUsuario(entradaUsuario);
 
             if (!validado)
             {
@@ -77,7 +72,7 @@ namespace BruxoSistema
         private void SelecionarOpcaoDeLancamentoProduto()
         {
             int codigoProduto = int.Parse(txtPesquisaProduto.Text);
-            List<Produto> produtosParaVenda = PDVController.SelecionarProdutosVenda(codigoProduto);
+            List<Produto> produtosParaVenda = PdvController.SelecionarProdutosVenda(codigoProduto);
 
             int opcaoLancamento = produtosParaVenda.Count;
 
@@ -103,7 +98,7 @@ namespace BruxoSistema
 
         private void RealizarProcessoLancarProduto(Produto produto)
         {
-            bool validaProduto = PDVController.ValidarProdutoParaVenda(produto);
+            bool validaProduto = PdvController.ValidarProdutoParaVenda(produto);
             if (validaProduto == false)
                 return;
 
@@ -160,7 +155,7 @@ namespace BruxoSistema
                 decimal novaQuantidade = PegarNovaQuantidade(e);
                 decimal novoValorUnitario = PegarNovoValorUnitario(e);
 
-                decimal novoValorTotal = PDVController.RecalcularPrecoTotalVendaProduto(novoValorUnitario, novaQuantidade);
+                decimal novoValorTotal = PdvController.RecalcularPrecoTotalVendaProduto(novoValorUnitario, novaQuantidade);
 
                 dataGridViewProdutos.Rows[e.RowIndex].Cells[4].Value = novoValorTotal;
 
@@ -250,7 +245,7 @@ namespace BruxoSistema
                 pedidoFinalizado.PRODUTOSVENDIDOS = produtosDoPedido;
                 pedidoFinalizado.USUARIO_ID = usuarioDaVenda;
 
-                PDVController.InserirNovoPedido(pedidoFinalizado);
+                PdvController.InserirNovoPedido(pedidoFinalizado);
 
                 MessageBox.Show("Venda Finalizada");
                 ResetarVenda();
@@ -267,7 +262,7 @@ namespace BruxoSistema
 
             pedidoFinalizado.VALORPEDIDO = decimal.Parse(labelTotalVenda.Text);
 
-            bool pedidoValidado = PDVController.ValidarPedido(pedidoFinalizado);
+            bool pedidoValidado = PdvController.ValidarPedido(pedidoFinalizado);
             if (!pedidoValidado)
             {
                 MessageBox.Show("Consagrado por favor esses produtos não podem ser inseridos desta maneira na venda!");
@@ -288,7 +283,7 @@ namespace BruxoSistema
                 produtoDoPedido.VALOR = decimal.Parse(row.Cells[4].Value.ToString());
                 produtoDoPedido.PRODUTO_ID = int.Parse(row.Cells[5].Value.ToString());
 
-                bool pedidoProdutoValidado = PDVController.ValidarPedidoProduto(produtoDoPedido);
+                bool pedidoProdutoValidado = PdvController.ValidarPedidoProduto(produtoDoPedido);
                 if (!pedidoProdutoValidado)
                 {
                     MessageBox.Show("Consagrado por favor esses produtos não podem ser inseridos desta maneira na venda!");
@@ -307,7 +302,7 @@ namespace BruxoSistema
             usuarioDaVenda.ID_USUARIO = UsuarioSessao.IdUsuario;
             usuarioDaVenda.NOME = UsuarioSessao.NomeUsuario;
 
-            bool usuarioValidado = PDVController.ValidarUsuario(usuarioDaVenda);
+            bool usuarioValidado = PdvController.ValidarUsuario(usuarioDaVenda);
             if (!usuarioValidado)
             {
                 MessageBox.Show("Consagrado a venda não pode ser concluida pois não há usuario logado no sistema!");

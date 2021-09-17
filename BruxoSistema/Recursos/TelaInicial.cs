@@ -1,5 +1,4 @@
-﻿using BruxoBiblioteca.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BruxoBiblioteca.NovasTelas.Models;
+using BruxoSistema.NovasTelas.Recursos;
 
 namespace BruxoSistema
 {
@@ -56,6 +57,17 @@ namespace BruxoSistema
         private void btnVoltarParaTeleDeLogin_Click(object sender, EventArgs e)
         {
             VoltarParaTeleDeLogin();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            AbrirTelaConfiguracoes();
+        }
+
+        private void AbrirTelaConfiguracoes()
+        {
+            frmNovasTelasConfig frmCpnfig = new frmNovasTelasConfig();
+            frmCpnfig.ShowDialog();
         }
 
         private void VoltarParaTeleDeLogin()

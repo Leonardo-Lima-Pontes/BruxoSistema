@@ -1,15 +1,8 @@
-﻿using BruxoBiblioteca.Controllers;
-using BruxoBiblioteca.Models;
-using FirebirdSql.Data.FirebirdClient;
+﻿using FirebirdSql.Data.FirebirdClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using BruxoBiblioteca.NovasTelas.Login;
+using BruxoBiblioteca.NovasTelas.Models;
 
 namespace BruxoSistema
 {
@@ -18,6 +11,7 @@ namespace BruxoSistema
         public Login()
         {
             InitializeComponent();
+
         }
 
         private void btnCadastrarUsuario_Click(object sender, EventArgs e)

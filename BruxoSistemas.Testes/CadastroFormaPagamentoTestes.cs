@@ -1,9 +1,9 @@
-﻿using BruxoBiblioteca.Controllers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BruxoBiblioteca.NovasTelas.CadastroFormaPagamento;
 using Xunit;
 
 namespace BruxoSistema.Testes

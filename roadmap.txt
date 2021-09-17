@@ -66,3 +66,22 @@ PDV
 refatorar codigo para implementar testes - ok
 implementar testes - ok
 testar e impedir possiveis bugs ou erros - ok
+
+IMPLEMENTAR TESTES NO SISTEMA - ok
+
+criar nova coluna no banco de dados - ok
+nome config - ok
+com arquivo json user newtonjson - ok
+criar tabela config com coluna chamada feature toogle: dentro dela colocar - ok
+
+criar novas telas com dev express utilizando featre toogle
+cadastros
+	formaPagamento
+	cadastroProduto
+	cadastroUsuario
+consultaprodutovenda
+faturamento
+pdv
+telainicial
+login
+

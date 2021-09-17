@@ -1,7 +1,8 @@
 using System;
 using Xunit;
-using BruxoBiblioteca.Controllers;
-using BruxoBiblioteca.Models;
+using BruxoBiblioteca.NovasTelas.Models;
+using BruxoBiblioteca.NovasTelas.PDV;
+
 
 namespace BruxoSistemas.Testes
 {
@@ -16,7 +17,7 @@ namespace BruxoSistemas.Testes
         [InlineData(" ", false)]
         public void ValidarEntradaUsuario_ConsultaProdutoId_RetornaBool(string entradaUsuario, bool valorEsperado)
         {
-            bool entradaUsuarioValida = PDVController.ValidarEntradaUsuario(entradaUsuario);
+            bool entradaUsuarioValida = PdvController.ValidarEntradaUsuario(entradaUsuario);
 
             Assert.Equal(valorEsperado, entradaUsuarioValida);
         }
@@ -29,7 +30,7 @@ namespace BruxoSistemas.Testes
             decimal novaQuantidade, 
             decimal valorEsperado)
         {
-            decimal precoTotalProduto = PDVController.RecalcularPrecoTotalVendaProduto(novoValorUnitario, novaQuantidade);
+            decimal precoTotalProduto = PdvController.RecalcularPrecoTotalVendaProduto(novoValorUnitario, novaQuantidade);
 
             Assert.Equal(valorEsperado, precoTotalProduto);
             Assert.True(precoTotalProduto > 0);
@@ -46,7 +47,7 @@ namespace BruxoSistemas.Testes
 
             bool valorEsperado = true;
 
-            bool validaProduto = PDVController.ValidarProdutoParaVenda(produto);
+            bool validaProduto = PdvController.ValidarProdutoParaVenda(produto);
 
             Assert.Equal(validaProduto, valorEsperado);
         }
@@ -60,7 +61,7 @@ namespace BruxoSistemas.Testes
 
             bool valorEsperado = true;
 
-            bool validaUsuario = PDVController.ValidarUsuario(usuario);
+            bool validaUsuario = PdvController.ValidarUsuario(usuario);
 
             Assert.Equal(validaUsuario, valorEsperado);
         }
@@ -75,7 +76,7 @@ namespace BruxoSistemas.Testes
 
             bool valorEsperado = true;
 
-            bool validaPedidoProduto = PDVController.ValidarPedidoProduto(pedidoProduto);
+            bool validaPedidoProduto = PdvController.ValidarPedidoProduto(pedidoProduto);
 
             Assert.Equal(validaPedidoProduto, valorEsperado);
         }
@@ -88,7 +89,7 @@ namespace BruxoSistemas.Testes
 
             bool valorEsperado = true;
 
-            bool validaPedido = PDVController.ValidarPedido(pedido);
+            bool validaPedido = PdvController.ValidarPedido(pedido);
 
             Assert.Equal(validaPedido, valorEsperado);
         }

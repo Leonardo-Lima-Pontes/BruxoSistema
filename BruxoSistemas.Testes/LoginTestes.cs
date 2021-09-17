@@ -1,10 +1,10 @@
-﻿using BruxoBiblioteca.Controllers;
-using BruxoBiblioteca.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BruxoBiblioteca.NovasTelas.Login;
+using BruxoBiblioteca.NovasTelas.Models;
 using Xunit;
 
 namespace BruxoSistema.Testes

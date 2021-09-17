@@ -1,12 +1,6 @@
-﻿using BruxoBiblioteca.DAO;
-using BruxoBiblioteca.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BruxoBiblioteca.Models;
 
-namespace BruxoBiblioteca.Controllers
+namespace BruxoBiblioteca.CadastroProduto
 {
     public class CadastroProdutoController
     {

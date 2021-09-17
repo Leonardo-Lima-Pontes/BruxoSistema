@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BruxoBiblioteca\BruxoBiblioteca.csproj" />
+    <ProjectReference Include="..\BruxoBiblioteca.NovasTelas\BruxoBiblioteca.NovasTelas.csproj" />
   </ItemGroup>
 
 </Project>

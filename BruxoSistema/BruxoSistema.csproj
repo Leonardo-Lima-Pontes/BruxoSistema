@@ -8,7 +8,48 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BruxoBiblioteca\BruxoBiblioteca.csproj" />
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="8.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BruxoBiblioteca.NovasTelas\BruxoBiblioteca.NovasTelas.csproj" />
+    <ProjectReference Include="..\BruxoSistema.NovasTelas\BruxoSistema.NovasTelas.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.Data.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v18.1">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.Images.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.1.Core">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.Pdf.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.1.Drawing">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.Pdf.v18.1.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.Printing.v18.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.Utils.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.XtraBars.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.XtraEditors.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.XtraLayout.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPdfViewer.v18.1">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.XtraPdfViewer.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v18.1">
+      <HintPath>..\..\..\..\..\..\lib\DevExpress.XtraTreeList.v18.1.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

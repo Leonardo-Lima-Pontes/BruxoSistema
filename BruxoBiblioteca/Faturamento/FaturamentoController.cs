@@ -1,12 +1,7 @@
-﻿using BruxoBiblioteca.DAO;
+﻿using System.Collections.Generic;
 using BruxoBiblioteca.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BruxoBiblioteca.Controllers
+namespace BruxoBiblioteca.Faturamento
 {
     public class FaturamentoController
     {
