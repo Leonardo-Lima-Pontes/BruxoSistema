@@ -138,5 +138,20 @@
   <ItemGroup>
     <None Include="Resources\bruxo.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216490_add_user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216490_add_user_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_SistemasBr_Solid_hor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
