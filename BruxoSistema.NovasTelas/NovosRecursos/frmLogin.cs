@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace BruxoSistema.NovasTelas.NovosRecursos
 {
-    public partial class frmLogin : DevExpress.XtraEditors.XtraForm
+    public partial class FrmLogin : DevExpress.XtraEditors.XtraForm
     {
-        public frmLogin()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -43,9 +43,9 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
                     return;
                 }
 
-                this.Hide();
+                Hide();
                 frmTelaInicialRibbon telaInicial = new frmTelaInicialRibbon();
-                telaInicial.Closed += (s, args) => this.Close();
+                telaInicial.Closed += (s, args) => Close();
                 telaInicial.ShowDialog();
             }
             catch (FbException ex)
@@ -72,10 +72,16 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             if (!LoginController.VerificarExisteUsuarioSessao(UsuarioSessao.IdUsuario, UsuarioSessao.NomeUsuario))
                 return;
 
-            this.Hide();
+            Hide();
             frmTelaInicialRibbon telaInicial = new frmTelaInicialRibbon();
-            telaInicial.Closed += (s, args) => this.Close();
+            telaInicial.Closed += (s, args) => Close();
             telaInicial.ShowDialog();
+        }
+
+        private void FrmLogar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                RealizarLogin();
         }
     }
 }

@@ -136,6 +136,9 @@
     <Compile Include="Recursos\frmTelaInicial.Designer.cs">
       <DependentUpon>frmTelaInicial.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="NovosRecursos\frmCadastroUsuario.resx">
+      <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NovosRecursos\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

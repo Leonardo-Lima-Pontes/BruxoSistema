@@ -1,7 +1,7 @@
 ﻿
 namespace BruxoSistema.NovasTelas.NovosRecursos
 {
-    partial class frmLogin
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.PictureEdit pictureEdit1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
             this.lblUsuairo = new DevExpress.XtraEditors.LabelControl();
             this.lblSenha = new DevExpress.XtraEditors.LabelControl();
@@ -174,7 +174,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "By: Bruxaria";
             // 
-            // frmLogin
+            // FrmLogin
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -197,10 +197,11 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "frmLogin";
+            this.Name = "FrmLogin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bem-Vindo";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogar_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha.Properties)).EndInit();
