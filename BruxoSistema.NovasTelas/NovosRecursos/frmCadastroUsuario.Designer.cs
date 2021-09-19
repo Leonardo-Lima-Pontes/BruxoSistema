@@ -1,7 +1,7 @@
 ﻿
 namespace BruxoSistema.NovasTelas.NovosRecursos
 {
-    partial class frmCadastroUsuario
+    partial class FrmCadastroUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -36,11 +36,11 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.txtSenha = new DevExpress.XtraEditors.TextEdit();
             this.lblUsuairo = new DevExpress.XtraEditors.LabelControl();
             this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
-            this.txtSenhaConfirma = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.lblSenhaConfirma = new DevExpress.XtraEditors.LabelControl();
+            this.txtSenhaConfirma = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSenhaConfirma.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,8 +68,9 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnCancelarCadastro.Location = new System.Drawing.Point(73, 304);
             this.btnCancelarCadastro.Name = "btnCancelarCadastro";
             this.btnCancelarCadastro.Size = new System.Drawing.Size(264, 35);
-            this.btnCancelarCadastro.TabIndex = 14;
+            this.btnCancelarCadastro.TabIndex = 5;
             this.btnCancelarCadastro.Text = "Cancelar (ESC)";
+            this.btnCancelarCadastro.Click += new System.EventHandler(this.btnCancelarCadastro_Click);
             // 
             // btnCadastrar
             // 
@@ -87,8 +88,9 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnCadastrar.Location = new System.Drawing.Point(73, 263);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(264, 35);
-            this.btnCadastrar.TabIndex = 12;
+            this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "Cadastrar (ENTER)";
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // lblSenha
             // 
@@ -113,7 +115,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.txtSenha.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtSenha.Properties.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(199, 26);
-            this.txtSenha.TabIndex = 10;
+            this.txtSenha.TabIndex = 2;
             // 
             // lblUsuairo
             // 
@@ -137,42 +139,42 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.txtUsuario.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtUsuario.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtUsuario.Size = new System.Drawing.Size(199, 26);
-            this.txtUsuario.TabIndex = 9;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.ToolTip = "Leo";
             this.txtUsuario.ToolTipTitle = "Leozin";
             // 
+            // lblSenhaConfirma
+            // 
+            this.lblSenhaConfirma.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenhaConfirma.Appearance.Options.UseFont = true;
+            this.lblSenhaConfirma.Location = new System.Drawing.Point(64, 183);
+            this.lblSenhaConfirma.Name = "lblSenhaConfirma";
+            this.lblSenhaConfirma.Size = new System.Drawing.Size(68, 20);
+            this.lblSenhaConfirma.TabIndex = 17;
+            this.lblSenhaConfirma.Text = "Confirma:";
+            // 
             // txtSenhaConfirma
             // 
-            this.txtSenhaConfirma.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenhaConfirma.Appearance.Options.UseFont = true;
-            this.txtSenhaConfirma.Location = new System.Drawing.Point(64, 183);
+            this.txtSenhaConfirma.Location = new System.Drawing.Point(138, 180);
             this.txtSenhaConfirma.Name = "txtSenhaConfirma";
-            this.txtSenhaConfirma.Size = new System.Drawing.Size(68, 20);
-            this.txtSenhaConfirma.TabIndex = 17;
-            this.txtSenhaConfirma.Text = "Confirma:";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(138, 180);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseBorderColor = true;
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
-            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.textEdit1.Properties.PasswordChar = '*';
-            this.textEdit1.Size = new System.Drawing.Size(199, 26);
-            this.textEdit1.TabIndex = 16;
+            this.txtSenhaConfirma.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
+            this.txtSenhaConfirma.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenhaConfirma.Properties.Appearance.Options.UseBorderColor = true;
+            this.txtSenhaConfirma.Properties.Appearance.Options.UseFont = true;
+            this.txtSenhaConfirma.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
+            this.txtSenhaConfirma.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtSenhaConfirma.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtSenhaConfirma.Properties.PasswordChar = '*';
+            this.txtSenhaConfirma.Size = new System.Drawing.Size(199, 26);
+            this.txtSenhaConfirma.TabIndex = 3;
             // 
             // frmCadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 432);
+            this.Controls.Add(this.lblSenhaConfirma);
             this.Controls.Add(this.txtSenhaConfirma);
-            this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelarCadastro);
             this.Controls.Add(this.btnCadastrar);
@@ -181,14 +183,16 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.Controls.Add(this.lblUsuairo);
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "frmCadastroUsuario";
+            this.Name = "FrmCadastroUsuario";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Usuário";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmCadastroUsuario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSenhaConfirma.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,7 +207,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         private DevExpress.XtraEditors.TextEdit txtSenha;
         private DevExpress.XtraEditors.LabelControl lblUsuairo;
         private DevExpress.XtraEditors.TextEdit txtUsuario;
-        private DevExpress.XtraEditors.LabelControl txtSenhaConfirma;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.LabelControl lblSenhaConfirma;
+        private DevExpress.XtraEditors.TextEdit txtSenhaConfirma;
     }
 }

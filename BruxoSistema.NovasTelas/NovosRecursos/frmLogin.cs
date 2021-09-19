@@ -66,7 +66,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
         private void CadastrarUsuario()
         {
-            frmCadastroUsuario cadastroUsuario = new frmCadastroUsuario();
+            FrmCadastroUsuario cadastroUsuario = new FrmCadastroUsuario();
             cadastroUsuario.ShowDialog();
 
             if (!LoginController.VerificarExisteUsuarioSessao(UsuarioSessao.IdUsuario, UsuarioSessao.NomeUsuario))
