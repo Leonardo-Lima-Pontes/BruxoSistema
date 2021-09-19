@@ -32,7 +32,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.PictureEdit pictureEdit1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.txtLogin = new DevExpress.XtraEditors.TextEdit();
+            this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
             this.lblUsuairo = new DevExpress.XtraEditors.LabelControl();
             this.lblSenha = new DevExpress.XtraEditors.LabelControl();
             this.txtSenha = new DevExpress.XtraEditors.TextEdit();
@@ -43,7 +43,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
@@ -65,21 +65,21 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             pictureEdit1.Size = new System.Drawing.Size(297, 132);
             pictureEdit1.TabIndex = 9;
             // 
-            // txtLogin
+            // txtUsuario
             // 
-            this.txtLogin.Location = new System.Drawing.Point(133, 207);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
-            this.txtLogin.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Properties.Appearance.Options.UseBorderColor = true;
-            this.txtLogin.Properties.Appearance.Options.UseFont = true;
-            this.txtLogin.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
-            this.txtLogin.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtLogin.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtLogin.Size = new System.Drawing.Size(199, 26);
-            this.txtLogin.TabIndex = 1;
-            this.txtLogin.ToolTip = "Leo";
-            this.txtLogin.ToolTipTitle = "Leozin";
+            this.txtUsuario.Location = new System.Drawing.Point(133, 207);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
+            this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Properties.Appearance.Options.UseBorderColor = true;
+            this.txtUsuario.Properties.Appearance.Options.UseFont = true;
+            this.txtUsuario.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
+            this.txtUsuario.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtUsuario.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtUsuario.Size = new System.Drawing.Size(199, 26);
+            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.ToolTip = "Leo";
+            this.txtUsuario.ToolTipTitle = "Leozin";
             // 
             // lblUsuairo
             // 
@@ -143,6 +143,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnAdicionarUsuario.Name = "btnAdicionarUsuario";
             this.btnAdicionarUsuario.Size = new System.Drawing.Size(70, 35);
             this.btnAdicionarUsuario.TabIndex = 7;
+            this.btnAdicionarUsuario.Click += new System.EventHandler(this.btnAdicionarUsuario_Click);
             // 
             // btnEntrar
             // 
@@ -163,6 +164,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnEntrar.Size = new System.Drawing.Size(180, 35);
             this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // labelControl1
             // 
@@ -189,7 +191,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblUsuairo);
-            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(pictureEdit1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -200,7 +202,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bem-Vindo";
             ((System.ComponentModel.ISupportInitialize)(pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSenha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
@@ -209,7 +211,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         }
 
         #endregion
-        private DevExpress.XtraEditors.TextEdit txtLogin;
+        private DevExpress.XtraEditors.TextEdit txtUsuario;
         private DevExpress.XtraEditors.LabelControl lblUsuairo;
         private DevExpress.XtraEditors.LabelControl lblSenha;
         private DevExpress.XtraEditors.TextEdit txtSenha;
