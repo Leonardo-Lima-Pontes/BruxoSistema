@@ -142,6 +142,15 @@
     <EmbeddedResource Include="NovosRecursos\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NovosRecursos\frmTelaInicialRibbon.ksh-DE.resx">
+      <DependentUpon>frmTelaInicialRibbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovosRecursos\frmTelaInicialRibbon.pt.resx">
+      <DependentUpon>frmTelaInicialRibbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovosRecursos\frmTelaInicialRibbon.resx">
+      <DependentUpon>frmTelaInicialRibbon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Recursos\frmNovaTelaInicial.resx">
       <DependentUpon>frmNovaTelaInicial.cs</DependentUpon>
     </EmbeddedResource>
