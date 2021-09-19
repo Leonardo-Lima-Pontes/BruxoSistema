@@ -58,16 +58,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NovosRecursos\frmCadastroFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovosRecursos\frmCadastroFormaPagamento.Designer.cs">
+      <DependentUpon>frmCadastroFormaPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovosRecursos\frmCadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovosRecursos\frmCadastroProduto.Designer.cs">
+      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovosRecursos\frmCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovosRecursos\frmCadastroUsuario.Designer.cs">
+      <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovosRecursos\frmConsultaProdutoVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovosRecursos\frmConsultaProdutoVenda.Designer.cs">
+      <DependentUpon>frmConsultaProdutoVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovosRecursos\frmFaturamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovosRecursos\frmFaturamento.Designer.cs">
+      <DependentUpon>frmFaturamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="NovosRecursos\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NovosRecursos\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="NovosRecursos\frmNovaTelaInicial.cs">
+    <Compile Include="NovosRecursos\frmPdv.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NovosRecursos\frmNovaTelaInicial.Designer.cs">
+    <Compile Include="NovosRecursos\frmPdv.Designer.cs">
+      <DependentUpon>frmPdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovosRecursos\frmTelaInicialRibbon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovosRecursos\frmTelaInicialRibbon.Designer.cs">
+      <DependentUpon>frmTelaInicialRibbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\frmNovaTelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\frmNovaTelaInicial.Designer.cs">
       <DependentUpon>frmNovaTelaInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Recursos\frmLoginteste.cs">
@@ -93,7 +135,7 @@
     <EmbeddedResource Include="NovosRecursos\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NovosRecursos\frmNovaTelaInicial.resx">
+    <EmbeddedResource Include="Recursos\frmNovaTelaInicial.resx">
       <DependentUpon>frmNovaTelaInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos\frmLoginteste.resx">
