@@ -2,7 +2,7 @@
 using BruxoBiblioteca.NovasTelas.Configuracoes;
 using BruxoBiblioteca.NovasTelas.Models;
 
-namespace BruxoSistema.NovasTelas.Recursos
+namespace BruxoSistema.NovasTelas.NovosRecursos
 {
     public partial class frmNovasTelasConfig : DevExpress.XtraEditors.XtraForm
     {

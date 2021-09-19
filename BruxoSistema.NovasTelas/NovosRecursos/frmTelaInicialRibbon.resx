@@ -117,28 +117,68 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;ribbonPageGroup2.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="lblSairLogin.Caption" xml:space="preserve">
+    <value>Sair/Login</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ribbon.ExpandCollapseItem.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;txtUsuario.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barStaticItem1.Name" xml:space="preserve">
-    <value>barStaticItem1</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ribbonPage3.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="&gt;&gt;btnCadastroProdutos.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="btnCadastroProdutos.Caption" xml:space="preserve">
+    <value>Produtos</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="barButtonItem1.ImageOptions.Image2" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCadastroProdutos.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        vQAAAL0BHVrG+gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOASURBVFhH7Zdr
+        SBRRFMfPzI67m7Puurm7PtBQ0yR1y96aUi35+hBl0UuLhKAPRZIVIfQhg0J7QFFSKBU9IZS+1ZceGETQ
+        k4r6kCFKRGlBGOWaj1ZP58w4YjqltrIR+Icfc8+9w57/PTv33hnwV5IkfaELMoIg+Og6m/sDKXz46DG+
+        bniDcXHx7RRnq92BE7rCI7rCIyK7DJLEFQi8gaXl1zD/0E2UndFeigNvYPX5Biyqa0VrVMJXiv9/AxKx
+        kjhKVBAeIo3YT1QS6wgzwRKJwQa+UZyrjPylnMQD4hVxkGATPwheZmeIAwSPPyfYxHrZGdNRVNuiGEjM
+        Le4JMstXqP+vdYM4RxiUCGAX0UjcJ6q4gyQQKYQYZA5uytxxWknOrKx5gaJk7KaxeL5xrEogeFMJViJV
+        74g8IonoJGRCUyHPvrD2w4ABpQo5m7gKl/vvGZOWE/fUpiILwaXnK+sT4Vabw2ev4U8V1hC31aYiO8EG
+        NDURc9Qmzd41fPYaY60Cl55/uIx41N9m+OlnA1r8nuAq0ezlZr3Za4ypCqIAvmAj9EZa4UeYDLyVom2S
+        0OmyCryrYYRN8GrkJQe9vbvLcksOsfp+N3uNrNIafp4cnGMkocsCWL8dcIVbPdXqtsjYdixUaWO1/Ree
+        7rVimMupm5TJKKnC+OwijPWs7Qaj8YIuksSra0DoSQR0RwJSBTApHDr9MRDmzkBYkIawKk8fD42bTR/V
+        1KrwyW7AKBvgxY2A6bHgZQNDE2uMaCA1fTQGeEUNCJv3AX6uAGyr9M9AQfVzNATLKOYsRjFvCUJOVvcw
+        HHYfCEIf5Z2rpu83wMn9NTBl0SoU8z0I18/pc/Ywgsnog6x5fWAyPaPcvKuOjwF+HxBlC8Ll4/rJmQUz
+        OyE7swdOHUCw2zooNx9s42PA4V6Igj0UpVkzVNJm9EFKkneA5AROiDAl6jtMi/WSgR5aEa3jZsAcEYNQ
+        UoxwqEyfDQUIMZFdULYVFUo3K6tsfA1w+Z9e14dNpFIltL/jatWEgQkDvxp4Wabuhv/EwM2tgCYJsDz/
+        HxmY5gJclgJoMQFG26An4AamOgBvbwMsnq904Pli9TgeSvuJUMXAZKdD+RbQ4NdyxUBNBUL9VX3KSxGm
+        T+1QEjN8LrABowH4a0Zz80cSXWLjnZ0hRwyi2Du4f8/JS1cmhUe3DO4bFQZD2088a3dzjgHgFAAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="btnCadastroFormaPagamento.Caption" xml:space="preserve">
+    <value>Pagamentos</value>
+  </data>
+  <data name="btnCadastroFormaPagamento.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAABK9JREFUaEPtmGtMW2UAhklMdDExZj/84Q+XONBooXMgFcZthaLAhEGBQimlF25j
+        DLIxLmMChVaguLHAhht0G5nL4qYwJ8RlGlznIjNBkmkIushGNAioYKQDum6DwmvPWelaeyjltIXM9E2e
+        H5wezvc+5+t3LvVwxx13/mfZzGgI8WQ05HgylblrhZe3Mo7BqH7aWIF+Xg88oQpIuTzFKfoRa0loTq+W
+        EfDhTQ9ex1PGKvTiHaoa558B1oMA/pW/PZkf+Bmr0AuTffpPqoOvBcHSaxpPbyXbWIVenniBN8LaptJr
+        BrAehPEu6hwW2BrSohNJz2E9YMecXHALuAUcwC1AhLn91ERa6ywI1EMal9M1oCHHIggR9Uw7LmB2H+if
+        nHc5V0fmnXsfWI3Ad2P3ob4zDfXwDG26BmeQ3Koj2Zbx9d01EbgxqsPH10eg6h5ymKbOIcRUDZOwuF2z
+        ThX46Ae9FWdu6qH4ZASlJ35CEv8sojnNiOE00Sae04h32YdJYoKVi1FvKSa2b5XfWg62b03/mz6KBGNd
+        66z0LJTc9oA8W+FRp3B9RyYWUxOBVC5ttIqDmFXKTOgqiin3W2Kax0MSq3Ly5S31rxorW8ZcIK5+HLF1
+        oxZEVwyBnd+HiG2HKAdYLfeqSi0EtHWVQJrtk/LpO7kLXj5KobGyZcwFEo/NgNussYCQiNw/gMgg5wg8
+        2J9vIUAwtyebct8lPovKxStMpcRY2TLmAlEHf8HbJYMWhBf0I1ikRkRgA+XBV4s+S2hR/su9MqRGlyM1
+        shjZnCqkxbVAEN2IwYQM0//YLUBF4rFpcg1EhjRaFHEEXWUxWf5uvQxJUeW4/81zWOzdgG/PxoPIP1P3
+        IIx5PJ5NAUZQ62hq+wJleQJXCOgzDbNgKD8ur8YuXgFwYwP0vc/iVocPKUBEEN8CfXYG5gpycEFStbzA
+        a4EtYu8Q1V8s7qUxFvdzK/x3dv7hG3N+Mty/Vk9Vhi4PC3PJWciLr0S7LBJfNLFQIJajR30bRw73QC48
+        Yvqanc9RLC9AxMvr6DOGHTbbguMnHzUNnpKE37l8C/Q0Lq/EgtbUVeNCrhztWTL0ldRAlaVE9x4FZuqr
+        7RewJxy/mt+IQbW8ZKSEl+BAhghlBkqEYpSLhBCEF9OSmN+dCW1thaksFU4V+D5OjKNFsdB8tZFk4vIL
+        0F59HjJpGoYTBJQlV2IxPRkPi3Zb3eRcItAXK8b7eUm43bGJLD/a/SKGO19CSboYd2gKmOBzsSAVGGZF
+        irnCHHIBz+dJcTE237kz0LwvzmoGqgwD052BlbB5GbU3SwI6wxrgE2tAICYpS5PgQLoEkgh6a8AenCpA
+        QBQ1vwKNJfIdfsizhdMF5GH7IAp4z4LjEQVQG55W/7udgNg+sFNotZ04DnG8wqAyq8+IbS4TQLnhEbi2
+        mhqFDJCkA7ukj7eVPipKF+cLnFYB3ZeWZ28+UGE4g0t/E/ubFVotzhc4VA+cbH1E23FAajjjZgM6G7cA
+        kQi/ml+pDr4W2Hwjszehvoor13ZIFlx5uaSCeCfmsSqWfye2N5uYyo2hfvJzYb7yn6l+PXAVxK8S/lvq
+        Eo013HHHnSc/Hh7/AuyVaLrWa918AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnVenda.Caption" xml:space="preserve">
+    <value>Venda/Pedido</value>
+  </data>
+  <data name="btnVenda.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAVHSURBVFhH7Zdv
@@ -167,274 +207,10 @@
         UU3hOepDg5FpYlRE0UQ+9f4rhIX9BTBCa731pLM4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;ribbonStatusBar.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonStatusBar, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="btnConfiguracoes.Caption" xml:space="preserve">
+    <value>Configurações</value>
   </data>
-  <data name="barButtonItem1.ImageOptions.ImageIndex1" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="&gt;&gt;btnCadastroFormaPagamento.Name" xml:space="preserve">
-    <value>btnCadastroFormaPagamento</value>
-  </data>
-  <data name="frmTelaInicialRibbon.Appearance.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;ribbonPage1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="barStaticItem3.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;ribbon.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ribbonPage3.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="ribbon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>442, 143</value>
-  </data>
-  <data name="barStaticItem1.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="&gt;&gt;ribbonStatusBar.Name" xml:space="preserve">
-    <value>ribbonStatusBar</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="barButtonItem2.ImageOptions.LargeImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="&gt;&gt;ribbon.Name" xml:space="preserve">
-    <value>ribbon</value>
-  </data>
-  <data name="frmTelaInicialRibbon.Appearance.GradientMode" type="System.Drawing.Drawing2D.LinearGradientMode, System.Drawing">
-    <value>Horizontal</value>
-  </data>
-  <data name="&gt;&gt;ribbonPage1.Name" xml:space="preserve">
-    <value>ribbonPage1</value>
-  </data>
-  <data name="barButtonItem2.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="&gt;&gt;barStaticItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="barButtonItem1.ImageOptions.LargeImageIndex1" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="barButtonItem1.ImageOptions.LargeImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="barButtonItem1.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;ribbonPage2.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonPage3.Name" xml:space="preserve">
-    <value>ribbonPage3</value>
-  </data>
-  <data name="&gt;&gt;ribbonPageGroup1.Name" xml:space="preserve">
-    <value>ribbonPageGroup1</value>
-  </data>
-  <data name="ribbonPageGroup1.ImageOptions.ImageIndex1" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="barStaticItem2.ImageOptions.LargeImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="&gt;&gt;ribbonPageGroup2.Name" xml:space="preserve">
-    <value>ribbonPageGroup2</value>
-  </data>
-  <data name="barStaticItem2.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="&gt;&gt;ribbonStatusBar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnConfiguracoes.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;btnCadastroProdutos.Name" xml:space="preserve">
-    <value>btnCadastroProdutos</value>
-  </data>
-  <data name="ribbon.ExpandCollapseItem.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="barButtonItem1.ImageOptions.SvgImage2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnCadastroFormaPagamento.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="barButtonItem1.ImageOptions.SvgImage1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;ribbonPage2.Name" xml:space="preserve">
-    <value>ribbonPage2</value>
-  </data>
-  <data name="&gt;&gt;cadastros.Name" xml:space="preserve">
-    <value>cadastros</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonForm, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="barStaticItem1.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>442, 31</value>
-  </data>
-  <data name="ribbonPage1.Text" xml:space="preserve">
-    <value>ribbonPage1</value>
-  </data>
-  <data name="ribbonPageGroup1.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="ribbonPage2.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="barButtonItem1.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="barStaticItem2.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ribbon.ExpandCollapseItem.ImageOptions.LargeImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="&gt;&gt;ribbon.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;barStaticItem2.Name" xml:space="preserve">
-    <value>barStaticItem2</value>
-  </data>
-  <data name="&gt;&gt;ribbon.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="barButtonItem1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        vQAAAL0BHVrG+gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOASURBVFhH7Zdr
-        SBRRFMfPzI67m7Puurm7PtBQ0yR1y96aUi35+hBl0UuLhKAPRZIVIfQhg0J7QFFSKBU9IZS+1ZceGETQ
-        k4r6kCFKRGlBGOWaj1ZP58w4YjqltrIR+Icfc8+9w57/PTv33hnwV5IkfaELMoIg+Og6m/sDKXz46DG+
-        bniDcXHx7RRnq92BE7rCI7rCIyK7DJLEFQi8gaXl1zD/0E2UndFeigNvYPX5Biyqa0VrVMJXiv9/AxKx
-        kjhKVBAeIo3YT1QS6wgzwRKJwQa+UZyrjPylnMQD4hVxkGATPwheZmeIAwSPPyfYxHrZGdNRVNuiGEjM
-        Le4JMstXqP+vdYM4RxiUCGAX0UjcJ6q4gyQQKYQYZA5uytxxWknOrKx5gaJk7KaxeL5xrEogeFMJViJV
-        74g8IonoJGRCUyHPvrD2w4ABpQo5m7gKl/vvGZOWE/fUpiILwaXnK+sT4Vabw2ev4U8V1hC31aYiO8EG
-        NDURc9Qmzd41fPYaY60Cl55/uIx41N9m+OlnA1r8nuAq0ezlZr3Za4ypCqIAvmAj9EZa4UeYDLyVom2S
-        0OmyCryrYYRN8GrkJQe9vbvLcksOsfp+N3uNrNIafp4cnGMkocsCWL8dcIVbPdXqtsjYdixUaWO1/Ree
-        7rVimMupm5TJKKnC+OwijPWs7Qaj8YIuksSra0DoSQR0RwJSBTApHDr9MRDmzkBYkIawKk8fD42bTR/V
-        1KrwyW7AKBvgxY2A6bHgZQNDE2uMaCA1fTQGeEUNCJv3AX6uAGyr9M9AQfVzNATLKOYsRjFvCUJOVvcw
-        HHYfCEIf5Z2rpu83wMn9NTBl0SoU8z0I18/pc/Ywgsnog6x5fWAyPaPcvKuOjwF+HxBlC8Ll4/rJmQUz
-        OyE7swdOHUCw2zooNx9s42PA4V6Igj0UpVkzVNJm9EFKkneA5AROiDAl6jtMi/WSgR5aEa3jZsAcEYNQ
-        UoxwqEyfDQUIMZFdULYVFUo3K6tsfA1w+Z9e14dNpFIltL/jatWEgQkDvxp4Wabuhv/EwM2tgCYJsDz/
-        HxmY5gJclgJoMQFG26An4AamOgBvbwMsnq904Pli9TgeSvuJUMXAZKdD+RbQ4NdyxUBNBUL9VX3KSxGm
-        T+1QEjN8LrABowH4a0Zz80cSXWLjnZ0hRwyi2Du4f8/JS1cmhUe3DO4bFQZD2088a3dzjgHgFAAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="frmTelaInicialRibbon.Appearance.FontStyleDelta" type="System.Drawing.FontStyle, System.Drawing">
-    <value>Regular</value>
-  </data>
-  <data name="barButtonItem1.ImageOptions.LargeImageIndex2" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="&gt;&gt;cadastros.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="barButtonItem1.ImageOptions.ImageIndex2" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="barButtonItem1.ImageOptions.Image1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAABK9JREFUaEPtmGtMW2UAhklMdDExZj/84Q+XONBooXMgFcZthaLAhEGBQimlF25j
-        DLIxLmMChVaguLHAhht0G5nL4qYwJ8RlGlznIjNBkmkIushGNAioYKQDum6DwmvPWelaeyjltIXM9E2e
-        H5wezvc+5+t3LvVwxx13/mfZzGgI8WQ05HgylblrhZe3Mo7BqH7aWIF+Xg88oQpIuTzFKfoRa0loTq+W
-        EfDhTQ9ex1PGKvTiHaoa558B1oMA/pW/PZkf+Bmr0AuTffpPqoOvBcHSaxpPbyXbWIVenniBN8LaptJr
-        BrAehPEu6hwW2BrSohNJz2E9YMecXHALuAUcwC1AhLn91ERa6ywI1EMal9M1oCHHIggR9Uw7LmB2H+if
-        nHc5V0fmnXsfWI3Ad2P3ob4zDfXwDG26BmeQ3Koj2Zbx9d01EbgxqsPH10eg6h5ymKbOIcRUDZOwuF2z
-        ThX46Ae9FWdu6qH4ZASlJ35CEv8sojnNiOE00Sae04h32YdJYoKVi1FvKSa2b5XfWg62b03/mz6KBGNd
-        66z0LJTc9oA8W+FRp3B9RyYWUxOBVC5ttIqDmFXKTOgqiin3W2Kax0MSq3Ly5S31rxorW8ZcIK5+HLF1
-        oxZEVwyBnd+HiG2HKAdYLfeqSi0EtHWVQJrtk/LpO7kLXj5KobGyZcwFEo/NgNussYCQiNw/gMgg5wg8
-        2J9vIUAwtyebct8lPovKxStMpcRY2TLmAlEHf8HbJYMWhBf0I1ikRkRgA+XBV4s+S2hR/su9MqRGlyM1
-        shjZnCqkxbVAEN2IwYQM0//YLUBF4rFpcg1EhjRaFHEEXWUxWf5uvQxJUeW4/81zWOzdgG/PxoPIP1P3
-        IIx5PJ5NAUZQ62hq+wJleQJXCOgzDbNgKD8ur8YuXgFwYwP0vc/iVocPKUBEEN8CfXYG5gpycEFStbzA
-        a4EtYu8Q1V8s7qUxFvdzK/x3dv7hG3N+Mty/Vk9Vhi4PC3PJWciLr0S7LBJfNLFQIJajR30bRw73QC48
-        Yvqanc9RLC9AxMvr6DOGHTbbguMnHzUNnpKE37l8C/Q0Lq/EgtbUVeNCrhztWTL0ldRAlaVE9x4FZuqr
-        7RewJxy/mt+IQbW8ZKSEl+BAhghlBkqEYpSLhBCEF9OSmN+dCW1thaksFU4V+D5OjKNFsdB8tZFk4vIL
-        0F59HjJpGoYTBJQlV2IxPRkPi3Zb3eRcItAXK8b7eUm43bGJLD/a/SKGO19CSboYd2gKmOBzsSAVGGZF
-        irnCHHIBz+dJcTE237kz0LwvzmoGqgwD052BlbB5GbU3SwI6wxrgE2tAICYpS5PgQLoEkgh6a8AenCpA
-        QBQ1vwKNJfIdfsizhdMF5GH7IAp4z4LjEQVQG55W/7udgNg+sFNotZ04DnG8wqAyq8+IbS4TQLnhEbi2
-        mhqFDJCkA7ukj7eVPipKF+cLnFYB3ZeWZ28+UGE4g0t/E/ubFVotzhc4VA+cbH1E23FAajjjZgM6G7cA
-        kQi/ml+pDr4W2Hwjszehvoor13ZIFlx5uaSCeCfmsSqWfye2N5uYyo2hfvJzYb7yn6l+PXAVxK8S/lvq
-        Eo013HHHnSc/Hh7/AuyVaLrWa918AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="ribbon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmTelaInicialRibbon</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>frmTelaInicialRibbon</value>
-  </data>
-  <data name="&gt;&gt;btnVenda.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonStatusBar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="ribbonPage1.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="ribbonStatusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 418</value>
-  </data>
-  <data name="barButtonItem2.ImageOptions.SvgImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;btnConfiguracoes.Name" xml:space="preserve">
-    <value>btnConfiguracoes</value>
-  </data>
-  <data name="ribbonPageGroup2.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="frmTelaInicialRibbon.Appearance.FontSizeDelta" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnVenda.Name" xml:space="preserve">
-    <value>btnVenda</value>
-  </data>
-  <data name="&gt;&gt;ribbonPageGroup1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="barStaticItem3.ImageOptions.LargeImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="barStaticItem3.ImageOptions.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="&gt;&gt;barStaticItem2.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="ribbonPageGroup1.Text" xml:space="preserve">
-    <value>ribbonPageGroup1</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>442, 449</value>
-  </data>
-  <data name="barStaticItem1.ImageOptions.LargeImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="frmTelaInicialRibbon.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
-    <value>240, 240, 240</value>
-  </data>
-  <data name="barButtonItem2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnConfiguracoes.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         3QAAAN0BcFOiBwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAWDSURBVFhHvZd7
@@ -464,13 +240,218 @@
         9GVotT1Qg96Qawah7D6ZQav5PyD7DxB9wk9Qpg8GAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="&gt;&gt;txtUsuario.Name" xml:space="preserve">
-    <value>txtUsuario</value>
+  <data name="lblUsuario.Caption" xml:space="preserve">
+    <value>Usuario:</value>
   </data>
+  <data name="ribbon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ribbonPage1.Text" xml:space="preserve">
+    <value>Cadastros</value>
+  </data>
+  <data name="ribbonPage2.Text" xml:space="preserve">
+    <value>Operacional</value>
+  </data>
+  <data name="ribbonPageGroup2.Text" xml:space="preserve">
+    <value>Configurações Gerais</value>
+  </data>
+  <data name="ribbonPage3.Text" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="ribbon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1333, 143</value>
+  </data>
+  <data name="ribbonStatusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 750</value>
+  </data>
+  <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1333, 31</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.Name" xml:space="preserve">
+    <value>ribbonStatusBar</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonStatusBar, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ribbon.Name" xml:space="preserve">
+    <value>ribbon</value>
+  </data>
+  <data name="&gt;&gt;ribbon.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbon.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ribbon.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cadastros.Text" xml:space="preserve">
+    <value>Cadastros Gerais</value>
+  </data>
+  <data name="ribbonPageGroup1.Text" xml:space="preserve">
+    <value>Vendas</value>
+  </data>
+  <metadata name="documentManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>pt</value>
+  <data name="frmTelaInicialRibbon.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>240, 240, 240</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1333, 781</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Sistema de vendas</value>
+  </data>
+  <data name="&gt;&gt;lblSairLogin.Name" xml:space="preserve">
+    <value>lblSairLogin</value>
+  </data>
+  <data name="&gt;&gt;lblSairLogin.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnCadastroProdutos.Name" xml:space="preserve">
+    <value>btnCadastroProdutos</value>
+  </data>
+  <data name="&gt;&gt;btnCadastroProdutos.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnCadastroFormaPagamento.Name" xml:space="preserve">
+    <value>btnCadastroFormaPagamento</value>
+  </data>
+  <data name="&gt;&gt;btnCadastroFormaPagamento.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnVenda.Name" xml:space="preserve">
+    <value>btnVenda</value>
+  </data>
+  <data name="&gt;&gt;btnVenda.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnConfiguracoes.Name" xml:space="preserve">
+    <value>btnConfiguracoes</value>
+  </data>
+  <data name="&gt;&gt;btnConfiguracoes.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;txtUsuario.Name" xml:space="preserve">
+    <value>txtUsuario</value>
+  </data>
+  <data name="&gt;&gt;txtUsuario.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage1.Name" xml:space="preserve">
+    <value>ribbonPage1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;cadastros.Name" xml:space="preserve">
+    <value>cadastros</value>
+  </data>
+  <data name="&gt;&gt;cadastros.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage2.Name" xml:space="preserve">
+    <value>ribbonPage2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup1.Name" xml:space="preserve">
+    <value>ribbonPageGroup1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage3.Name" xml:space="preserve">
+    <value>ribbonPage3</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup2.Name" xml:space="preserve">
+    <value>ribbonPageGroup2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Name" xml:space="preserve">
+    <value>lblUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblUsuarioLogado.Name" xml:space="preserve">
+    <value>lblUsuarioLogado</value>
+  </data>
+  <data name="&gt;&gt;lblUsuarioLogado.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;documentManager1.Name" xml:space="preserve">
+    <value>documentManager1</value>
+  </data>
+  <data name="&gt;&gt;documentManager1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking2010.DocumentManager, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tabbedView1.Name" xml:space="preserve">
+    <value>tabbedView1</value>
+  </data>
+  <data name="&gt;&gt;tabbedView1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;adornerUIManager1.Name" xml:space="preserve">
+    <value>adornerUIManager1</value>
+  </data>
+  <data name="&gt;&gt;adornerUIManager1.Type" xml:space="preserve">
+    <value>DevExpress.Utils.VisualEffects.AdornerUIManager, DevExpress.Utils.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;badge1.Name" xml:space="preserve">
+    <value>badge1</value>
+  </data>
+  <data name="&gt;&gt;badge1.Type" xml:space="preserve">
+    <value>DevExpress.Utils.VisualEffects.Badge, DevExpress.Utils.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;badge2.Name" xml:space="preserve">
+    <value>badge2</value>
+  </data>
+  <data name="&gt;&gt;badge2.Type" xml:space="preserve">
+    <value>DevExpress.Utils.VisualEffects.Badge, DevExpress.Utils.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;badge3.Name" xml:space="preserve">
+    <value>badge3</value>
+  </data>
+  <data name="&gt;&gt;badge3.Type" xml:space="preserve">
+    <value>DevExpress.Utils.VisualEffects.Badge, DevExpress.Utils.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;badge4.Name" xml:space="preserve">
+    <value>badge4</value>
+  </data>
+  <data name="&gt;&gt;badge4.Type" xml:space="preserve">
+    <value>DevExpress.Utils.VisualEffects.Badge, DevExpress.Utils.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmTelaInicialRibbon</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonForm, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <metadata name="adornerUIManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>179, 17</value>
   </metadata>
 </root>

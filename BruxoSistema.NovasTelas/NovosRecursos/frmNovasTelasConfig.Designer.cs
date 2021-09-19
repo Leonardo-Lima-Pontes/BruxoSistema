@@ -1,5 +1,5 @@
 ﻿
-namespace BruxoSistema.NovasTelas.Recursos
+namespace BruxoSistema.NovasTelas.NovosRecursos
 {
     partial class frmNovasTelasConfig
     {

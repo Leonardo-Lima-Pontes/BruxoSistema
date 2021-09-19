@@ -17,5 +17,33 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         {
             InitializeComponent();
         }
+
+        private void btnCadastroProdutos_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmCadastroProduto frm = new frmCadastroProduto();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnCadastroFormaPagamento_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmCadastroFormaPagamento frm = new frmCadastroFormaPagamento();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnVenda_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmPdv frm = new frmPdv();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnConfiguracoes_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmNovasTelasConfig frm = new frmNovasTelasConfig();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
