@@ -1,7 +1,7 @@
 ﻿
 namespace BruxoSistema.NovasTelas.NovosRecursos
 {
-    partial class frmTelaInicialRibbon
+    partial class FrmTelaInicialRibbon
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,8 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTelaInicialRibbon));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTelaInicialRibbon));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.lblSairLogin = new DevExpress.XtraBars.BarStaticItem();
             this.btnCadastroProdutos = new DevExpress.XtraBars.BarButtonItem();
@@ -37,6 +38,8 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnVenda = new DevExpress.XtraBars.BarButtonItem();
             this.btnConfiguracoes = new DevExpress.XtraBars.BarButtonItem();
             this.txtUsuario = new DevExpress.XtraBars.BarStaticItem();
+            this.lblUsuario = new DevExpress.XtraBars.BarStaticItem();
+            this.lblUsuarioLogado = new DevExpress.XtraBars.BarStaticItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.cadastros = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -44,19 +47,12 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.lblUsuario = new DevExpress.XtraBars.BarStaticItem();
-            this.lblUsuarioLogado = new DevExpress.XtraBars.BarStaticItem();
-            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager();
-            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
-            this.adornerUIManager1 = new DevExpress.Utils.VisualEffects.AdornerUIManager();
-            this.badge1 = new DevExpress.Utils.VisualEffects.Badge();
+            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.badge2 = new DevExpress.Utils.VisualEffects.Badge();
-            this.badge3 = new DevExpress.Utils.VisualEffects.Badge();
-            this.badge4 = new DevExpress.Utils.VisualEffects.Badge();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adornerUIManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -91,6 +87,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             resources.ApplyResources(this.lblSairLogin, "lblSairLogin");
             this.lblSairLogin.Id = 2;
             this.lblSairLogin.Name = "lblSairLogin";
+            this.lblSairLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.lblSairLogin_ItemClick);
             // 
             // btnCadastroProdutos
             // 
@@ -132,6 +129,17 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             this.txtUsuario.Id = 7;
             this.txtUsuario.Name = "txtUsuario";
+            // 
+            // lblUsuario
+            // 
+            resources.ApplyResources(this.lblUsuario, "lblUsuario");
+            this.lblUsuario.Id = 9;
+            this.lblUsuario.Name = "lblUsuario";
+            // 
+            // lblUsuarioLogado
+            // 
+            this.lblUsuarioLogado.Id = 10;
+            this.lblUsuarioLogado.Name = "lblUsuarioLogado";
             // 
             // ribbonPage1
             // 
@@ -185,17 +193,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             // 
-            // lblUsuario
-            // 
-            resources.ApplyResources(this.lblUsuario, "lblUsuario");
-            this.lblUsuario.Id = 9;
-            this.lblUsuario.Name = "lblUsuario";
-            // 
-            // lblUsuarioLogado
-            // 
-            this.lblUsuarioLogado.Id = 10;
-            this.lblUsuarioLogado.Name = "lblUsuarioLogado";
-            // 
             // documentManager1
             // 
             this.documentManager1.MdiParent = this;
@@ -204,37 +201,14 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
-            // adornerUIManager1
-            // 
-            this.adornerUIManager1.Elements.Add(this.badge1);
-            this.adornerUIManager1.Elements.Add(this.badge2);
-            this.adornerUIManager1.Elements.Add(this.badge3);
-            this.adornerUIManager1.Elements.Add(this.badge4);
-            this.adornerUIManager1.Owner = this;
-            // 
-            // badge1
-            // 
-            this.badge1.Properties.Location = System.Drawing.ContentAlignment.TopLeft;
-            this.badge1.TargetElement = this.btnCadastroProdutos;
-            // 
             // badge2
             // 
             this.badge2.Properties.Location = System.Drawing.ContentAlignment.TopLeft;
             this.badge2.TargetElement = this.btnCadastroFormaPagamento;
             // 
-            // badge3
+            // FrmTelaInicialRibbon
             // 
-            this.badge3.Properties.Location = System.Drawing.ContentAlignment.TopLeft;
-            this.badge3.TargetElement = this.btnVenda;
-            // 
-            // badge4
-            // 
-            this.badge4.Properties.Location = System.Drawing.ContentAlignment.TopLeft;
-            this.badge4.TargetElement = this.btnConfiguracoes;
-            // 
-            // frmTelaInicialRibbon
-            // 
-            this.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("frmTelaInicialRibbon.Appearance.BackColor")));
+            this.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("FrmTelaInicialRibbon.Appearance.BackColor")));
             this.Appearance.Options.UseBackColor = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -242,7 +216,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
             this.KeyPreview = true;
-            this.Name = "frmTelaInicialRibbon";
+            this.Name = "FrmTelaInicialRibbon";
             this.Ribbon = this.ribbon;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -251,7 +225,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adornerUIManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,10 +250,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         private DevExpress.XtraBars.BarStaticItem lblUsuarioLogado;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
-        private DevExpress.Utils.VisualEffects.AdornerUIManager adornerUIManager1;
-        private DevExpress.Utils.VisualEffects.Badge badge1;
         private DevExpress.Utils.VisualEffects.Badge badge2;
-        private DevExpress.Utils.VisualEffects.Badge badge3;
-        private DevExpress.Utils.VisualEffects.Badge badge4;
     }
 }

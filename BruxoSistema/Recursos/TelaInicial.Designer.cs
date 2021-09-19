@@ -95,7 +95,7 @@ namespace BruxoSistema
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 898F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 899F));
             this.tableLayoutPanel1.Controls.Add(this.toolStrip1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.toolStrip2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -117,7 +117,7 @@ namespace BruxoSistema
             this.toolStrip1.Location = new System.Drawing.Point(1, 1);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(213, 74);
+            this.toolStrip1.Size = new System.Drawing.Size(212, 74);
             this.toolStrip1.TabIndex = 5;
             // 
             // btnAbrirTelaPDV
@@ -150,9 +150,9 @@ namespace BruxoSistema
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAbrirTelaCadastroProduto,
             this.toolStripButton1});
-            this.toolStrip2.Location = new System.Drawing.Point(215, 1);
+            this.toolStrip2.Location = new System.Drawing.Point(214, 1);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(898, 74);
+            this.toolStrip2.Size = new System.Drawing.Size(899, 74);
             this.toolStrip2.TabIndex = 6;
             this.toolStrip2.Text = "toolStrip2";
             // 

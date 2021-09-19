@@ -17,5 +17,10 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         {
             InitializeComponent();
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

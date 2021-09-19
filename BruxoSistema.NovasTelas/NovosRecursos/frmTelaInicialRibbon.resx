@@ -246,8 +246,14 @@
   <data name="ribbon.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="cadastros.Text" xml:space="preserve">
+    <value>Cadastros Gerais</value>
+  </data>
   <data name="ribbonPage1.Text" xml:space="preserve">
     <value>Cadastros</value>
+  </data>
+  <data name="ribbonPageGroup1.Text" xml:space="preserve">
+    <value>Vendas</value>
   </data>
   <data name="ribbonPage2.Text" xml:space="preserve">
     <value>Operacional</value>
@@ -291,19 +297,13 @@
   <data name="&gt;&gt;ribbon.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="cadastros.Text" xml:space="preserve">
-    <value>Cadastros Gerais</value>
-  </data>
-  <data name="ribbonPageGroup1.Text" xml:space="preserve">
-    <value>Vendas</value>
-  </data>
   <metadata name="documentManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="frmTelaInicialRibbon.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+  <data name="FrmTelaInicialRibbon.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>240, 240, 240</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
@@ -355,6 +355,18 @@
   <data name="&gt;&gt;txtUsuario.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;lblUsuario.Name" xml:space="preserve">
+    <value>lblUsuario</value>
+  </data>
+  <data name="&gt;&gt;lblUsuario.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;lblUsuarioLogado.Name" xml:space="preserve">
+    <value>lblUsuarioLogado</value>
+  </data>
+  <data name="&gt;&gt;lblUsuarioLogado.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;ribbonPage1.Name" xml:space="preserve">
     <value>ribbonPage1</value>
   </data>
@@ -391,18 +403,6 @@
   <data name="&gt;&gt;ribbonPageGroup2.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;lblUsuario.Name" xml:space="preserve">
-    <value>lblUsuario</value>
-  </data>
-  <data name="&gt;&gt;lblUsuario.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;lblUsuarioLogado.Name" xml:space="preserve">
-    <value>lblUsuarioLogado</value>
-  </data>
-  <data name="&gt;&gt;lblUsuarioLogado.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;documentManager1.Name" xml:space="preserve">
     <value>documentManager1</value>
   </data>
@@ -415,43 +415,16 @@
   <data name="&gt;&gt;tabbedView1.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;adornerUIManager1.Name" xml:space="preserve">
-    <value>adornerUIManager1</value>
-  </data>
-  <data name="&gt;&gt;adornerUIManager1.Type" xml:space="preserve">
-    <value>DevExpress.Utils.VisualEffects.AdornerUIManager, DevExpress.Utils.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;badge1.Name" xml:space="preserve">
-    <value>badge1</value>
-  </data>
-  <data name="&gt;&gt;badge1.Type" xml:space="preserve">
-    <value>DevExpress.Utils.VisualEffects.Badge, DevExpress.Utils.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;badge2.Name" xml:space="preserve">
     <value>badge2</value>
   </data>
   <data name="&gt;&gt;badge2.Type" xml:space="preserve">
     <value>DevExpress.Utils.VisualEffects.Badge, DevExpress.Utils.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;badge3.Name" xml:space="preserve">
-    <value>badge3</value>
-  </data>
-  <data name="&gt;&gt;badge3.Type" xml:space="preserve">
-    <value>DevExpress.Utils.VisualEffects.Badge, DevExpress.Utils.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;badge4.Name" xml:space="preserve">
-    <value>badge4</value>
-  </data>
-  <data name="&gt;&gt;badge4.Type" xml:space="preserve">
-    <value>DevExpress.Utils.VisualEffects.Badge, DevExpress.Utils.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmTelaInicialRibbon</value>
+    <value>FrmTelaInicialRibbon</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonForm, DevExpress.XtraBars.v18.1, Version=18.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <metadata name="adornerUIManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>179, 17</value>
-  </metadata>
 </root>

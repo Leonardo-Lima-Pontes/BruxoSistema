@@ -44,7 +44,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
                 }
 
                 Hide();
-                frmTelaInicialRibbon telaInicial = new frmTelaInicialRibbon();
+                FrmTelaInicialRibbon telaInicial = new FrmTelaInicialRibbon();
                 telaInicial.Closed += (s, args) => Close();
                 telaInicial.ShowDialog();
             }
@@ -73,7 +73,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
                 return;
 
             Hide();
-            frmTelaInicialRibbon telaInicial = new frmTelaInicialRibbon();
+            FrmTelaInicialRibbon telaInicial = new FrmTelaInicialRibbon();
             telaInicial.Closed += (s, args) => Close();
             telaInicial.ShowDialog();
         }
