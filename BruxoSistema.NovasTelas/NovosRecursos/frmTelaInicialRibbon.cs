@@ -15,7 +15,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
         private void btnCadastroProdutos_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmCadastroProduto frm = new frmCadastroProduto();
+            FrmCadastroProduto frm = new FrmCadastroProduto();
             frm.MdiParent = this;
             frm.Show();
         }

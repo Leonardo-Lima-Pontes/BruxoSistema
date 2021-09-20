@@ -1,7 +1,7 @@
 ﻿
 namespace BruxoSistema.NovasTelas.NovosRecursos
 {
-    partial class frmCadastroProduto
+    partial class FrmCadastroProduto
     {
         /// <summary>
         /// Required designer variable.
@@ -29,196 +29,205 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroProduto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroProduto));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.lblSenhaConfirma = new DevExpress.XtraEditors.LabelControl();
-            this.txtSenhaConfirma = new DevExpress.XtraEditors.TextEdit();
-            this.lblSenha = new DevExpress.XtraEditors.LabelControl();
-            this.txtSenha = new DevExpress.XtraEditors.TextEdit();
-            this.lblUsuairo = new DevExpress.XtraEditors.LabelControl();
-            this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.btnHabilitarCampos = new System.Windows.Forms.ToolStripButton();
+            this.btnGravar = new System.Windows.Forms.ToolStripButton();
+            this.BtnFechar = new System.Windows.Forms.ToolStripButton();
+            this.lblEstoque = new DevExpress.XtraEditors.LabelControl();
+            this.txtEstoque = new DevExpress.XtraEditors.TextEdit();
+            this.lblPreco = new DevExpress.XtraEditors.LabelControl();
+            this.txtPreco = new DevExpress.XtraEditors.TextEdit();
+            this.lblNome = new DevExpress.XtraEditors.LabelControl();
+            this.txtNome = new DevExpress.XtraEditors.TextEdit();
+            this.lblCodigo = new DevExpress.XtraEditors.LabelControl();
+            this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSenhaConfirma.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSenha.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEstoque.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPreco.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNome.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3});
+            this.btnHabilitarCampos,
+            this.btnGravar,
+            this.BtnFechar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1089, 63);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // btnHabilitarCampos
             // 
-            this.toolStripButton1.AutoSize = false;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(80, 60);
-            this.toolStripButton1.Text = "F2 - Novo";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHabilitarCampos.AutoSize = false;
+            this.btnHabilitarCampos.Image = ((System.Drawing.Image)(resources.GetObject("btnHabilitarCampos.Image")));
+            this.btnHabilitarCampos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnHabilitarCampos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnHabilitarCampos.Name = "btnHabilitarCampos";
+            this.btnHabilitarCampos.Size = new System.Drawing.Size(80, 60);
+            this.btnHabilitarCampos.Text = "F2 - Novo";
+            this.btnHabilitarCampos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHabilitarCampos.Click += new System.EventHandler(this.BtnHabilitarCampos_Click);
             // 
-            // toolStripButton2
+            // btnGravar
             // 
-            this.toolStripButton2.AutoSize = false;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(80, 60);
-            this.toolStripButton2.Text = "F5 - Gravar";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGravar.AutoSize = false;
+            this.btnGravar.Image = ((System.Drawing.Image)(resources.GetObject("btnGravar.Image")));
+            this.btnGravar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnGravar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(80, 60);
+            this.btnGravar.Text = "F5 - Gravar";
+            this.btnGravar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
             // 
-            // toolStripButton3
+            // BtnFechar
             // 
-            this.toolStripButton3.AutoSize = false;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(80, 60);
-            this.toolStripButton3.Text = "ESC - Fechar";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.BtnFechar.AutoSize = false;
+            this.BtnFechar.Image = ((System.Drawing.Image)(resources.GetObject("BtnFechar.Image")));
+            this.BtnFechar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.BtnFechar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnFechar.Name = "BtnFechar";
+            this.BtnFechar.Size = new System.Drawing.Size(80, 60);
+            this.BtnFechar.Text = "ESC - Fechar";
+            this.BtnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnFechar.Click += new System.EventHandler(this.BtnSair_Click);
             // 
-            // lblSenhaConfirma
+            // lblEstoque
             // 
-            this.lblSenhaConfirma.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenhaConfirma.Appearance.Options.UseFont = true;
-            this.lblSenhaConfirma.Location = new System.Drawing.Point(57, 263);
-            this.lblSenhaConfirma.Name = "lblSenhaConfirma";
-            this.lblSenhaConfirma.Size = new System.Drawing.Size(68, 20);
-            this.lblSenhaConfirma.TabIndex = 23;
-            this.lblSenhaConfirma.Text = "Confirma:";
+            this.lblEstoque.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstoque.Appearance.Options.UseFont = true;
+            this.lblEstoque.Enabled = false;
+            this.lblEstoque.Location = new System.Drawing.Point(57, 263);
+            this.lblEstoque.Name = "lblEstoque";
+            this.lblEstoque.Size = new System.Drawing.Size(64, 20);
+            this.lblEstoque.TabIndex = 23;
+            this.lblEstoque.Text = "Estoque:";
             // 
-            // txtSenhaConfirma
+            // txtEstoque
             // 
-            this.txtSenhaConfirma.Location = new System.Drawing.Point(131, 260);
-            this.txtSenhaConfirma.Name = "txtSenhaConfirma";
-            this.txtSenhaConfirma.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
-            this.txtSenhaConfirma.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenhaConfirma.Properties.Appearance.Options.UseBorderColor = true;
-            this.txtSenhaConfirma.Properties.Appearance.Options.UseFont = true;
-            this.txtSenhaConfirma.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
-            this.txtSenhaConfirma.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtSenhaConfirma.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtSenhaConfirma.Properties.PasswordChar = '*';
-            this.txtSenhaConfirma.Size = new System.Drawing.Size(199, 26);
-            this.txtSenhaConfirma.TabIndex = 20;
+            this.txtEstoque.Enabled = false;
+            this.txtEstoque.Location = new System.Drawing.Point(131, 260);
+            this.txtEstoque.Name = "txtEstoque";
+            this.txtEstoque.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
+            this.txtEstoque.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstoque.Properties.Appearance.Options.UseBorderColor = true;
+            this.txtEstoque.Properties.Appearance.Options.UseFont = true;
+            this.txtEstoque.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
+            this.txtEstoque.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtEstoque.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtEstoque.Size = new System.Drawing.Size(199, 26);
+            this.txtEstoque.TabIndex = 4;
             // 
-            // lblSenha
+            // lblPreco
             // 
-            this.lblSenha.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Appearance.Options.UseFont = true;
-            this.lblSenha.Location = new System.Drawing.Point(74, 177);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(51, 20);
-            this.lblSenha.TabIndex = 22;
-            this.lblSenha.Text = "Senha:";
+            this.lblPreco.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreco.Appearance.Options.UseFont = true;
+            this.lblPreco.Enabled = false;
+            this.lblPreco.Location = new System.Drawing.Point(74, 177);
+            this.lblPreco.Name = "lblPreco";
+            this.lblPreco.Size = new System.Drawing.Size(45, 20);
+            this.lblPreco.TabIndex = 22;
+            this.lblPreco.Text = "Preco:";
             // 
-            // txtSenha
+            // txtPreco
             // 
-            this.txtSenha.Location = new System.Drawing.Point(131, 174);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
-            this.txtSenha.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Properties.Appearance.Options.UseBorderColor = true;
-            this.txtSenha.Properties.Appearance.Options.UseFont = true;
-            this.txtSenha.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
-            this.txtSenha.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtSenha.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtSenha.Properties.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(199, 26);
-            this.txtSenha.TabIndex = 19;
+            this.txtPreco.Enabled = false;
+            this.txtPreco.Location = new System.Drawing.Point(131, 174);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
+            this.txtPreco.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.Properties.Appearance.Options.UseBorderColor = true;
+            this.txtPreco.Properties.Appearance.Options.UseFont = true;
+            this.txtPreco.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
+            this.txtPreco.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtPreco.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtPreco.Size = new System.Drawing.Size(199, 26);
+            this.txtPreco.TabIndex = 2;
             // 
-            // lblUsuairo
+            // lblNome
             // 
-            this.lblUsuairo.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuairo.Appearance.Options.UseFont = true;
-            this.lblUsuairo.Location = new System.Drawing.Point(66, 132);
-            this.lblUsuairo.Name = "lblUsuairo";
-            this.lblUsuairo.Size = new System.Drawing.Size(59, 20);
-            this.lblUsuairo.TabIndex = 21;
-            this.lblUsuairo.Text = "Usuário:";
+            this.lblNome.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Appearance.Options.UseFont = true;
+            this.lblNome.Enabled = false;
+            this.lblNome.Location = new System.Drawing.Point(66, 132);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(46, 20);
+            this.lblNome.TabIndex = 21;
+            this.lblNome.Text = "Nome:";
             // 
-            // txtUsuario
+            // txtNome
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(131, 129);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
-            this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Properties.Appearance.Options.UseBorderColor = true;
-            this.txtUsuario.Properties.Appearance.Options.UseFont = true;
-            this.txtUsuario.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
-            this.txtUsuario.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtUsuario.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtUsuario.Size = new System.Drawing.Size(199, 26);
-            this.txtUsuario.TabIndex = 18;
-            this.txtUsuario.ToolTip = "Leo";
-            this.txtUsuario.ToolTipTitle = "Leozin";
+            this.txtNome.Enabled = false;
+            this.txtNome.Location = new System.Drawing.Point(131, 129);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
+            this.txtNome.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Properties.Appearance.Options.UseBorderColor = true;
+            this.txtNome.Properties.Appearance.Options.UseFont = true;
+            this.txtNome.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
+            this.txtNome.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtNome.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtNome.Size = new System.Drawing.Size(199, 26);
+            this.txtNome.TabIndex = 1;
+            this.txtNome.ToolTip = "Leo";
+            this.txtNome.ToolTipTitle = "Leozin";
             // 
-            // labelControl1
+            // lblCodigo
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(57, 221);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(68, 20);
-            this.labelControl1.TabIndex = 25;
-            this.labelControl1.Text = "Confirma:";
+            this.lblCodigo.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Appearance.Options.UseFont = true;
+            this.lblCodigo.Enabled = false;
+            this.lblCodigo.Location = new System.Drawing.Point(57, 221);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(54, 20);
+            this.lblCodigo.TabIndex = 25;
+            this.lblCodigo.Text = "Código:";
             // 
-            // textEdit1
+            // txtCodigo
             // 
-            this.textEdit1.Location = new System.Drawing.Point(131, 218);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseBorderColor = true;
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
-            this.textEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.textEdit1.Properties.PasswordChar = '*';
-            this.textEdit1.Size = new System.Drawing.Size(199, 26);
-            this.textEdit1.TabIndex = 24;
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(131, 218);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
+            this.txtCodigo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Properties.Appearance.Options.UseBorderColor = true;
+            this.txtCodigo.Properties.Appearance.Options.UseFont = true;
+            this.txtCodigo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.White;
+            this.txtCodigo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtCodigo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtCodigo.Size = new System.Drawing.Size(199, 26);
+            this.txtCodigo.TabIndex = 3;
             // 
             // frmCadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1089, 683);
-            this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.lblSenhaConfirma);
-            this.Controls.Add(this.txtSenhaConfirma);
-            this.Controls.Add(this.lblSenha);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.lblUsuairo);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.lblEstoque);
+            this.Controls.Add(this.txtEstoque);
+            this.Controls.Add(this.lblPreco);
+            this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.toolStrip1);
+            this.KeyPreview = true;
             this.Name = "frmCadastroProduto";
             this.Text = "frmCadastroProduto";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCadastrarProduto_KeyDown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSenhaConfirma.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSenha.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEstoque.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPreco.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNome.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,16 +236,16 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private DevExpress.XtraEditors.LabelControl lblSenhaConfirma;
-        private DevExpress.XtraEditors.TextEdit txtSenhaConfirma;
-        private DevExpress.XtraEditors.LabelControl lblSenha;
-        private DevExpress.XtraEditors.TextEdit txtSenha;
-        private DevExpress.XtraEditors.LabelControl lblUsuairo;
-        private DevExpress.XtraEditors.TextEdit txtUsuario;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private System.Windows.Forms.ToolStripButton btnHabilitarCampos;
+        private System.Windows.Forms.ToolStripButton btnGravar;
+        private System.Windows.Forms.ToolStripButton BtnFechar;
+        private DevExpress.XtraEditors.LabelControl lblEstoque;
+        private DevExpress.XtraEditors.TextEdit txtEstoque;
+        private DevExpress.XtraEditors.LabelControl lblPreco;
+        private DevExpress.XtraEditors.TextEdit txtPreco;
+        private DevExpress.XtraEditors.LabelControl lblNome;
+        private DevExpress.XtraEditors.TextEdit txtNome;
+        private DevExpress.XtraEditors.LabelControl lblCodigo;
+        private DevExpress.XtraEditors.TextEdit txtCodigo;
     }
 }
