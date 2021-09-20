@@ -22,7 +22,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
         private void btnCadastroFormaPagamento_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmCadastroFormaPagamento frm = new frmCadastroFormaPagamento();
+            FrmCadastroFormaPagamento frm = new FrmCadastroFormaPagamento();
             frm.MdiParent = this;
             frm.Show();
         }

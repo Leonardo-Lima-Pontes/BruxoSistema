@@ -1,7 +1,7 @@
 ﻿
 namespace BruxoSistema.NovasTelas.NovosRecursos
 {
-    partial class frmCadastroFormaPagamento
+    partial class FrmCadastroFormaPagamento
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroFormaPagamento));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroFormaPagamento));
             this.lblForma = new DevExpress.XtraEditors.LabelControl();
             this.txtForma = new DevExpress.XtraEditors.TextEdit();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnCadastrar = new System.Windows.Forms.ToolStripButton();
+            this.btnHabilitar = new System.Windows.Forms.ToolStripButton();
             this.btnGravar = new System.Windows.Forms.ToolStripButton();
             this.btnFechar = new System.Windows.Forms.ToolStripButton();
             this.tgsDesabilitado = new DevExpress.XtraEditors.ToggleSwitch();
@@ -73,7 +73,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnCadastrar,
+            this.btnHabilitar,
             this.btnGravar,
             this.btnFechar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -82,16 +82,18 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.toolStrip1.TabIndex = 26;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // btnCadastrar
+            // btnHabilitar
             // 
-            this.btnCadastrar.AutoSize = false;
-            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
-            this.btnCadastrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnCadastrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(80, 60);
-            this.btnCadastrar.Text = "F2 - Novo";
-            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHabilitar.AutoSize = false;
+            this.btnHabilitar.Enabled = false;
+            this.btnHabilitar.Image = ((System.Drawing.Image)(resources.GetObject("btnHabilitar.Image")));
+            this.btnHabilitar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnHabilitar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnHabilitar.Name = "btnHabilitar";
+            this.btnHabilitar.Size = new System.Drawing.Size(80, 60);
+            this.btnHabilitar.Text = "F2 - Novo";
+            this.btnHabilitar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHabilitar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnGravar
             // 
@@ -103,6 +105,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnGravar.Size = new System.Drawing.Size(80, 60);
             this.btnGravar.Text = "F5 - Gravar";
             this.btnGravar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
             // 
             // btnFechar
             // 
@@ -114,6 +117,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnFechar.Size = new System.Drawing.Size(80, 60);
             this.btnFechar.Text = "ESC - Fechar";
             this.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
             // tgsDesabilitado
             // 
@@ -135,7 +139,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.lblDesabilitado.TabIndex = 32;
             this.lblDesabilitado.Text = "Desativado";
             // 
-            // frmCadastroFormaPagamento
+            // FrmCadastroFormaPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,8 +149,10 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.Controls.Add(this.lblForma);
             this.Controls.Add(this.txtForma);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "frmCadastroFormaPagamento";
+            this.KeyPreview = true;
+            this.Name = "FrmCadastroFormaPagamento";
             this.Text = "Cadastro de forma de pagamentos";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCadastrarFormaPagamento_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtForma.Properties)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -161,7 +167,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         private DevExpress.XtraEditors.LabelControl lblForma;
         private DevExpress.XtraEditors.TextEdit txtForma;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnCadastrar;
+        private System.Windows.Forms.ToolStripButton btnHabilitar;
         private System.Windows.Forms.ToolStripButton btnGravar;
         private System.Windows.Forms.ToolStripButton btnFechar;
         private DevExpress.XtraEditors.ToggleSwitch tgsDesabilitado;

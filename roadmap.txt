@@ -76,12 +76,18 @@ criar tabela config com coluna chamada feature toogle: dentro dela colocar - ok
 
 criar novas telas com dev express utilizando featre toogle
 cadastros
-	formaPagamento
-	cadastroProduto
-	cadastroUsuario
+	formaPagamento - ok
+	cadastroProduto - ok
+	cadastroUsuario - ok
 consultaprodutovenda
 faturamento
 pdv
-telainicial
-login
+telainicial-  ok
+login - ok
+
+realizar controle de configurações 
+
+baixar estoque que não esta baixando aaaaaaaa
+
+revitalizar telas e rever projeto
 

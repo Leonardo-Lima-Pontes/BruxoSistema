@@ -43,6 +43,9 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.Controls.OfType<LabelControl>().ToList().ForEach(labelConstrol => labelConstrol.Enabled = true);
 
             txtNome.Focus();
+
+            btnHabilitar.Enabled = true;
+            btnGravar.Enabled = false;
         }
 
         private void BtnGravar_Click(object sender, EventArgs e)
@@ -82,6 +85,9 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             });
 
             this.Controls.OfType<LabelControl>().ToList().ForEach(labelConstrol => labelConstrol.Enabled = false);
+
+            btnHabilitar.Enabled = true;
+            btnGravar.Enabled = false;
         }
 
         private bool ValidarSeTemCampoPreenchido()
@@ -97,7 +103,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             switch (e.KeyCode)
             {
                 case Keys.Escape:
-                    Close();
+                    FecharFormulario();
                     break;
                 case Keys.F2:
                     HabilitarCampos();

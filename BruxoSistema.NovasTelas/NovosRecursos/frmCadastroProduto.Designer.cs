@@ -31,7 +31,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastroProduto));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnHabilitarCampos = new System.Windows.Forms.ToolStripButton();
+            this.btnHabilitar = new System.Windows.Forms.ToolStripButton();
             this.btnGravar = new System.Windows.Forms.ToolStripButton();
             this.BtnFechar = new System.Windows.Forms.ToolStripButton();
             this.lblEstoque = new DevExpress.XtraEditors.LabelControl();
@@ -53,7 +53,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnHabilitarCampos,
+            this.btnHabilitar,
             this.btnGravar,
             this.BtnFechar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -62,17 +62,18 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // btnHabilitarCampos
+            // btnHabilitar
             // 
-            this.btnHabilitarCampos.AutoSize = false;
-            this.btnHabilitarCampos.Image = ((System.Drawing.Image)(resources.GetObject("btnHabilitarCampos.Image")));
-            this.btnHabilitarCampos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnHabilitarCampos.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnHabilitarCampos.Name = "btnHabilitarCampos";
-            this.btnHabilitarCampos.Size = new System.Drawing.Size(80, 60);
-            this.btnHabilitarCampos.Text = "F2 - Novo";
-            this.btnHabilitarCampos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnHabilitarCampos.Click += new System.EventHandler(this.BtnHabilitarCampos_Click);
+            this.btnHabilitar.AutoSize = false;
+            this.btnHabilitar.Enabled = false;
+            this.btnHabilitar.Image = ((System.Drawing.Image)(resources.GetObject("btnHabilitar.Image")));
+            this.btnHabilitar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnHabilitar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnHabilitar.Name = "btnHabilitar";
+            this.btnHabilitar.Size = new System.Drawing.Size(80, 60);
+            this.btnHabilitar.Text = "F2 - Novo";
+            this.btnHabilitar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnHabilitar.Click += new System.EventHandler(this.BtnHabilitarCampos_Click);
             // 
             // btnGravar
             // 
@@ -228,7 +229,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnHabilitarCampos;
+        private System.Windows.Forms.ToolStripButton btnHabilitar;
         private System.Windows.Forms.ToolStripButton btnGravar;
         private System.Windows.Forms.ToolStripButton BtnFechar;
         private DevExpress.XtraEditors.LabelControl lblEstoque;
