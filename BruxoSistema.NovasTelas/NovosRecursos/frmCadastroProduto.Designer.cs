@@ -102,8 +102,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             this.lblEstoque.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstoque.Appearance.Options.UseFont = true;
-            this.lblEstoque.Enabled = false;
-            this.lblEstoque.Location = new System.Drawing.Point(57, 263);
+            this.lblEstoque.Location = new System.Drawing.Point(53, 251);
             this.lblEstoque.Name = "lblEstoque";
             this.lblEstoque.Size = new System.Drawing.Size(64, 20);
             this.lblEstoque.TabIndex = 23;
@@ -111,8 +110,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             // txtEstoque
             // 
-            this.txtEstoque.Enabled = false;
-            this.txtEstoque.Location = new System.Drawing.Point(131, 260);
+            this.txtEstoque.Location = new System.Drawing.Point(123, 248);
             this.txtEstoque.Name = "txtEstoque";
             this.txtEstoque.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
             this.txtEstoque.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,8 +126,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             this.lblPreco.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPreco.Appearance.Options.UseFont = true;
-            this.lblPreco.Enabled = false;
-            this.lblPreco.Location = new System.Drawing.Point(74, 177);
+            this.lblPreco.Location = new System.Drawing.Point(72, 165);
             this.lblPreco.Name = "lblPreco";
             this.lblPreco.Size = new System.Drawing.Size(45, 20);
             this.lblPreco.TabIndex = 22;
@@ -137,8 +134,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             // txtPreco
             // 
-            this.txtPreco.Enabled = false;
-            this.txtPreco.Location = new System.Drawing.Point(131, 174);
+            this.txtPreco.Location = new System.Drawing.Point(123, 162);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
             this.txtPreco.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,8 +150,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             this.lblNome.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.Appearance.Options.UseFont = true;
-            this.lblNome.Enabled = false;
-            this.lblNome.Location = new System.Drawing.Point(66, 132);
+            this.lblNome.Location = new System.Drawing.Point(71, 120);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(46, 20);
             this.lblNome.TabIndex = 21;
@@ -163,8 +158,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             // txtNome
             // 
-            this.txtNome.Enabled = false;
-            this.txtNome.Location = new System.Drawing.Point(131, 129);
+            this.txtNome.Location = new System.Drawing.Point(123, 117);
             this.txtNome.Name = "txtNome";
             this.txtNome.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
             this.txtNome.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,8 +176,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             this.lblCodigo.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Appearance.Options.UseFont = true;
-            this.lblCodigo.Enabled = false;
-            this.lblCodigo.Location = new System.Drawing.Point(57, 221);
+            this.lblCodigo.Location = new System.Drawing.Point(63, 209);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(54, 20);
             this.lblCodigo.TabIndex = 25;
@@ -191,8 +184,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(131, 218);
+            this.txtCodigo.Location = new System.Drawing.Point(123, 206);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(126)))), ((int)(((byte)(210)))));
             this.txtCodigo.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,7 +196,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.txtCodigo.Size = new System.Drawing.Size(199, 26);
             this.txtCodigo.TabIndex = 3;
             // 
-            // frmCadastroProduto
+            // FrmCadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,8 +211,8 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.toolStrip1);
             this.KeyPreview = true;
-            this.Name = "frmCadastroProduto";
-            this.Text = "frmCadastroProduto";
+            this.Name = "FrmCadastroProduto";
+            this.Text = "Cadastro de produto";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCadastrarProduto_KeyDown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
