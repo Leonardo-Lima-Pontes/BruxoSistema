@@ -45,14 +45,14 @@ namespace BruxoBiblioteca.NovasTelas.PDV
 
                     pedidoFinalizado.ID_PEDIDO = parametrosPedido.Get<int>("@ID_PEDIDO");
 
-                    foreach (PedidoProduto pedidoProduto in pedidoFinalizado.PRODUTOSVENDIDOS)
+                    foreach (Produto produto in pedidoFinalizado.PRODUTOS)
                     {
                         DynamicParameters parametrosPedidoProduto = new DynamicParameters();
 
-                        parametrosPedidoProduto.Add("@QUANTIDADE", pedidoProduto.QUANTIDADE);
-                        parametrosPedidoProduto.Add("@VALOR", pedidoProduto.VALOR);
+                        parametrosPedidoProduto.Add("@QUANTIDADE", produto.QUANTIDADE);
+                        parametrosPedidoProduto.Add("@VALOR", produto.VALORTOTAL);
                         parametrosPedidoProduto.Add("@PEDIDO_ID", pedidoFinalizado.ID_PEDIDO);
-                        parametrosPedidoProduto.Add("@PRODUTO_ID", pedidoProduto.PRODUTO_ID);
+                        parametrosPedidoProduto.Add("@PRODUTO_ID", produto.ID_PRODUTO);
 
                         linhasAfetadas = conexao.Execute("insert into pedido_produto (quantidade, valor, pedido_id, produto_id) values (@QUANTIDADE, @VALOR, @PEDIDO_ID, @PRODUTO_ID)", parametrosPedidoProduto, transaction: transaction);
                     }

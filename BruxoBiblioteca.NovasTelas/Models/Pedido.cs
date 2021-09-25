@@ -28,5 +28,7 @@ namespace BruxoBiblioteca.NovasTelas.Models
         /// Todos produtos que foram vendido nesta venda
         /// </summary>
         public List<PedidoProduto> PRODUTOSVENDIDOS { get; set; }
+
+        public List<Produto> PRODUTOS { get; set; }
     }
 }

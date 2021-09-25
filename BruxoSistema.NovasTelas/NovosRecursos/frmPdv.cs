@@ -16,17 +16,11 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 {
     public partial class frmPdv : DevExpress.XtraEditors.XtraForm
     {
-        decimal precoUnitarioAtualProdutoEditando;
         private List<Produto> produtosDaVenda = new List<Produto>();
 
         public frmPdv()
         {
             InitializeComponent();
-        }
-
-        private void BtnAvançar_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void TxtBuscaProdutos_KeyDown(object sender, KeyEventArgs e)
@@ -62,7 +56,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
             switch (entradaUsuario)
             {
-                case "": SelecionarOpcaoDeLancamentoProduto(); break;
+                case "": FaturarVenda(); break;
                 default: SelecionarOpcaoDeLancamentoProduto(); break;
             }
         }
@@ -137,6 +131,147 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         private void AtualizarTotalDaVenda()
         {
             lblValorTotal.Text = produtosDaVenda.Sum(x => x.PRECOVENDA).ToString();
+        }
+
+        private void frmPdv_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Escape) return;
+            var resultado = MessageBox.Show("Deseja fechar a tela de vendas ?", "SAIR", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (resultado == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        private void BtnAvançar_Click(object sender, EventArgs e)
+        {
+            FaturarVenda();
+        }
+
+        private void FaturarVenda()
+        {
+            GridView view = dgvProdutos.MainView as GridView;
+
+            if (view.RowCount < 1)
+            {
+                MessageBox.Show("Consagrado insira produtos para que possamos prosseguir com a venda");
+                return;
+            }
+
+            FormaPagamento formaPagamentoSelecionada;
+            using (FrmFaturamento telaDeFaturamento = new FrmFaturamento())
+            {
+                telaDeFaturamento.ShowDialog();
+                formaPagamentoSelecionada = telaDeFaturamento.FormaPagamentoSelecionada;
+
+                if (formaPagamentoSelecionada != null)
+                    FinalizarVenda(formaPagamentoSelecionada);
+            }
+        }
+
+        private void FinalizarVenda(FormaPagamento formaPagamentoSelecionada)
+        {
+            try
+            {
+                Usuario usuarioDaVenda = PegarUsuario();
+                if (usuarioDaVenda == null)
+                    return;
+
+
+                Pedido pedidoFinalizado = PegarInformacoesDoPedido();
+                if (pedidoFinalizado == null)
+                    return;
+
+                pedidoFinalizado.FORMAPAMENTO_ID = formaPagamentoSelecionada;
+                pedidoFinalizado.PRODUTOS = produtosDaVenda;
+                pedidoFinalizado.USUARIO_ID = usuarioDaVenda;
+
+                PdvController.InserirNovoPedido(pedidoFinalizado);
+
+                MessageBox.Show("Venda Finalizada");
+                ResetarVenda();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro por favor entre em contato com o Bruxo! \n {ex.Message} \n\n {ex.StackTrace}");
+            }
+        }
+
+        private Pedido PegarInformacoesDoPedido()
+        {
+            Pedido pedidoFinalizado = new Pedido();
+
+            pedidoFinalizado.VALORPEDIDO = decimal.Parse(lblValorTotal.Text);
+
+            bool pedidoValidado = PdvController.ValidarPedido(pedidoFinalizado);
+            if (!pedidoValidado)
+            {
+                MessageBox.Show("Consagrado por favor esses produtos não podem ser inseridos desta maneira na venda!");
+                return null;
+            }
+
+            return pedidoFinalizado;
+        }
+
+        //private List<PedidoProduto> PegarProdutosDoPedido()
+        //{
+        //    List<PedidoProduto> produtosDoPedido = new List<PedidoProduto>();
+
+        //    foreach (DataGridViewRow row in dataGridViewProdutos.Rows)
+        //    {
+        //        PedidoProduto produtoDoPedido = new PedidoProduto();
+        //        produtoDoPedido.QUANTIDADE = decimal.Parse(row.Cells[3].Value.ToString());
+        //        produtoDoPedido.VALOR = decimal.Parse(row.Cells[4].Value.ToString());
+        //        produtoDoPedido.PRODUTO_ID = int.Parse(row.Cells[5].Value.ToString());
+
+        //        bool pedidoProdutoValidado = PdvController.ValidarPedidoProduto(produtoDoPedido);
+        //        if (!pedidoProdutoValidado)
+        //        {
+        //            MessageBox.Show("Consagrado por favor esses produtos não podem ser inseridos desta maneira na venda!");
+        //            return null;
+        //        }
+
+        //        produtosDoPedido.Add(produtoDoPedido);
+        //    }
+
+        //    return produtosDoPedido;
+        //}
+
+        private Usuario PegarUsuario()
+        {
+            Usuario usuarioDaVenda = new Usuario();
+            usuarioDaVenda.ID_USUARIO = UsuarioSessao.IdUsuario;
+            usuarioDaVenda.NOME = UsuarioSessao.NomeUsuario;
+
+            bool usuarioValidado = PdvController.ValidarUsuario(usuarioDaVenda);
+            if (!usuarioValidado)
+            {
+                MessageBox.Show("Consagrado a venda não pode ser concluida pois não há usuario logado no sistema!");
+                return null;
+            }
+
+            return usuarioDaVenda;
+        }
+
+        private void ResetarVenda()
+        {
+            produtosDaVenda = null;
+            AtualizarDataGridComDataSource();
+            lblTotalItens.ResetText();
+            lblValorTotal.ResetText();
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            GridView view = dgvProdutos.MainView as GridView;
+            if (view.RowCount > 0)
+            {
+                var resultado = MessageBox.Show("Os itens da venda serão perdidos", "Limpar Venda", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (resultado == DialogResult.Yes)
+                {
+                    ResetarVenda();
+                }
+            }
         }
     }
 }

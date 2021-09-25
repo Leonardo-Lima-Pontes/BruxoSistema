@@ -18,7 +18,7 @@ namespace BruxoSistema.NovasTelas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPdv());
+            Application.Run(new FrmLogin());
         }
     }
 }

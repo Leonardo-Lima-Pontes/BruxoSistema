@@ -1,0 +1,32 @@
+[33md7c286c[m[33m ([m[1;36mHEAD[m[33m)[m desing e codigo formulario consulta produto para venda finalizado
+[33m5822b09[m[33m ([m[1;32mmaster[m[33m)[m design formulario pdv modificado
+[33m0297b10[m Design de tela de venda finalizado
+[33m3b6a6da[m parte funcional e codigo cadastrar forma pagamento concluido
+[33md66d571[m Design tela cadastro finalizada
+[33m4ec0549[m[33m ([m[1;31morigin/master[m[33m)[m funcionalidades de design e codigo finalizadas
+[33mf691a6a[m menus de formularios adicionado
+[33m5310b2e[m funcionalidade de abrir multiplos formularios no ribbon form adicionada
+[33m983b8ff[m Design tela inicial feito
+[33mbb2b92e[m codigo cadastro usuario finalizado
+[33m5283ed5[m design tela cadastro usuario criada
+[33m0b16ba9[m codigo login inserido
+[33m11c9523[m novas telas inseridas
+[33m877a2b0[m interface login finalizada
+[33mbae4916[m tela de login iniciada para design
+[33mfd458c6[m feature toogle implementada e novos projeto de novas telas utilizando devexpress iniciado
+[33mef71c4a[m Organização na estrutura de pastas do projeto realizada
+[33mc3e1c25[m Codigo de todas as telas refatoradas e implementado primeiros testes
+[33m5b80b4b[m irrigar
+[33mfcb2ed4[m Codigo cadastrar forma pagamento e testes aplicados
+[33m58c6ddb[m codigo cadastro produto refatorado e aplicado testes
+[33m2dd22d7[m Testes na tela de login implementados
+[33m5a0a534[m Codigo login refatorado para receber testes
+[33mf49982b[m PDV testado
+[33m84148a4[m Codigo PDV refatorado para aplicar testes unitarios
+[33md77301c[m Codigo refatorado para se adequar a testes unitarios
+[33m6515f8c[m Primeiro MVP sem testes finalizado
+[33maf92810[m Alterações de UI primeira fase finalizadas
+[33m60e59e0[m Revitalização de tela ui e funcional tela login, cadastro de usuario, tela iniciarl, cadastro de produto e forma de pagamento
+[33mc6f09cd[m Parte funcional do sistema criado, tela de login, cadastro de forma de pagamento, cadastro de produto, cadastro de usuario, tela de venda finalizada (somente parte funcional)
+[33m3bf72e1[m Adicionar arquivos de projeto.
+[33m84b8113[m Adicionar .gitignore e .gitattributes.

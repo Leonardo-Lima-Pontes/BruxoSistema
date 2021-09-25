@@ -362,6 +362,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnReiniciar.Size = new System.Drawing.Size(97, 29);
             this.btnReiniciar.TabIndex = 18;
             this.btnReiniciar.Text = "Reiniciar";
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // labelControl3
             // 
@@ -404,6 +405,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.KeyPreview = true;
             this.Name = "frmPdv";
             this.Text = "Venda";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmPdv_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.panel)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
