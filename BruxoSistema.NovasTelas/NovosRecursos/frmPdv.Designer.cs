@@ -29,31 +29,34 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPdv));
-            this.lblItensTotalizador = new DevExpress.XtraEditors.PanelControl();
+            this.panel = new DevExpress.XtraEditors.PanelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtBuscaProdutos = new DevExpress.XtraEditors.SearchControl();
             this.btnAvançar = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCadastrar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.dgvProdutos = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnCodigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnDescricao = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnValorUnitario = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnQuantidade = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnValorTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlInformacoes = new DevExpress.XtraEditors.PanelControl();
-            this.lblValorTotalizador = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalVenda = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalTotalizador = new DevExpress.XtraEditors.LabelControl();
-            this.lblItens = new DevExpress.XtraEditors.LabelControl();
+            this.lblValorTotal = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalItens = new DevExpress.XtraEditors.LabelControl();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnReiniciar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.lblItensTotalizador)).BeginInit();
-            this.lblItensTotalizador.SuspendLayout();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.panel)).BeginInit();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscaProdutos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
@@ -62,19 +65,20 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.pnlInformacoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblItensTotalizador
+            // panel
             // 
-            this.lblItensTotalizador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblItensTotalizador.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lblItensTotalizador.Controls.Add(this.pictureEdit1);
-            this.lblItensTotalizador.Controls.Add(this.labelControl1);
-            this.lblItensTotalizador.Location = new System.Drawing.Point(910, 38);
-            this.lblItensTotalizador.Name = "lblItensTotalizador";
-            this.lblItensTotalizador.Size = new System.Drawing.Size(255, 723);
-            this.lblItensTotalizador.TabIndex = 1;
+            this.panel.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panel.Controls.Add(this.pictureEdit1);
+            this.panel.Controls.Add(this.labelControl1);
+            this.panel.Location = new System.Drawing.Point(910, 38);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(255, 656);
+            this.panel.TabIndex = 1;
             // 
             // pictureEdit1
             // 
@@ -96,7 +100,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(128)))), ((int)(((byte)(162)))));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(37, 688);
+            this.labelControl1.Location = new System.Drawing.Point(37, 621);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(177, 30);
             this.labelControl1.TabIndex = 0;
@@ -119,6 +123,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.txtBuscaProdutos.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtBuscaProdutos.Size = new System.Drawing.Size(912, 40);
             this.txtBuscaProdutos.TabIndex = 1;
+            this.txtBuscaProdutos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBuscaProdutos_KeyDown);
             // 
             // btnAvançar
             // 
@@ -136,34 +141,34 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnAvançar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnAvançar.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
             this.btnAvançar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAvançar.Location = new System.Drawing.Point(1039, 769);
+            this.btnAvançar.Location = new System.Drawing.Point(1039, 702);
             this.btnAvançar.Name = "btnAvançar";
             this.btnAvançar.Size = new System.Drawing.Size(97, 35);
             this.btnAvançar.TabIndex = 7;
             this.btnAvançar.Text = "Avançar";
+            this.btnAvançar.Click += new System.EventHandler(this.BtnAvançar_Click);
             // 
-            // btnCadastrar
+            // btnCancelar
             // 
-            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCadastrar.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(139)))), ((int)(((byte)(148)))));
-            this.btnCadastrar.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(201)))));
-            this.btnCadastrar.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Appearance.Options.UseBackColor = true;
-            this.btnCadastrar.Appearance.Options.UseBorderColor = true;
-            this.btnCadastrar.Appearance.Options.UseFont = true;
-            this.btnCadastrar.Appearance.Options.UseForeColor = true;
-            this.btnCadastrar.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(120)))), ((int)(((byte)(130)))));
-            this.btnCadastrar.AppearanceHovered.Options.UseBackColor = true;
-            this.btnCadastrar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnCadastrar.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.btnCadastrar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnCadastrar.Location = new System.Drawing.Point(936, 769);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(97, 35);
-            this.btnCadastrar.TabIndex = 6;
-            this.btnCadastrar.Text = "Cancelar";
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(139)))), ((int)(((byte)(148)))));
+            this.btnCancelar.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(201)))));
+            this.btnCancelar.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Appearance.Options.UseBackColor = true;
+            this.btnCancelar.Appearance.Options.UseBorderColor = true;
+            this.btnCancelar.Appearance.Options.UseFont = true;
+            this.btnCancelar.Appearance.Options.UseForeColor = true;
+            this.btnCancelar.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(120)))), ((int)(((byte)(130)))));
+            this.btnCancelar.AppearanceHovered.Options.UseBackColor = true;
+            this.btnCancelar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnCancelar.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.btnCancelar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnCancelar.Location = new System.Drawing.Point(936, 702);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(97, 35);
+            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.Text = "Cancelar";
             // 
             // dgvProdutos
             // 
@@ -173,7 +178,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.dgvProdutos.Location = new System.Drawing.Point(-1, 111);
             this.dgvProdutos.MainView = this.gridView1;
             this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.Size = new System.Drawing.Size(912, 650);
+            this.dgvProdutos.Size = new System.Drawing.Size(912, 583);
             this.dgvProdutos.TabIndex = 8;
             this.dgvProdutos.TabStop = false;
             this.dgvProdutos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -182,56 +187,79 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5});
+            this.clnCodigo,
+            this.clnDescricao,
+            this.clnValorUnitario,
+            this.clnQuantidade,
+            this.clnValorTotal,
+            this.clnId});
             this.gridView1.GridControl = this.dgvProdutos;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
-            // gridColumn1
+            // clnCodigo
             // 
-            this.gridColumn1.Caption = "Código";
-            this.gridColumn1.CustomizationCaption = "Código";
-            this.gridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 50;
+            this.clnCodigo.Caption = "Código";
+            this.clnCodigo.CustomizationCaption = "Código";
+            this.clnCodigo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.clnCodigo.FieldName = "CODIGO";
+            this.clnCodigo.Name = "clnCodigo";
+            this.clnCodigo.Visible = true;
+            this.clnCodigo.VisibleIndex = 0;
+            this.clnCodigo.Width = 50;
             // 
-            // gridColumn2
+            // clnDescricao
             // 
-            this.gridColumn2.Caption = "Descrição";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 405;
+            this.clnDescricao.Caption = "Descrição";
+            this.clnDescricao.FieldName = "NOME";
+            this.clnDescricao.Name = "clnDescricao";
+            this.clnDescricao.Visible = true;
+            this.clnDescricao.VisibleIndex = 1;
+            this.clnDescricao.Width = 405;
             // 
-            // gridColumn3
+            // clnValorUnitario
             // 
-            this.gridColumn3.Caption = "Valor Unitário";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 133;
+            this.clnValorUnitario.Caption = "Valor Unitário";
+            this.clnValorUnitario.FieldName = "PRECOVENDA";
+            this.clnValorUnitario.Name = "clnValorUnitario";
+            this.clnValorUnitario.Visible = true;
+            this.clnValorUnitario.VisibleIndex = 2;
+            this.clnValorUnitario.Width = 133;
             // 
-            // gridColumn4
+            // clnQuantidade
             // 
-            this.gridColumn4.Caption = "Quantidade";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 136;
+            this.clnQuantidade.Caption = "Quantidade";
+            this.clnQuantidade.FieldName = "QUANTIDADE";
+            this.clnQuantidade.Name = "clnQuantidade";
+            this.clnQuantidade.Visible = true;
+            this.clnQuantidade.VisibleIndex = 3;
             // 
-            // gridColumn5
+            // clnValorTotal
             // 
-            this.gridColumn5.Caption = "Valor Total";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 170;
+            this.clnValorTotal.Caption = "Valor Total";
+            this.clnValorTotal.FieldName = "VALORTOTAL";
+            this.clnValorTotal.Name = "clnValorTotal";
+            this.clnValorTotal.Visible = true;
+            this.clnValorTotal.VisibleIndex = 4;
+            this.clnValorTotal.Width = 170;
+            // 
+            // clnId
+            // 
+            this.clnId.Caption = "Id";
+            this.clnId.FieldName = "ID_PRODUTO";
+            this.clnId.Name = "clnId";
+            this.clnId.OptionsColumn.AllowEdit = false;
+            this.clnId.OptionsColumn.AllowFocus = false;
+            this.clnId.OptionsColumn.AllowMove = false;
+            this.clnId.OptionsColumn.AllowShowHide = false;
+            this.clnId.OptionsColumn.AllowSize = false;
+            this.clnId.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.True;
+            this.clnId.OptionsColumn.ReadOnly = true;
+            this.clnId.OptionsColumn.ShowCaption = false;
+            this.clnId.OptionsColumn.ShowInCustomizationForm = false;
+            this.clnId.OptionsColumn.ShowInExpressionEditor = false;
+            this.clnId.OptionsColumn.TabStop = false;
             // 
             // pnlInformacoes
             // 
@@ -243,64 +271,64 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.pnlInformacoes.Appearance.Options.UseBackColor = true;
             this.pnlInformacoes.Appearance.Options.UseBorderColor = true;
             this.pnlInformacoes.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlInformacoes.Controls.Add(this.lblValorTotalizador);
-            this.pnlInformacoes.Controls.Add(this.lblTotalVenda);
-            this.pnlInformacoes.Controls.Add(this.lblTotalTotalizador);
-            this.pnlInformacoes.Controls.Add(this.lblItens);
-            this.pnlInformacoes.Location = new System.Drawing.Point(-1, 761);
+            this.pnlInformacoes.Controls.Add(this.lblValorTotal);
+            this.pnlInformacoes.Controls.Add(this.label1);
+            this.pnlInformacoes.Controls.Add(this.lblTotalItens);
+            this.pnlInformacoes.Controls.Add(this.label2);
+            this.pnlInformacoes.Location = new System.Drawing.Point(-1, 694);
             this.pnlInformacoes.Name = "pnlInformacoes";
             this.pnlInformacoes.Size = new System.Drawing.Size(912, 56);
             this.pnlInformacoes.TabIndex = 0;
             // 
-            // lblValorTotalizador
+            // lblValorTotal
             // 
-            this.lblValorTotalizador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblValorTotalizador.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorTotalizador.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblValorTotalizador.Appearance.Options.UseFont = true;
-            this.lblValorTotalizador.Appearance.Options.UseForeColor = true;
-            this.lblValorTotalizador.Location = new System.Drawing.Point(826, 13);
-            this.lblValorTotalizador.Name = "lblValorTotalizador";
-            this.lblValorTotalizador.Size = new System.Drawing.Size(42, 30);
-            this.lblValorTotalizador.TabIndex = 12;
-            this.lblValorTotalizador.Text = "0,00";
+            this.lblValorTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblValorTotal.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorTotal.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblValorTotal.Appearance.Options.UseFont = true;
+            this.lblValorTotal.Appearance.Options.UseForeColor = true;
+            this.lblValorTotal.Location = new System.Drawing.Point(826, 13);
+            this.lblValorTotal.Name = "lblValorTotal";
+            this.lblValorTotal.Size = new System.Drawing.Size(42, 30);
+            this.lblValorTotal.TabIndex = 12;
+            this.lblValorTotal.Text = "0,00";
             // 
-            // lblTotalVenda
+            // label1
             // 
-            this.lblTotalVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotalVenda.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalVenda.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTotalVenda.Appearance.Options.UseFont = true;
-            this.lblTotalVenda.Appearance.Options.UseForeColor = true;
-            this.lblTotalVenda.Location = new System.Drawing.Point(799, 13);
-            this.lblTotalVenda.Name = "lblTotalVenda";
-            this.lblTotalVenda.Size = new System.Drawing.Size(26, 30);
-            this.lblTotalVenda.TabIndex = 13;
-            this.lblTotalVenda.Text = "R$";
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.label1.Appearance.Options.UseFont = true;
+            this.label1.Appearance.Options.UseForeColor = true;
+            this.label1.Location = new System.Drawing.Point(799, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 30);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "R$";
             // 
-            // lblTotalTotalizador
+            // lblTotalItens
             // 
-            this.lblTotalTotalizador.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalTotalizador.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTotalTotalizador.Appearance.Options.UseFont = true;
-            this.lblTotalTotalizador.Appearance.Options.UseForeColor = true;
-            this.lblTotalTotalizador.Location = new System.Drawing.Point(40, 20);
-            this.lblTotalTotalizador.Name = "lblTotalTotalizador";
-            this.lblTotalTotalizador.Size = new System.Drawing.Size(7, 17);
-            this.lblTotalTotalizador.TabIndex = 11;
-            this.lblTotalTotalizador.Text = "0";
+            this.lblTotalItens.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalItens.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblTotalItens.Appearance.Options.UseFont = true;
+            this.lblTotalItens.Appearance.Options.UseForeColor = true;
+            this.lblTotalItens.Location = new System.Drawing.Point(40, 20);
+            this.lblTotalItens.Name = "lblTotalItens";
+            this.lblTotalItens.Size = new System.Drawing.Size(7, 17);
+            this.lblTotalItens.TabIndex = 11;
+            this.lblTotalItens.Text = "0";
             // 
-            // lblItens
+            // label2
             // 
-            this.lblItens.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItens.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblItens.Appearance.Options.UseFont = true;
-            this.lblItens.Appearance.Options.UseForeColor = true;
-            this.lblItens.Location = new System.Drawing.Point(7, 20);
-            this.lblItens.Name = "lblItens";
-            this.lblItens.Size = new System.Drawing.Size(27, 17);
-            this.lblItens.TabIndex = 9;
-            this.lblItens.Text = "Itens";
+            this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Appearance.ForeColor = System.Drawing.Color.White;
+            this.label2.Appearance.Options.UseFont = true;
+            this.label2.Appearance.Options.UseForeColor = true;
+            this.label2.Location = new System.Drawing.Point(7, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Itens";
             // 
             // panelControl1
             // 
@@ -365,19 +393,20 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 816);
+            this.ClientSize = new System.Drawing.Size(1165, 749);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.lblItensTotalizador);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.pnlInformacoes);
             this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.btnAvançar);
-            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtBuscaProdutos);
+            this.KeyPreview = true;
             this.Name = "frmPdv";
             this.Text = "Venda";
-            ((System.ComponentModel.ISupportInitialize)(this.lblItensTotalizador)).EndInit();
-            this.lblItensTotalizador.ResumeLayout(false);
-            this.lblItensTotalizador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panel)).EndInit();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscaProdutos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
@@ -388,32 +417,35 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DevExpress.XtraEditors.PanelControl lblItensTotalizador;
+        private DevExpress.XtraEditors.PanelControl panel;
         private DevExpress.XtraEditors.SearchControl txtBuscaProdutos;
         private DevExpress.XtraEditors.SimpleButton btnAvançar;
-        private DevExpress.XtraEditors.SimpleButton btnCadastrar;
+        private DevExpress.XtraEditors.SimpleButton btnCancelar;
         private DevExpress.XtraGrid.GridControl dgvProdutos;
         private DevExpress.XtraEditors.PanelControl pnlInformacoes;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl lblValorTotalizador;
-        private DevExpress.XtraEditors.LabelControl lblTotalVenda;
-        private DevExpress.XtraEditors.LabelControl lblTotalTotalizador;
-        private DevExpress.XtraEditors.LabelControl lblItens;
+        private DevExpress.XtraEditors.LabelControl lblValorTotal;
+        private DevExpress.XtraEditors.LabelControl label1;
+        private DevExpress.XtraEditors.LabelControl lblTotalItens;
+        private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.SimpleButton btnReiniciar;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn clnCodigo;
+        private DevExpress.XtraGrid.Columns.GridColumn clnDescricao;
+        private DevExpress.XtraGrid.Columns.GridColumn clnValorUnitario;
+        private DevExpress.XtraGrid.Columns.GridColumn clnValorTotal;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn clnQuantidade;
+        private DevExpress.XtraGrid.Columns.GridColumn clnId;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }

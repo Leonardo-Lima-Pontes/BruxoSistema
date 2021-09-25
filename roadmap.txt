@@ -91,3 +91,7 @@ baixar estoque que não esta baixando aaaaaaaa
 
 revitalizar telas e rever projeto
 
+vamos tentar o seguinte
+criar uma model com todos os campos necessários para a venda adicionar no construtor quantidade = 1 valor unitário = precoproduto
+depois recuperar esse data source dar jeito
+para finalizar as operações de finalizar venda

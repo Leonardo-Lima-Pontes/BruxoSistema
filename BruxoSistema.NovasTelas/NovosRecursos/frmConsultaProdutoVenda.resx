@@ -121,15 +121,15 @@
   <data name="btnReiniciar.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAStJREFUSEvt1CtLBGEUh/ERbBpNlsWkiFZBFoP3ph/AYvML+AEWDAaroMGmmAQx
-        CEbFYDHbxEsTk6io4O354w4cDucdx3HjPvCD5eXsvHPZnaxdK5rGFi7xgjdcYxtz6IBtEQs/H4vrwzG+
-        fnGOYagGtKaTKGwU9/AHS3nEjltLVsMd7HAVyQ7hh48wiW50YRwH8HNW2Aj84Cr8g8zbg5/Pha3BDulq
-        Ui3hE3beCjuDHdKtiJpF0cEl7AZ2SPc8Sv+NZ9hZSycadgU7mNqgcqewG6RuUeVWYDfQT7GlDeEDdpNl
-        pJrHbdOUFsq0C7uB7KOOTqgBrMOejF6ApeqBf9i5d7y6tZy+U7pB6LKjA0UeMIM/1YvoveSdoB+VG8MG
-        LvDUpM+bmEC7/5Rl38wVthYUFyuxAAAAAElFTkSuQmCC
+        EwAACxMBAJqcGAAAAdNJREFUSEutlstOFEEUQGfJ1oULUFlJIBHBsEDCmocmQkgICV9AIu+HOwhrPoGX
+        rsUEVgpseAQ+Ao1fgBhBYQEb4znV4yTM9Ex3D5zkTG7NdFV3Vd+6NbkE6nECd/ErXuU9wW0cw8eYGTu9
+        xxvcx2nswea8xjN4gNe4inWYigH8gxv41C8S8JpP+Bv7/KISU3iJg6GVjSH0wcZDKwaf3MHbQ6s67OtN
+        SmbimvtDNU9ejDO5wNrQyvMBP0bhveA7WYnCKBXNhDQvNI6HWBOFBRrQMR/ZmMQ9gyowZU/xTWjd5hBH
+        DXbQPM9KK/7ApdAqZRY/G3zHLoMMvMAzXAyteHrR3R9S85lBStrwJ86HVnmeo2OHD9eymAfYFIUFXuI5
+        Ov0kWtDdnfuG3QZFuGxe4KDSiea3SZGG12hRrPiSLR2/cAS9WciKlLzDLwbWDqtiORbwL1qas3CMbw2e
+        YNJGy1rzG9ExC/3W0e19X2zhchRGuKVdYwvVXRlGx7pV7KQf71quO9AjtezBYwp6k2pm4pPb1zO8Is7E
+        KfpOrIpJ+EI30T5xRS8WD/A1NBOsiu7cV/j/0HcTzeEReo21v2TN02Camf/+RXFXugRq7CZy41VI4Vzu
+        H5bkYFwQSJGeAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="behaviorManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

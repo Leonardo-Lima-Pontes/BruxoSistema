@@ -28,6 +28,10 @@
         /// </summary>
         public decimal PRECOVENDA { get; set; }
 
+        public decimal QUANTIDADE { get; set; }
+
+        public decimal VALORTOTAL { get; set; }
+
         public Produto(int iD_PRODUTO = 0, string nOME = "", int cODIGO = 0, decimal eSTOQUE = 0, decimal pRECOVENDA = 0)
         {
             ID_PRODUTO = iD_PRODUTO;
@@ -35,6 +39,8 @@
             CODIGO = cODIGO;
             ESTOQUE = eSTOQUE;
             PRECOVENDA = pRECOVENDA;
+            QUANTIDADE = 1;
+            VALORTOTAL = PRECOVENDA;
         }
     }
 
