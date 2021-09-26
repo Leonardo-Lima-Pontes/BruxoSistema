@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BruxoSistema.NovasTelas.NovosRecursos;
-using BruxoSistema.NovasTelas.Recursos;
 
 namespace BruxoSistema.NovasTelas
 {

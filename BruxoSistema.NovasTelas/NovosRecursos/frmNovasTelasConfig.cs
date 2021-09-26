@@ -14,25 +14,23 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         private void btnGravarConfiguracoes_Click(object sender, EventArgs e)
         {
             NovasTelasConfig novasTelasConfig = new NovasTelasConfig(
-                novaTelaVenda: tgsPdv.IsOn,
-                novaTelaCadastroProduto: tgsCadastroProduto.IsOn,
-                novaTelaCadastroFormaPagamento: tgsCadastroFormaPagamento.IsOn,
-                novaTelaCadastroUsuario: tgsCadastroUsuario.IsOn,
-                novaTelaConsultaProdutoVenda: tgsConsultaProdutoVenda.IsOn,
-                novaTelaFaturamento: tgsFaturamento.IsOn,
-                novaTelaInicial: tgsTelaInicial.IsOn
+                novoFluxoFaturamento: tgsNovoFluxoFaturamento.IsOn,
+                modificaQuantidade: tgsModificarQuantidade.IsOn
             );
 
             ConfiguracoesController.GravarConfiguracoes(novasTelasConfig);
 
-            ConfiguracoesGlobais.NovasTelas.NovaTelaInicial = tgsTelaInicial.IsOn;
+            ConfiguracoesGlobais.NovosFluxos.NovoFluxoFaturamento = tgsNovoFluxoFaturamento.IsOn;
+            ConfiguracoesGlobais.NovosFluxos.ModificaQuantidade = tgsModificarQuantidade.IsOn;
 
             Close();
         }
 
         private void frmNovasTelasConfig_Load(object sender, EventArgs e)
         {
-            tgsTelaInicial.IsOn = ConfiguracoesGlobais.NovasTelas.NovaTelaInicial;
+            tgsNovoFluxoFaturamento.IsOn = ConfiguracoesGlobais.NovosFluxos.NovoFluxoFaturamento;
+            tgsModificarQuantidade.IsOn = ConfiguracoesGlobais.NovosFluxos.ModificaQuantidade;
+
         }
     }
 }

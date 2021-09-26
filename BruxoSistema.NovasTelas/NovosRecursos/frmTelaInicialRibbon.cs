@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using BruxoBiblioteca.NovasTelas.Configuracoes;
 using BruxoBiblioteca.NovasTelas.Models;
 using DevExpress.XtraBars;
 
@@ -10,6 +11,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         {
             InitializeComponent();
 
+            ConfiguracoesController.CarregarConfiguracoes();
             lblUsuarioLogado.Caption = UsuarioSessao.NomeUsuario;
         }
 

@@ -21,7 +21,8 @@ namespace BruxoBiblioteca.NovasTelas.Configuracoes
             string config = ConfiguracoesDao.CarregarConfiguracoes();
             NovasTelasConfig configs = JsonConvert.DeserializeObject<NovasTelasConfig>(config);
 
-            ConfiguracoesGlobais.NovasTelas.NovaTelaInicial = configs.NovaTelaInicial;
+            ConfiguracoesGlobais.NovosFluxos.NovoFluxoFaturamento = configs.NovoFluxoFaturamento;
+            ConfiguracoesGlobais.NovosFluxos.ModificaQuantidade = configs.ModificaQuantidade;
         }
     }
 }
