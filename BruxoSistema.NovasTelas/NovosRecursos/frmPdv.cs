@@ -255,7 +255,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
         private void ResetarVenda()
         {
-            produtosDaVenda = null;
+            produtosDaVenda.Clear();
             AtualizarDataGridComDataSource();
             lblTotalItens.ResetText();
             lblValorTotal.ResetText();

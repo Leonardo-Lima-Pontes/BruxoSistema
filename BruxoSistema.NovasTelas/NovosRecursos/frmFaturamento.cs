@@ -42,9 +42,13 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
                 novoBotão.Width = 160;
                 novoBotão.TabIndex = tabIndex;
                 novoBotão.Height = 50;
-                novoBotão.BorderStyle = BorderStyles.Simple;
+                novoBotão.ButtonStyle = BorderStyles.Flat;
                 novoBotão.GroupIndex = 1;
+                novoBotão.Appearance.BackColor = Color.White;
+                novoBotão.GotFocus += new EventHandler(SelecionarCheckButton);
+                novoBotão.CheckedChanged += new EventHandler(MudarCorCheckButton);
                 panelControl2.Controls.Add(novoBotão);
+
 
                 tabIndex++;
 
@@ -56,7 +60,23 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
                 }
             }
 
-            panelControl2.Controls.OfType<CheckButton>().First().Select();
+            panelControl2.Controls.OfType<CheckButton>().First(r => r.Checked = true).Select();
+        }
+
+        private void MudarCorCheckButton(object sender, EventArgs e)
+        {
+            CheckButton btn = sender as CheckButton;
+
+            if (btn.Checked)
+                btn.Appearance.BackColor = Color.FromArgb(200, 200, 200);
+            else
+                btn.Appearance.BackColor = Color.White;
+        }
+
+        private void SelecionarCheckButton(object sender, EventArgs e)
+        {
+            CheckButton button = (CheckButton)sender;
+            button.Checked = true;
         }
 
         private void FaturarVenda()
