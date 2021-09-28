@@ -25,8 +25,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         private void btnCadastroFormaPagamento_ItemClick(object sender, ItemClickEventArgs e)
         {
             FrmCadastroFormaPagamento frm = new FrmCadastroFormaPagamento();
-            frm.MdiParent = this;
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void btnVenda_ItemClick(object sender, ItemClickEventArgs e)

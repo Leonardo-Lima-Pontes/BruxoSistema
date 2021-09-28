@@ -213,30 +213,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             return pedidoFinalizado;
         }
 
-        //private List<PedidoProduto> PegarProdutosDoPedido()
-        //{
-        //    List<PedidoProduto> produtosDoPedido = new List<PedidoProduto>();
-
-        //    foreach (DataGridViewRow row in dataGridViewProdutos.Rows)
-        //    {
-        //        PedidoProduto produtoDoPedido = new PedidoProduto();
-        //        produtoDoPedido.QUANTIDADE = decimal.Parse(row.Cells[3].Value.ToString());
-        //        produtoDoPedido.VALOR = decimal.Parse(row.Cells[4].Value.ToString());
-        //        produtoDoPedido.PRODUTO_ID = int.Parse(row.Cells[5].Value.ToString());
-
-        //        bool pedidoProdutoValidado = PdvController.ValidarPedidoProduto(produtoDoPedido);
-        //        if (!pedidoProdutoValidado)
-        //        {
-        //            MessageBox.Show("Consagrado por favor esses produtos não podem ser inseridos desta maneira na venda!");
-        //            return null;
-        //        }
-
-        //        produtosDoPedido.Add(produtoDoPedido);
-        //    }
-
-        //    return produtosDoPedido;
-        //}
-
         private Usuario PegarUsuario()
         {
             Usuario usuarioDaVenda = new Usuario();

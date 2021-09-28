@@ -176,7 +176,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             // 
             // FrmLogin
             // 
-            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseBorderColor = true;

@@ -11,11 +11,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             InitializeComponent();
         }
 
-        private void BtnGravar_Click(object sender, EventArgs e)
-        {
-            SalvarFormaDePagamento();
-        }
-
         private void SalvarFormaDePagamento()
         {
             char desabilitado = !tgsDesabilitado.IsOn ? 'N' : 'S';
@@ -31,40 +26,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
             MessageBox.Show(@"Forma de pagamento cadastrada com sucesso");
 
-            ResetarCampos();
-            DesabilitarCampos();
-        }
-
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            HabilitarCampos();
-        }
-
-        private void ResetarCampos()
-        {
-            txtForma.ResetText();
-            tgsDesabilitado.IsOn = false;
-        }
-
-        private void DesabilitarCampos()
-        {
-            lblForma.Enabled = false;
-            txtForma.Enabled = false;
-            lblDesabilitado.Enabled = false;
-            tgsDesabilitado.Enabled = false;
-            btnHabilitar.Enabled = true;
-            btnGravar.Enabled = false;
-        }
-
-        private void HabilitarCampos()
-        {
-            lblForma.Enabled = true;
-            txtForma.Enabled = true;
-            lblDesabilitado.Enabled = true;
-            tgsDesabilitado.Enabled = true;
-            btnHabilitar.Enabled = false;
-            btnGravar.Enabled = true;
-            txtForma.Focus();
+            Close();
         }
 
         private void FrmCadastrarFormaPagamento_KeyDown(object sender, KeyEventArgs e)
@@ -74,18 +36,10 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
                 case Keys.Escape:
                     FecharFormulario();
                     break;
-                case Keys.F2:
-                    HabilitarCampos();
-                    break;
-                case Keys.F5:
+                case Keys.Enter:
                     SalvarFormaDePagamento();
                     break;
             }
-        }
-
-        private void BtnFechar_Click(object sender, EventArgs e)
-        {
-            FecharFormulario();
         }
 
         private void FecharFormulario()
@@ -105,6 +59,21 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         private bool ValidarSeTemCampoPreenchido()
         {
             return !string.IsNullOrWhiteSpace(txtForma.Text);
+        }
+
+        private void labelControl2_Click(object sender, EventArgs e)
+        {
+            FecharFormulario();
+        }
+
+        private void btnAvançar_Click(object sender, EventArgs e)
+        {
+            SalvarFormaDePagamento();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            FecharFormulario();
         }
     }
 }

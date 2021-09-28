@@ -39,13 +39,15 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
         private void HabilitarCampos()
         {
-            this.Controls.OfType<TextEdit>().ToList().ForEach(labelConstrol => labelConstrol.Enabled = true);
-            this.Controls.OfType<LabelControl>().ToList().ForEach(labelConstrol => labelConstrol.Enabled = true);
+            //this.groupBox1.Controls.OfType<TextEdit>().ToList().ForEach(labelConstrol => labelConstrol.Enabled = true);
+            //this.groupBox1.Controls.OfType<LabelControl>().ToList().ForEach(labelConstrol => labelConstrol.Enabled = true);
+
+            groupBox1.Enabled = true;
 
             txtNome.Focus();
 
-            btnHabilitar.Enabled = true;
-            btnGravar.Enabled = false;
+            btnNovo.Enabled = true;
+            btnSalvar.Enabled = false;
         }
 
         private void BtnGravar_Click(object sender, EventArgs e)
@@ -78,16 +80,18 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
         private void DesabilitarCampos()
         {
-            this.Controls.OfType<TextEdit>().ToList().ForEach(textBox =>
+            this.groupBox1.Controls.OfType<TextEdit>().ToList().ForEach(textBox =>
             {
                 textBox.ResetText();
-                textBox.Enabled = false;
+                //textBox.Enabled = false;
             });
 
-            this.Controls.OfType<LabelControl>().ToList().ForEach(labelConstrol => labelConstrol.Enabled = false);
+            //this.groupBox1.Controls.OfType<LabelControl>().ToList().ForEach(labelConstrol => labelConstrol.Enabled = false);
 
-            btnHabilitar.Enabled = true;
-            btnGravar.Enabled = false;
+            groupBox1.Enabled = false;
+
+            btnNovo.Enabled = true;
+            btnSalvar.Enabled = false;
         }
 
         private bool ValidarSeTemCampoPreenchido()
@@ -112,6 +116,21 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
                     RealizarCadastroProduto();
                     break;
             }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            HabilitarCampos();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            RealizarCadastroProduto();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            FecharFormulario();
         }
     }
 }
