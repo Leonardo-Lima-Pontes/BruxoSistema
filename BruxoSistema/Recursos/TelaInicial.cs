@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BruxoBiblioteca.NovasTelas.Models;
 using BruxoSistema.NovasTelas.NovosRecursos;
-using BruxoSistema.NovasTelas.Recursos;
 
 namespace BruxoSistema
 {

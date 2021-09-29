@@ -40,10 +40,10 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnNovo = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             this.btnSair = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNovo = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnSalvar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstoque.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreco.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNome.Properties)).BeginInit();
@@ -173,7 +173,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.groupBox1.Location = new System.Drawing.Point(298, 86);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(313, 225);
-            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações do produto";
             // 
@@ -190,17 +190,26 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.panelControl1.Size = new System.Drawing.Size(264, 683);
             this.panelControl1.TabIndex = 27;
             // 
-            // labelControl1
+            // btnSair
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(201)))));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(298, 25);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(230, 32);
-            this.labelControl1.TabIndex = 28;
-            this.labelControl1.Text = "Cadastro de produtos";
+            this.btnSair.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(157)))), ((int)(((byte)(217)))));
+            this.btnSair.Appearance.BorderColor = System.Drawing.Color.Maroon;
+            this.btnSair.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnSair.Appearance.Options.UseBackColor = true;
+            this.btnSair.Appearance.Options.UseBorderColor = true;
+            this.btnSair.Appearance.Options.UseFont = true;
+            this.btnSair.Appearance.Options.UseForeColor = true;
+            this.btnSair.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnSair.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.btnSair.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.ImageOptions.Image")));
+            this.btnSair.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightTop;
+            this.btnSair.Location = new System.Drawing.Point(57, 132);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(151, 32);
+            this.btnSair.TabIndex = 7;
+            this.btnSair.Text = "ESC - Fechar";
+            this.btnSair.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // btnNovo
             // 
@@ -214,7 +223,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnNovo.Appearance.Options.UseForeColor = true;
             this.btnNovo.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnNovo.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.btnNovo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnNovo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.ImageOptions.Image")));
             this.btnNovo.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightTop;
             this.btnNovo.Location = new System.Drawing.Point(57, 86);
             this.btnNovo.Name = "btnNovo";
@@ -222,6 +231,18 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnNovo.TabIndex = 6;
             this.btnNovo.Text = "F2 - Novo";
             this.btnNovo.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(115)))), ((int)(((byte)(201)))));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.Location = new System.Drawing.Point(298, 25);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(230, 32);
+            this.labelControl1.TabIndex = 28;
+            this.labelControl1.Text = "Cadastro de produtos";
             // 
             // btnSalvar
             // 
@@ -235,7 +256,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnSalvar.Appearance.Options.UseForeColor = true;
             this.btnSalvar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnSalvar.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.btnSalvar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnSalvar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.ImageOptions.Image")));
             this.btnSalvar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightTop;
             this.btnSalvar.Location = new System.Drawing.Point(398, 353);
             this.btnSalvar.Name = "btnSalvar";
@@ -243,27 +264,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "F5 - Gravar";
             this.btnSalvar.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(157)))), ((int)(((byte)(217)))));
-            this.btnSair.Appearance.BorderColor = System.Drawing.Color.Maroon;
-            this.btnSair.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Appearance.Options.UseBackColor = true;
-            this.btnSair.Appearance.Options.UseBorderColor = true;
-            this.btnSair.Appearance.Options.UseFont = true;
-            this.btnSair.Appearance.Options.UseForeColor = true;
-            this.btnSair.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.btnSair.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
-            this.btnSair.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.btnSair.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightTop;
-            this.btnSair.Location = new System.Drawing.Point(57, 132);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(151, 32);
-            this.btnSair.TabIndex = 7;
-            this.btnSair.Text = "ESC - Fechar";
-            this.btnSair.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // FrmCadastroProduto
             // 

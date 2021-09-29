@@ -13,11 +13,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             InitializeComponent();
         }
 
-        private void BtnSair_Click(object sender, EventArgs e)
-        {
-            FecharFormulario();
-        }
-
         private void FecharFormulario()
         {
             if (!ValidarSeTemCampoPreenchido())
@@ -32,11 +27,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             if (resultado == DialogResult.Yes) Close();
         }
 
-        private void BtnHabilitarCampos_Click(object sender, EventArgs e)
-        {
-            HabilitarCampos();
-        }
-
         private void HabilitarCampos()
         {
             //this.groupBox1.Controls.OfType<TextEdit>().ToList().ForEach(labelConstrol => labelConstrol.Enabled = true);
@@ -48,11 +38,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
             btnNovo.Enabled = true;
             btnSalvar.Enabled = false;
-        }
-
-        private void BtnGravar_Click(object sender, EventArgs e)
-        {
-            RealizarCadastroProduto();
         }
 
         private void RealizarCadastroProduto()
@@ -109,10 +94,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
                 case Keys.Escape:
                     FecharFormulario();
                     break;
-                case Keys.F2:
-                    HabilitarCampos();
-                    break;
-                case Keys.F5:
+                case Keys.Enter:
                     RealizarCadastroProduto();
                     break;
             }

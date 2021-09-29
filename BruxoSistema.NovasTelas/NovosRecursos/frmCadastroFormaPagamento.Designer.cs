@@ -34,14 +34,16 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnAvançar = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtForma = new DevExpress.XtraEditors.TextEdit();
             this.lblForma = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tgsDesabilitado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtForma.Properties)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tgsDesabilitado
@@ -49,6 +51,8 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.tgsDesabilitado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tgsDesabilitado.Location = new System.Drawing.Point(12, 274);
             this.tgsDesabilitado.Name = "tgsDesabilitado";
+            this.tgsDesabilitado.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.tgsDesabilitado.Properties.Appearance.Options.UseBackColor = true;
             this.tgsDesabilitado.Properties.OffText = "Off";
             this.tgsDesabilitado.Properties.OnText = "On";
             this.tgsDesabilitado.Properties.ShowText = false;
@@ -84,7 +88,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnAvançar.Location = new System.Drawing.Point(402, 269);
             this.btnAvançar.Name = "btnAvançar";
             this.btnAvançar.Size = new System.Drawing.Size(128, 37);
-            this.btnAvançar.TabIndex = 34;
+            this.btnAvançar.TabIndex = 2;
             this.btnAvançar.Text = "Gravar (F5)";
             this.btnAvançar.Click += new System.EventHandler(this.btnAvançar_Click);
             // 
@@ -108,7 +112,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.btnCancelar.Location = new System.Drawing.Point(268, 269);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(128, 37);
-            this.btnCancelar.TabIndex = 33;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar (ESC)";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -122,8 +126,22 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(542, 56);
+            this.panelControl1.Size = new System.Drawing.Size(540, 56);
             this.panelControl1.TabIndex = 35;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelControl2.Location = new System.Drawing.Point(529, 3);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(10, 20);
+            this.labelControl2.TabIndex = 38;
+            this.labelControl2.Text = "X";
+            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
             // 
             // labelControl1
             // 
@@ -149,7 +167,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.txtForma.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtForma.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.txtForma.Size = new System.Drawing.Size(298, 24);
-            this.txtForma.TabIndex = 36;
+            this.txtForma.TabIndex = 1;
             this.txtForma.ToolTip = "Leo";
             this.txtForma.ToolTipTitle = "Leozin";
             // 
@@ -165,19 +183,15 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.lblForma.TabIndex = 37;
             this.lblForma.Text = "Nome*";
             // 
-            // labelControl2
+            // panel1
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelControl2.Location = new System.Drawing.Point(529, 3);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(10, 20);
-            this.labelControl2.TabIndex = 38;
-            this.labelControl2.Text = "X";
-            this.labelControl2.Click += new System.EventHandler(this.labelControl2_Click);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panelControl1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(542, 318);
+            this.panel1.TabIndex = 0;
             // 
             // FrmCadastroFormaPagamento
             // 
@@ -188,11 +202,11 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.ClientSize = new System.Drawing.Size(542, 318);
             this.Controls.Add(this.txtForma);
             this.Controls.Add(this.lblForma);
-            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.btnAvançar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblDesabilitado);
             this.Controls.Add(this.tgsDesabilitado);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FrmCadastroFormaPagamento";
@@ -204,6 +218,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtForma.Properties)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +234,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtForma;
         private DevExpress.XtraEditors.LabelControl lblForma;
+        private System.Windows.Forms.Panel panel1;
     }
 }
