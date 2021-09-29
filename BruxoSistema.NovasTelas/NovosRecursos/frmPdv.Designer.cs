@@ -41,8 +41,8 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clnCodigo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnDescricao = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.clnValorUnitario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnQuantidade = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clnValorUnitario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnValorTotal = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clnId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlInformacoes = new DevExpress.XtraEditors.PanelControl();
@@ -189,8 +189,8 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.clnCodigo,
             this.clnDescricao,
-            this.clnValorUnitario,
             this.clnQuantidade,
+            this.clnValorUnitario,
             this.clnValorTotal,
             this.clnId});
             this.gridView1.GridControl = this.dgvProdutos;
@@ -205,6 +205,8 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.clnCodigo.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.clnCodigo.FieldName = "CODIGO";
             this.clnCodigo.Name = "clnCodigo";
+            this.clnCodigo.OptionsColumn.AllowEdit = false;
+            this.clnCodigo.OptionsColumn.AllowFocus = false;
             this.clnCodigo.Visible = true;
             this.clnCodigo.VisibleIndex = 0;
             this.clnCodigo.Width = 50;
@@ -214,32 +216,40 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.clnDescricao.Caption = "Descrição";
             this.clnDescricao.FieldName = "NOME";
             this.clnDescricao.Name = "clnDescricao";
+            this.clnDescricao.OptionsColumn.AllowEdit = false;
+            this.clnDescricao.OptionsColumn.AllowFocus = false;
             this.clnDescricao.Visible = true;
             this.clnDescricao.VisibleIndex = 1;
             this.clnDescricao.Width = 405;
             // 
-            // clnValorUnitario
-            // 
-            this.clnValorUnitario.Caption = "Valor Unitário";
-            this.clnValorUnitario.FieldName = "PRECOVENDA";
-            this.clnValorUnitario.Name = "clnValorUnitario";
-            this.clnValorUnitario.Visible = true;
-            this.clnValorUnitario.VisibleIndex = 2;
-            this.clnValorUnitario.Width = 133;
-            // 
             // clnQuantidade
             // 
             this.clnQuantidade.Caption = "Quantidade";
+            this.clnQuantidade.DisplayFormat.FormatString = "N3";
+            this.clnQuantidade.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.clnQuantidade.FieldName = "QUANTIDADE";
             this.clnQuantidade.Name = "clnQuantidade";
             this.clnQuantidade.Visible = true;
-            this.clnQuantidade.VisibleIndex = 3;
+            this.clnQuantidade.VisibleIndex = 2;
+            // 
+            // clnValorUnitario
+            // 
+            this.clnValorUnitario.Caption = "Valor Unitário";
+            this.clnValorUnitario.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.clnValorUnitario.FieldName = "PRECOVENDA";
+            this.clnValorUnitario.Name = "clnValorUnitario";
+            this.clnValorUnitario.Visible = true;
+            this.clnValorUnitario.VisibleIndex = 3;
+            this.clnValorUnitario.Width = 133;
             // 
             // clnValorTotal
             // 
             this.clnValorTotal.Caption = "Valor Total";
+            this.clnValorTotal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.clnValorTotal.FieldName = "VALORTOTAL";
             this.clnValorTotal.Name = "clnValorTotal";
+            this.clnValorTotal.OptionsColumn.AllowEdit = false;
+            this.clnValorTotal.OptionsColumn.AllowFocus = false;
             this.clnValorTotal.Visible = true;
             this.clnValorTotal.VisibleIndex = 4;
             this.clnValorTotal.Width = 170;
@@ -287,7 +297,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.lblValorTotal.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblValorTotal.Appearance.Options.UseFont = true;
             this.lblValorTotal.Appearance.Options.UseForeColor = true;
-            this.lblValorTotal.Location = new System.Drawing.Point(826, 13);
+            this.lblValorTotal.Location = new System.Drawing.Point(807, 13);
             this.lblValorTotal.Name = "lblValorTotal";
             this.lblValorTotal.Size = new System.Drawing.Size(42, 30);
             this.lblValorTotal.TabIndex = 12;
@@ -300,7 +310,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             this.label1.Appearance.ForeColor = System.Drawing.Color.White;
             this.label1.Appearance.Options.UseFont = true;
             this.label1.Appearance.Options.UseForeColor = true;
-            this.label1.Location = new System.Drawing.Point(799, 13);
+            this.label1.Location = new System.Drawing.Point(780, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 30);
             this.label1.TabIndex = 13;

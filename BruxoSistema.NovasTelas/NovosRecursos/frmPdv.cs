@@ -17,10 +17,12 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
     public partial class frmPdv : DevExpress.XtraEditors.XtraForm
     {
         private List<Produto> produtosDaVenda = new List<Produto>();
+        private GridView view;
 
         public frmPdv()
         {
             InitializeComponent();
+              view = dgvProdutos.MainView as GridView;
         }
 
         private void TxtBuscaProdutos_KeyDown(object sender, KeyEventArgs e)
@@ -103,6 +105,8 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             InserirProdutoNaVenda(produto);
             AtualizarTotalDaVenda();
             AtualizarTotalItensDaVenda();
+
+            if (ConfiguracoesGlobais.NovosFluxos.ModificaQuantidade) dgvProdutos.Select();
         }
 
         private void InserirProdutoNaVenda(Produto produtoParaVenda)
@@ -110,6 +114,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
             produtosDaVenda.Add(produtoParaVenda);
             AtualizarDataGridComDataSource();
             txtBuscaProdutos.ResetText();
+            view.MoveLast();
         }
 
         private void AtualizarDataGridComDataSource()
@@ -120,7 +125,23 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            produtosDaVenda = (dgvProdutos.DataSource as IEnumerable<Produto>).ToList();
+            if (view == null) return;
+            if (e.Column.FieldName == "QUANTIDADE" || e.Column.FieldName == "PRECOVENDA")
+            {
+                decimal novaQuantidade = decimal.Parse(view.GetRowCellValue(e.RowHandle, view.Columns["QUANTIDADE"]).ToString());
+                decimal novoValorUnitario = decimal.Parse(view.GetRowCellValue(e.RowHandle, view.Columns["PRECOVENDA"]).ToString());
+
+                decimal novoValorTotal = PdvController.RecalcularPrecoTotalVendaProduto(novoValorUnitario, novaQuantidade);
+
+                view.SetRowCellValue(e.RowHandle, view.Columns["VALORTOTAL"], novoValorTotal);
+
+                AtualizarTotalDaVenda();
+                AtualizarTotalItensDaVenda();
+                txtBuscaProdutos.Select();
+                view.ClearSelection();
+
+                produtosDaVenda = (dgvProdutos.DataSource as IEnumerable<Produto>).ToList();
+            }
         }
 
         private void AtualizarTotalItensDaVenda()
@@ -130,7 +151,7 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
         private void AtualizarTotalDaVenda()
         {
-            lblValorTotal.Text = produtosDaVenda.Sum(x => x.PRECOVENDA).ToString();
+            lblValorTotal.Text = produtosDaVenda.Sum(x => x.VALORTOTAL).ToString("N2");
         }
 
         private void frmPdv_KeyDown(object sender, KeyEventArgs e)
@@ -150,8 +171,6 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
 
         private void FaturarVenda()
         {
-            GridView view = dgvProdutos.MainView as GridView;
-
             if (view.RowCount < 1)
             {
                 MessageBox.Show("Consagrado insira produtos para que possamos prosseguir com a venda");
@@ -233,13 +252,12 @@ namespace BruxoSistema.NovasTelas.NovosRecursos
         {
             produtosDaVenda.Clear();
             AtualizarDataGridComDataSource();
-            lblTotalItens.ResetText();
-            lblValorTotal.ResetText();
+            lblTotalItens.Text = "0";
+            lblValorTotal.Text = "0,00";
         }
 
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
-            GridView view = dgvProdutos.MainView as GridView;
             if (view.RowCount > 0)
             {
                 var resultado = MessageBox.Show("Os itens da venda serão perdidos", "Limpar Venda", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
